@@ -1,0 +1,15 @@
+@mixin media($size)
+    @media screen and (max-width:#{$size}px)
+        @content
+        
+
+html
+    font-size: 1px
+
+html,body
+    scroll-behavior: smooth
+
+a
+    text-decoration: none
+    &:hover
+        cursor: url("../img/icons/cursor.cur") , pointer

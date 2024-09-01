@@ -23,15 +23,19 @@ ul
 .flex
     display: flex
     flex-direction: column
+    flex-wrap: wrap
     +media(728)
         flex-direction: row
 
-.global
+.milk-background
+    background-image: url("../img/background.png")
+    background-color: #fdf5e2
 
+.global
     &__btn
         display: block
-        width: 200px
-        padding: 11.5px
+        width: 205px
+        padding: 13.5px
         height: min-content
         box-sizing: border-box
         font-family: 'Balsamiq Sans'
@@ -52,15 +56,23 @@ ul
         font-size: 56px
         line-height: 67px
         letter-spacing: 0.03em
-        text-transform: uppercase
-        color: #0033FF
+        text-transform: uppercase         
+        color:#FF8B00
         align-self: stretch
-        text-align: center
+        text-align: center 
 
+    &__middle_text 
+        font-family: 'Balsamiq Sans'
+        font-weight: 700
+        font-size: 24px
+        line-height: 29px
+        letter-spacing: 0.03em
+        text-transform: uppercase
+        color: #0035F7
 
-        
 
 
 
 
 @import components/header
+@import components/main

@@ -1,12 +1,18 @@
 .header
     &__menu
-        padding: 30px 0
+        padding: 30px 10px 27px
         box-sizing: border-box
-        justify-content: space-around
+        justify-content: space-between
+        margin: 0 auto 
+        max-width: 1580px
+        column-gap: 30px
+
         img
+            margin-left: 20px
             height: 60px
 
         &__elements
+            padding-left: 15px
             column-gap: 40px   
             
         &__item
@@ -18,29 +24,46 @@
             text-transform: uppercase
             color: #313131
             &__holder
-                padding: 15px 0 
-
+                padding: 20px 0
+        &__btn
+            margin-top: 5px
     &__hero
-
+        border-top: 3px solid #FF8B00
+        text-align: center
+        padding-bottom: 45px
+        &-strip
+            margin-top: 10px
         &_header
-            margin: auto
-
+            margin: 45px auto 20px
+            color: #0033FF
         &__text
+            padding-left: 15px
+            box-sizing: border-box
+
             font-family: 'Open Sans'
             font-weight: 500
             font-size: 18px
             line-height: 23px
             color: #313131
 
-        &__btn            
+        &__btn      
+            margin: 35px auto      
             width: 300px
             font-size: 18px
             line-height: 22px
-            padding: 15px
+            padding: 16px
             color: #FFFFFF
             background: #EA18AA
             border: 3px solid #FF8B00
-
+            
+        &_img_container 
+            padding-top: 30px
+            padding-bottom: 30px
+            justify-content: center
+            column-gap: 40px
+            img
+                display: block
+                height: 480px
    
 
 

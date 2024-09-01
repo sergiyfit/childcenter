@@ -32,49 +32,50 @@ html(lang="en")
                         li.header__menu__item__holder
                             a(href="#").header__menu__item Контакти
                 a.global__btn.header__menu__btn Записати дитину
-            .header__hero
+            .header__hero.milk-background
+                img(src="img/header/srtichka.svg", alt="strichka").header__hero-strip
                 h1.global__huge_text.header__hero_header Ваша дитина починає розвиватись тут
                 p.header__hero__text Від немовля до дошкільнятки, більше 9 років співпраці з батьками і дітьми!
                 a.global__btn.header__hero__btn Записати дитину
-                .header__hero_img_container 
+                .header__hero_img_container.flex 
                     img(src="img/header/ditina_3h_rokiv_malue_olivcami.png", alt="ditina_3h_rokiv_malue_olivcami").header__hero_img
                     img(src="img/header/yak_ditini_namaluvati_yizhachka.png", alt="yak_ditini_namaluvati_yizhachka").header__hero_img
                     img(src="img/header/dity_z_ranyoyi_shkoly_rozvitky.png", alt="dity_z_ranyoyi_shkoly_rozvitky").header__hero_img
                     img(src="img/header/centr_rozvitky_ditey_labaratoriya_malenkih_geniyiv.png", alt="centr_rozvitky_ditey_labaratoriya_malenkih_geniyiv").header__hero_img 
         main 
-            .main__about 
+            .main__about.milk-background 
                 h2.global__huge_text.main__about_header Про нас
                 .main__about_box.flex
-                    img(src="img/about/comfort_dlya_ditiny.png", alt="comfort_dlya_ditiny") 
-                    p.main__about_text 
-                        h3.global__middle_text 
+                    img(src="img/about/comfort_dlya_ditiny.png", alt="comfort_dlya_ditiny").left-img 
+                    .main__about_text 
                         ul.main__about_list
+                            h3.global__middle_text.main__about_list_header Комфортний простір для дитини 
                             li.main__about_list_item Ігровий майданчик 
-                            li.main__about_list_item Ігровий майданчик
-                            li.main__about_list_item Ігровий майданчик
-                            li.main__about_list_item Ігровий майданчик
-                        a.global__btn.main__about__btn Записати дитину
+                            li.main__about_list_item Красиві та затишні приміщення
+                            li.main__about_list_item Якісні іграшки та навчальні матеріали
+                            li.main__about_list_item 5-разове харчування
+                            a.global__btn.main__about__btn Записати дитину
+                .main__about_box.flex.left-container
+                    .main__about_text.left-list  
+                        ul.main__about_list
+                            h3.global__middle_text.main__about_list_header Гармонійний фізичний розвиток
+                            li.main__about_list_item Заняття з фізкультури
+                            li.main__about_list_item Прогулянки на свіжому повітрі
+                            li.main__about_list_item Хореографія
+                            li.main__about_list_item Спортивні розваги та квести
+                            a.global__btn.main__about__btn Записати дитину
+                    img(src="img/about/fizicni_vpravi_dlya_ditiny.png", alt="fizicni_vpravi_dlya_ditiny").right-img 
                 .main__about_box.flex
-                    p.main__about_text 
-                        h3.global__middle_text 
+                    img(src="img/about/intelektualni_navichky_dytyny.png", alt="intelektualni_navichky_dytyny").left-img
+                    .main__about_text
                         ul.main__about_list
-                            li.main__about_list_item Ігровий майданчик 
-                            li.main__about_list_item Ігровий майданчик
-                            li.main__about_list_item Ігровий майданчик
-                            li.main__about_list_item Ігровий майданчик
-                        a.global__btn.main__about__btn Записати дитину
-                    img(src="img/about/fizicni_vpravi_dlya_ditiny.png", alt="fizicni_vpravi_dlya_ditiny") 
-                .main__about_box.flex
-                    img(src="img/about/intelektualni_navichky_dytyny.png", alt="intelektualni_navichky_dytyny") 
-                    p.main__about_text 
-                        h3.global__middle_text 
-                        ul.main__about_list
-                            li.main__about_list_item Ігровий майданчик 
-                            li.main__about_list_item Ігровий майданчик
-                            li.main__about_list_item Ігровий майданчик
-                            li.main__about_list_item Ігровий майданчик
-                        a.global__btn.main__about__btn Записати дитину
-            .main__age 
+                            h3.global__middle_text.main__about_list_header інтелектуальний розвиток
+                            li.main__about_list_item Образотворче мистецтво та музика
+                            li.main__about_list_item Математика, логіка та читання
+                            li.main__about_list_item Англійська мова
+                            li.main__about_list_item Пізнаємо світ та розвиток мовлення
+                            a.global__btn.main__about__btn Записати дитину
+            .main__age.milk-background 
                 h2.global__huge_text.main__age_header вікові групи
                 .main__age_container.flex 
                     .main__age_item 
@@ -92,7 +93,7 @@ html(lang="en")
 
             .main__kindergarten 
                 h2.global__huge_text.main__kindergarten_header дитячий садок
-                .main__kindergarten_container.flex 
+                .main__kindergarten_container.flex.milk-background 
                     ul.main__kindergarten_list 
                         li.main__kindergarten_line.flex
                             img.main__kindergarten_icon(src="img/kindergarten/food.svg", alt="#")
@@ -114,35 +115,35 @@ html(lang="en")
             .main__lessons 
                 h2.global__huge_text.main__lessons_header 
                 .main__lessons_container.flex 
-                    .main__lessons_card 
+                    .main__lessons_card.milk-background 
                         h3.global__middle_text математика
                         img(src="img/lessons/math.png", alt="math").main__lessons_img
-                    .main__lessons_card 
+                    .main__lessons_card.milk-background 
                         h3.global__middle_text читання
                         img(src="img/lessons/reading.png", alt="reading").main__lessons_img
-                    .main__lessons_card 
+                    .main__lessons_card.milk-background 
                         h3.global__middle_text пізнаємо світ
                         img(src="img/lessons/discovery.png", alt="discovery").main__lessons_img
-                    .main__lessons_card 
+                    .main__lessons_card.milk-background 
                         h3.global__middle_text розвиток мовлення
                         img(src="img/lessons/speaking.png", alt="speaking").main__lessons_img
-                    .main__lessons_card 
+                    .main__lessons_card.milk-background 
                         h3.global__middle_text образотворче мистецтво
                         img(src="img/lessons/art.png", alt="art").main__lessons_img
-                    .main__lessons_card 
+                    .main__lessons_card.milk-background 
                         h3.global__middle_text англійська мова
                         img(src="img/lessons/english.png", alt="english").main__lessons_img
-                    .main__lessons_card 
+                    .main__lessons_card.milk-background 
                         h3.global__middle_text лего конструювання
                         img(src="img/lessons/lego.png", alt="lego").main__lessons_img
-                    .main__lessons_card 
+                    .main__lessons_card.milk-background 
                         h3.global__middle_text хореографія
                         img(src="img/lessons/dancing.png", alt="dancing").main__lessons_img
-                    .main__lessons_card 
+                    .main__lessons_card.milk-background 
                         h3.global__middle_text музичні заняття
                         img(src="img/lessons/music.png", alt="music").main__lessons_img
-            .main__price
-                h2.global__huge_text.main__price_header 
+            .main__price.milk-background
+                h2.global__huge_text.main__price_header варіанти відвідування садочку 
                 .main__price_container.flex
                      .main__price_card 
                         span.global__btn.main__price_time.main__price_time--green 8:00-13:00
@@ -236,7 +237,7 @@ html(lang="en")
                     .global-dot.main__gallery_nav__dot 
                     button.main__gallery_nav__circle_btn.main__gallery_nav__circle_btn--right 
 
-            .main__feedback 
+            .main__feedback.milk-background 
                 h2.global__huge_text.main__feedback_header галерея
                 .main__feedback_container.flex
                     .main__feedback_card 
@@ -258,7 +259,7 @@ html(lang="en")
                     button.main__feedback_nav__circle_btn.main__feedback_nav__circle_btn--right 
                 a.global__btn.main__feedback_btn Переглянути усі
         footer.footer 
-            .footer__location
+            .footer__location.milk-background
                 p.global__middle_text.footer__disclaimer Наш садочок забезпечений сучасним укриттям, додатковими джерелами електроенергії (на випадок відключення світла), котельня обладнана генератором для опалювального сезону.
                 .footer__location_container.flex
                     .footer__location_card 
@@ -276,7 +277,7 @@ html(lang="en")
                         | 8:00-19:00
                         strong.footer__location_strong Центр розвитку дітей:
                         | 16:30 - 19:30
-            .footer__contact
+            .footer__contact.milk-background
                 .footer__contact_links 
                     a.footer__contact_links--phone(href="tel:+380984562045") +38 098 456 20 45
                     a.footer__contact_links--email(href="mailto:labmalgen@gmail.com") labmalgen@gmail.com

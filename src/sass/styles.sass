@@ -1,7 +1,9 @@
 @mixin media($size)
-    @media screen and (max-width:#{$size}px)
+    @media screen and (min-width:#{$size}px)
         @content
         
+* 
+    margin: 0 
 
 html
     font-size: 1px
@@ -13,3 +15,52 @@ a
     text-decoration: none
     &:hover
         cursor: url("../img/icons/cursor.cur") , pointer
+
+ul
+    list-style: none
+    padding: 0
+
+.flex
+    display: flex
+    flex-direction: column
+    +media(728)
+        flex-direction: row
+
+.global
+
+    &__btn
+        display: block
+        width: 200px
+        padding: 11.5px
+        height: min-content
+        box-sizing: border-box
+        font-family: 'Balsamiq Sans'
+        font-weight: 700
+        font-size: 14px
+        text-align: center
+        letter-spacing: 0.03em
+        text-transform: uppercase
+        color: #0033FF  
+        background: #FDF5E2
+        border: 3px solid #FF0099
+        border-radius: 100px
+
+    &__huge_text
+        font-family: 'Balsamiq Sans'
+        font-style: normal
+        font-weight: 700
+        font-size: 56px
+        line-height: 67px
+        letter-spacing: 0.03em
+        text-transform: uppercase
+        color: #0033FF
+        align-self: stretch
+        text-align: center
+
+
+        
+
+
+
+
+@import components/header

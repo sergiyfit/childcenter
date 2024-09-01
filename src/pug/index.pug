@@ -6,14 +6,17 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Центр розвитку дітей - Лабараторія маленьких винахідників Хмельницький
         link(rel="stylesheet", href="css/styles.css")
-       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     body 
         header.header 
-            .header__menu
+            .header__menu.flex
                 .header__menu__logo 
                     img(src="img/header/Logo.svg", alt="Laboratory_malenkih_vihakhidnikiv_Khmalnytskiy")
                 nav.header__menu__container 
-                    ul.header__menu__elements
+                    ul.header__menu__elements.flex
                         li.header__menu__item__holder
                             a(href="#").header__menu__item Про нас  
                         li.header__menu__item__holder
@@ -28,10 +31,10 @@ html(lang="en")
                             a(href="#").header__menu__item Відгуки
                         li.header__menu__item__holder
                             a(href="#").header__menu__item Контакти
-                    a.global__btn.header__menu__btn Записати дитину
+                a.global__btn.header__menu__btn Записати дитину
             .header__hero
                 h1.global__huge_text.header__hero_header Ваша дитина починає розвиватись тут
-                p Від немовля до дошкільнятки, більше 9 років співпраці з батьками і дітьми!
+                p.header__hero__text Від немовля до дошкільнятки, більше 9 років співпраці з батьками і дітьми!
                 a.global__btn.header__hero__btn Записати дитину
                 .header__hero_img_container 
                     img(src="img/header/ditina_3h_rokiv_malue_olivcami.png", alt="ditina_3h_rokiv_malue_olivcami").header__hero_img

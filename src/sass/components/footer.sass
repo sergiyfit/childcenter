@@ -34,6 +34,18 @@
         &_marker
             padding-left: 30px
             display: block
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: 4px
+                left: 2px
+                width: 15px
+                height: 18px
+                background-size: contain
+                background-repeat: no-repeat
+                background-image: url("../img/icons/location.svg")
+           
         &_link
             display: block
             padding: 15px 0
@@ -63,10 +75,43 @@
                 &::before
                     content: ''
                     position: absolute
-                    top: 1px
-                    left: 0
+                    top: 10px
+                    left: 6px
                     width: 18px
                     height: 18px
+                    background-size: contain
+                    background-repeat: no-repeat
+            &--phone::before
+                background-image: url("../img/icons/phone.svg")
+            &--email::before
+                top: 20px
+                background-image: url("../img/icons/email.svg")
+
+            &-centered
+                padding-top: 10px
+                text-align: center
+            &-social
+                justify-content: center
+                padding: 25px
+                &-ref
+                    display: block
+                    margin: 5px
+                    width: 25px
+                    height: 25px
+                    background-size: contain
+                    background-repeat: no-repeat
+            &--politic
+                display: block
+                margin: 15px 0
+                text-decoration: underline
+                font-weight: 500
+                font-size: 16px
+                color: #313131
 
 
+.facebook
+    background-image: url("../img/icons/instagram.svg")
+
+.instagram
+    background-image: url("../img/icons/facebook.svg")
  

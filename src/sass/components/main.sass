@@ -59,6 +59,10 @@
             margin: 50px 0 35px
             width: 255px
             padding: 12px
+            
+    /*---------------------------------------------*/
+    /*-------------------age-----------------------*/
+    /*---------------------------------------------*/
     &__age 
         margin-top: 90px
         padding: 43px 10px
@@ -76,6 +80,11 @@
                 padding: 20px 10px
                 width: 200px
                 text-align: center 
+
+    /*---------------------------------------------*/
+    /*--------------kindergarten-------------------*/
+    /*---------------------------------------------*/
+
     &__kindergarten
         padding-top: 33px
         &_header 
@@ -196,7 +205,26 @@
             padding: 8px
             font-size: 16px
             color: #FFFFFF
-
+            &--green
+              background-color: #03CEA4
+              border-color: #03CEA4
+              &:hover
+                background-color: #03CE84   
+            &--pink
+              background-color: #FF0099
+              &:hover
+                background-color: #FF0079  
+            &--blue
+              background-color: #0033FF
+              border-color: #0033FF
+              &:hover
+                background-color: #0033CF   
+            &--yellow
+              background-color: #FFE600
+              border-color: #FFE600
+              &:hover
+                border-color: #FFB600 
+                background-color: #FFB600  
 
         &_text
             color: #313131
@@ -281,7 +309,25 @@
             padding: 10px 30px 8px
             font-weight: 700
             font-size: 16px
+            background-color: #fff
+            appearance: none
+            &:hover
+                background-color: #fff
+                color: #fff
 
+            &:nth-child(3n+1)
+                color: #0033FF
+                border-color: #0033FF
+                    
+            &:nth-child(3n-1)
+                color: #FF0099
+                border-color: #FF0099
+
+            &:nth-child(3n)
+                color: #03CEA4
+                border-color: #03CEA4
+
+                
             &_container
                 justify-content: center
                 column-gap: 50px

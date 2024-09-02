@@ -11,6 +11,11 @@ html
 html,body
     scroll-behavior: smooth
 
+body
+    font-family: 'Open Sans'
+    font-style: normal
+    font-weight: 500
+
 a
     text-decoration: none
     &:hover
@@ -30,9 +35,10 @@ ul
 .milk-background
     background-image: url("../img/background.png")
     background-color: #fdf5e2
+    box-shadow: 0px 5px 7px rgba(42, 42, 42, 0.1)
 
 .global
-    &__btn
+    &__btn        
         display: block
         width: 205px
         padding: 13.5px
@@ -49,6 +55,13 @@ ul
         border: 3px solid #FF0099
         border-radius: 100px
 
+    &__link
+        font-family: 'Balsamiq Sans'
+        font-style: normal
+        font-weight: 700
+        font-size: 16px
+        color: #FF8B00
+        
     &__huge_text
         font-family: 'Balsamiq Sans'
         font-style: normal
@@ -69,10 +82,42 @@ ul
         letter-spacing: 0.03em
         text-transform: uppercase
         color: #0035F7
+    &-dot
+        width: 15px
+        height: 15px
+        border-radius: 50%
+        box-sizing: border-box
+        border: 1px solid #0033FF
+        
+        &--active
+            background: #FF8B00
+            border-color: transparent
 
-
+    &__circle_btn
+        margin: 0 20px
+        width: 40px
+        height: 40px
+        background: #FF8B00
+        border: none
+        border-radius: 50%
 
 
 
 @import components/header
 @import components/main
+@import components/footer
+
+
+.left-container
+    padding-left: 10px
+    padding-right: 120px
+.left-list
+    align-items: flex-start
+    padding: 28px 50px
+.left-img    
+    left: 15px 
+
+.right-img 
+    right: 0px
+
+

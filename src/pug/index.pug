@@ -93,27 +93,27 @@ html(lang="en")
 
             .main__kindergarten 
                 h2.global__huge_text.main__kindergarten_header дитячий садок
-                .main__kindergarten_container.flex.milk-background 
-                    ul.main__kindergarten_list 
+                .main__kindergarten_container.flex
+                    ul.main__kindergarten_list.milk-background  
                         li.main__kindergarten_line.flex
                             img.main__kindergarten_icon(src="img/kindergarten/food.svg", alt="#")
-                            p.main__kindergarten 
-                                strong.global__middle_text.main__kindergarten_header Ми любимо нашу їжу
+                            p.main__kindergarten_text 
+                                strong.global__middle_text.main__kindergarten_line_header Ми любимо нашу їжу
                                 span.main__kindergarten_text і готуємо її з любовʼю до дітей
-                                a(href="#").main__kindergarten_link подивитися меню  
+                                a(href="#").global__link.main__kindergarten_link подивитися меню  
                         li.main__kindergarten_line.flex
                             img.main__kindergarten_icon(src="img/kindergarten/age.svg", alt="#")
-                            p.main__kindergarten 
-                                strong.global__middle_text.main__kindergarten_header 9 років
+                            p.main__kindergarten_text 
+                                strong.global__middle_text.main__kindergarten_line_header 9 років
                                 span.main__kindergarten_text ми працюємо з дітками 
                         li.main__kindergarten_line.flex
                             img.main__kindergarten_icon(src="img/kindergarten/nanny.svg", alt="#")
-                            p.main__kindergarten 
-                                strong.global__middle_text.main__kindergarten_header Наші працівники тут
+                            p.main__kindergarten_text 
+                                strong.global__middle_text.main__kindergarten_line_header Наші працівники тут
                                 span.main__kindergarten_text тому-що люблять свою роботу та дітей
                     img.main__kindergarten_image(src="img/kindergarten/kindergarten_Ukraine.png", alt="kindergarten_Ukraine")
             .main__lessons 
-                h2.global__huge_text.main__lessons_header 
+                h2.global__huge_text.main__lessons_header заняття у нашому садочку
                 .main__lessons_container.flex 
                     .main__lessons_card.milk-background 
                         h3.global__middle_text математика
@@ -147,7 +147,7 @@ html(lang="en")
                 .main__price_container.flex
                      .main__price_card 
                         span.global__btn.main__price_time.main__price_time--green 8:00-13:00
-                        h3.global__middle_text.main__price_header адаптаційний період
+                        h3.global__middle_text.main__price_card_header адаптаційний період
                         p.main__price_text Адаптаційний період створений для батьків, які хочуть допомогти своїй дитині легше адаптуватися до нових умов. Зазвичай у цей період передбачено поступове збільшення часу перебування дитини в садку, що допомагає уникнути стресу і поступово вводить дитину в новий ритм життя
                             strong Вартість:
                             ul 
@@ -159,42 +159,42 @@ html(lang="en")
 
                      .main__price_card 
                         span.global__btn.main__price_time.main__price_time--green 8:00-13:00
-                        h3.global__middle_text.main__price_header міні-садочок
+                        h3.global__middle_text.main__price_card_header міні-садочок
                         p.main__price_text Наш тариф «Міні-садочок» для батьків, які бажають поступово адаптувати дитину до більш тривалого перебування в садочку або з власних міркувань бажають, щоб дитина відвідувала садок неповний день.
-                            strong У цей тариф входить: 
-                            ul 
-                                li  3-разове харчування (сніданок, ланч та обід);
-                                li  3 заняття щоденно;
-                                li  прогулянка;
-                                li  ігрова діяльність.
-                            span.global__middle_text.main__price_in-month ціна - 7000 грн/місяць
+                        strong У цей тариф входить: 
+                        ul 
+                            li  3-разове харчування (сніданок, ланч та обід);
+                            li  3 заняття щоденно;
+                            li  прогулянка;
+                            li  ігрова діяльність.
+                        span.global__middle_text.main__price_in-month ціна - 7000 грн/місяць
                         a.global__btn.main__price_card_btn Записати дитину
 
                      .main__price_card 
                         span.global__btn.main__price_time.main__price_time--green 8:00-17:00
-                        h3.global__middle_text.main__price_header садочок
+                        h3.global__middle_text.main__price_card_header садочок
                         p.main__price_text Створений для батьків, які бажають, щоб їхня дитина мала більше можливостей для взаємодії з однолітками та участі в організованих заняттях, що сприяють її соціальному та емоційному розвитку.
-                            strong У цей тариф входить:
-                            ul 
-                                li  4-разове харчування (сніданок, ланч, обід, полуденок);
-                                li  4 заняття щоденно;
-                                li  прогулянка;
-                                li  ігрова діяльність.
-                            span.global__middle_text.main__price_in-month ціна - 10500 грн/місяць
+                        strong У цей тариф входить:
+                        ul 
+                            li  4-разове харчування (сніданок, ланч, обід, полуденок);
+                            li  4 заняття щоденно;
+                            li  прогулянка;
+                            li  ігрова діяльність.
+                        span.global__middle_text.main__price_in-month ціна - 10500 грн/місяць
                         a.global__btn.main__price_card_btn Записати дитину
                      .main__price_card 
                         span.global__btn.main__price_time.main__price_time--green 8:00-19:00
-                        h3.global__middle_text.main__price_header садочок повного дня
+                        h3.global__middle_text.main__price_card_header садочок повного дня
                         p.main__price_text Створений для батьків, які шукають структурований день для дитини: дитина отримає регулярний розпорядок дня, включаючи навчальні та ігрові заняття, що допомагає в її розвитку та соціалізації.
-                            strong У цей тариф входить:
-                            ul 
-                                li  5-разове харчування (сніданок, ланч, обід, полуденок, вечеря);
-                                li  4 заняття щоденно;
-                                li  прогулянка;
-                                li  ігрова діяльність.
-                            span.global__middle_text.main__price_in-month ціна - 12500 грн/місяць
+                        strong У цей тариф входить:
+                        ul 
+                            li  5-разове харчування (сніданок, ланч, обід, полуденок, вечеря);
+                            li  4 заняття щоденно;
+                            li  прогулянка;
+                            li  ігрова діяльність.
+                        span.global__middle_text.main__price_in-month ціна - 12500 грн/місяць
                         a.global__btn.main__price_card_btn Записати дитину
-            .main__facultative 
+            .main__facultative.milk-background 
                 h2.global__huge_text.main__facultative_header додаткові заняття та гуртки у Центрі розвитку дітей
                 .main__facultative_container.flex
                     .main__facultative_card
@@ -226,37 +226,38 @@ html(lang="en")
                     button.global__btn.main__gallery_btn меню
                     
                 .main__gallery_img_container.flex
-                    img(src="img/gallery/gallery1.png", alt="lego").main__facultative_img 
-                    img(src="img/gallery/gallery2.png", alt="lego").main__facultative_img 
-                    img(src="img/gallery/gallery3.png", alt="lego").main__facultative_img 
+                    img(src="img/gallery/gallery1.png", alt="lego").main__gallery_img 
+                    img(src="img/gallery/gallery2.png", alt="lego").main__gallery_img 
+                    img(src="img/gallery/gallery3.png", alt="lego").main__gallery_img 
                 .main__gallery_nav_container.flex
-                    button.main__gallery_nav__circle_btn.main__gallery_nav__circle_btn--left 
-                    .global-dot.main__gallery_nav__dot.main__gallery_nav__dot-active 
+                    button.global__circle_btn.main__gallery_nav__circle_btn--left 
+                    .global-dot.main__gallery_nav__dot.global-dot--active 
                     .global-dot.main__gallery_nav__dot 
                     .global-dot.main__gallery_nav__dot 
                     .global-dot.main__gallery_nav__dot 
-                    button.main__gallery_nav__circle_btn.main__gallery_nav__circle_btn--right 
+                    .global-dot.main__gallery_nav__dot 
+                    button.global__circle_btn.main__gallery_nav__circle_btn--right 
 
             .main__feedback.milk-background 
-                h2.global__huge_text.main__feedback_header галерея
+                h2.global__huge_text.main__feedback_header Відгуки
                 .main__feedback_container.flex
                     .main__feedback_card 
-                        h3.main__feedback_card_name Катерина Медун
+                        .main__feedback_card_name.global__btn Катерина Медун
                         p.main__feedback_card_text Відвідували багато садочків але підхід до малечі змогли знайти саме тут. Лабораторія маленьких геніїв - це, в першу чергу, професійна команда відкритих та добрих людей , яка по-справжньому любить малечу. Команда, в якій панує затишна та гармонійна атмосфера і яка кожен день створює маленьке свято для них. Щиро раджу♥️♥️♥️♥️
                     .main__feedback_card 
-                        h3.main__feedback_card_name Аліса Крук
+                        .main__feedback_card_name.global__btn Аліса Крук
                         p.main__feedback_card_text Відвідуємо садочок вже 4 роки. Дуже задоволені. Дитина ходить з задоволенням щодня. Ще дуже крута підготовка до школи . Після занять в садочку не потрібно додаткових підготовок. Дитина читає, пише , вміє рахувати.
                     .main__feedback_card 
-                        h3.main__feedback_card_name Лілія Хомич
+                        .main__feedback_card_name.global__btn Лілія Хомич
                         p.main__feedback_card_text Зручне місце розташування. Комфортні умови для дітей. Хороші іграшки для самостійної гри. Та найцінніше те, що усі вихователі мають позитивний світогляд та ставляться до дітей як до маленьких особистостей, дають свободу для самовираження, та одночасно слідкують за дотриманням соціальних правил та норм. Атмосфера в садочку позитивна і це сприяє гармонійному розвитку дітей. Підготовка  більше...
-                .main__feedback_nav_container.flex
-                    button.main__feedback_nav__circle_btn.main__feedback_nav__circle_btn--left 
-                    .global-dot.main__feedback_nav__dot.main__feedback_nav__dot-active 
+                .main__feedback_nav_container.global-nav.flex
+                    button.global__circle_btn.main__feedback_nav__circle_btn--left 
+                    .global-dot.main__feedback_nav__dot.global-dot--active 
                     .global-dot.main__feedback_nav__dot 
                     .global-dot.main__feedback_nav__dot 
                     .global-dot.main__feedback_nav__dot 
                     .global-dot.main__feedback_nav__dot 
-                    button.main__feedback_nav__circle_btn.main__feedback_nav__circle_btn--right 
+                    button.global__circle_btn.main__feedback_nav__circle_btn--right 
                 a.global__btn.main__feedback_btn Переглянути усі
         footer.footer 
             .footer__location.milk-background
@@ -265,29 +266,33 @@ html(lang="en")
                     .footer__location_card 
                         h3.global__middle_text.footer__location_header наша локація
                         a(href="#").footer__location_strong.footer__location_marker вул. Вайсера, 4/2  
-                        a(href="#").footer__location_link подивитися мапу 
+                        a(href="#").global__link.footer__location_link подивитися мапу 
                             span.footer__location_arrow 
                     .footer__location_card 
                         h3.global__middle_text.footer__location_header Графік роботи
                         strong.footer__location_strong Міні-садок:
-                        | 8:00-13:00
+                        span 8:00-13:00
+                        br
                         strong.footer__location_strong Садок:
-                        | 8:00-17:00
+                        span 8:00-17:00
+                        br
                         strong.footer__location_strong Садок повного дня:
-                        | 8:00-19:00
+                        span 8:00-19:00
+                        br
                         strong.footer__location_strong Центр розвитку дітей:
-                        | 16:30 - 19:30
+                        span 16:30 - 19:30
             .footer__contact.milk-background
-                .footer__contact_links 
-                    a.footer__contact_links--phone(href="tel:+380984562045") +38 098 456 20 45
-                    a.footer__contact_links--email(href="mailto:labmalgen@gmail.com") labmalgen@gmail.com
-                .footer__contact_links-centered 
-                    .footer__contact_links-social 
-                        a.footer__contact_link.instagram(href="#")
-                        a.footer__contact_link.facebook(href="#")
-                    p.footer__contact_links-copywright &copy; Лабораторія маленьких геніїв 2015-2024. Усі права захищені
-                .footer__contact_links        
-                    .footer__contact_links__logo 
-                        img(src="img/header/Logo.svg", alt="Laboratory_malenkih_vihakhidnikiv_Khmalnytskiy")
-                    a.footer__contact_links--politic(href="#") Політика конфіденційності
-        script(src="js/script.js") 
+                .footer__contact_container.flex
+                    .footer__contact_links 
+                        a.footer__contact_links--phone(href="tel:+380984562045") +38 098 456 20 45
+                        a.footer__contact_links--email(href="mailto:labmalgen@gmail.com") labmalgen@gmail.com
+                    .footer__contact_links-centered 
+                        .footer__contact_links-social 
+                            a.footer__contact_link.instagram(href="#")
+                            a.footer__contact_link.facebook(href="#")
+                        p.footer__contact_links-copywright &copy; Лабораторія маленьких геніїв 2015-2024. Усі права захищені
+                    .footer__contact_links-left        
+                        .footer__contact_links__logo 
+                            img(src="img/header/Logo.svg", alt="Laboratory_malenkih_vihakhidnikiv_Khmalnytskiy")
+                        a.footer__contact_links--politic(href="#") Політика конфіденційності
+        script(src="js/scripts.js") 

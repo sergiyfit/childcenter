@@ -6,11 +6,19 @@
         margin: 0 auto 
         max-width: 1580px
         column-gap: 30px
+        &__logo
+            display: flex
+            justify-content: space-between
 
         img
+            width: 185px
+            display: block
             margin-left: 20px
             height: 60px
-
+        &__container 
+            display: none
+            +media(678)
+                display: block
         &__elements
             padding-left: 15px
             column-gap: 40px   
@@ -31,6 +39,9 @@
                 padding: 20px 0
         &__btn
             margin-top: 5px
+            display: none
+            +media(678)
+                display: block
     &__hero
         border-top: 3px solid #FF8B00
         text-align: center
@@ -46,6 +57,7 @@
         &_header
             margin: 45px auto 20px
             color: #0033FF
+
         &__text
             padding-left: 15px
             box-sizing: border-box
@@ -55,10 +67,16 @@
 
         &__btn      
             margin: 35px auto      
-            width: 300px
-            font-size: 18px
-            line-height: 22px
-            padding: 16px
+            width: 220px
+            font-size: 12px
+            padding: 10px
+            +media(480)
+                font-size: 14px
+                width: 270px
+            +media(678)
+                width: 300px
+                font-size: 18px
+                padding: 16px
             color: #FFFFFF
             background: #EA18AA
             border: 3px solid #FF8B00
@@ -70,10 +88,20 @@
             padding-top: 30px
             padding-bottom: 30px
             justify-content: center
+            align-items: center
             column-gap: 40px
+            +media(480)
+                flex-direction: row
             img
                 display: block
-                height: 480px
+                width: 80%
+                +media(480)
+                    width: 40%
+                +media(728)
+                    width: 20%
+                +media(1680)
+                    width: auto
+                    height: 480px
    
 
 

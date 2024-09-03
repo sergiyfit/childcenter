@@ -3,13 +3,23 @@
         text-align: center
         max-width: 1050px
         margin: 0px auto 30px
+
     &__location
         max-width: 1280px
         width: 100%
         margin: 100px auto
-        padding: 65px 10px 55px
         box-sizing: border-box 
-        border-radius: 150px
+        border-radius: 50px
+        padding: 25px 10px 25px
+
+        +media(728)
+            padding: 45px 10px 45px
+            border-radius: 100px
+
+        +media(1280)
+            padding: 65px 10px 55px
+            border-radius: 150px
+
         &_container
             justify-content: center
             column-gap: 50px
@@ -19,16 +29,29 @@
             box-sizing: border-box
             padding-left: 20px
             font-weight: 400
-            font-size: 18px
             color: #313131
-            line-height: 29px
+            font-size: 13px
+            line-height: 16px
+
+            +media(640)
+
+                font-size: 14px
+                line-height: 20px
+                
+            +media(840)
+                width: 340px
+                font-size: 18px
+                line-height: 29px
 
 
         &_header
             margin-bottom: 18px
         &_strong            
             font-weight: 500
-            font-size: 18px
+            font-size: 14px
+            +media(640)
+                font-size: 18px
+
             color: #313131
             margin-right: 5px
         &_marker
@@ -38,7 +61,10 @@
             &::before
                 content: ''
                 position: absolute
-                top: 4px
+                top: 0px
+                +media(640)
+                    top: 4px
+
                 left: 2px
                 width: 15px
                 height: 18px

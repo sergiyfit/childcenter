@@ -125,11 +125,27 @@ ul
     &__middle_text 
         font-family: 'Balsamiq Sans'
         font-weight: 700
-        font-size: 24px
+        font-size: 16px
         line-height: 29px
         letter-spacing: 0.03em
         text-transform: uppercase
         color: #0035F7
+
+        +media(480)
+            font-size: 18px
+            line-height: 29px
+        +media(678)
+            font-size: 24px
+    &-nav    
+        display: flex
+        justify-content: center
+        align-items: center
+        column-gap: 5px
+        margin: 10px 0
+        +media(640)
+            column-gap: 10px
+            margin: 30px
+            
     &-dot
         width: 15px
         height: 15px
@@ -157,7 +173,6 @@ ul
 
 
 .left-container
-    padding-left: 10px
     +media(1280)
         padding-left: 10px
         padding-right: 120px

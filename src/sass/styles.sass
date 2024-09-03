@@ -40,10 +40,40 @@ ul
 .burger
     width: 40px
     height: 40px
-    margin: 20px
-    border: 1px solid black
+    margin: 10px
+    border: 1px solid #FF0099
+    position: relative
     +media(678)
         display: none
+
+    span, span::before,span::after
+        position: absolute
+        transform: translate(-50% , -50%)
+        top: 50%
+        left: 50%
+        width: 30px
+        height: 4px
+        border-radius: 2px
+        background-color: #FF0099
+        transition: all 1s ease, width 0.1s ease
+    span::before,span::after
+        content: ''
+    span::before   
+        top: 13px
+    span::after
+        top: -10px  
+
+.burger-close               
+
+    span
+        width: 0
+    span::before,span::after
+        top: 50%
+        left: -15px
+    span::before   
+        transform: rotate(135deg)
+    span::after
+        transform: rotate(225deg)
 
          
 
@@ -144,7 +174,7 @@ ul
         margin: 10px 0
         +media(640)
             column-gap: 10px
-            margin: 30px
+            margin: 25px
             
     &-dot
         width: 15px
@@ -216,22 +246,105 @@ ul
     background-color: #03CEA4
     border-color: #03CEA4
     &:hover
-    background-color: #03CE84   
+        background-color: #03CE84   
 .pink
     background-color: #FF0099
     &:hover
-    background-color: #FF0079  
+        background-color: #FF0079  
 .blue
     background-color: #0033FF
     border-color: #0033FF
     &:hover
-    background-color: #0033CF   
+        background-color: #0033CF   
 .yellow
     background-color: #FFE600
     border-color: #FFE600
     &:hover
-    border-color: #FFB600 
-    background-color: #FFB600  
+        border-color: #FFB600 
+        background-color: #FFB600  
+
+.diamond
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        right: 0
+        
+        top: -10px
+        width: 40px
+        height: 40px
+        background-size: contain
+        background-repeat: no-repeat
+        background-image: url("../img/price/diamond.svg")
+
+        +media(720)
+            top: -23px
+            width: 85px
+            height: 85px
+    
+
+.circle
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        right: 0
+        
+        top: -10px
+        width: 35px
+        height: 35px
+
+        background-color: #03CEA4
+        border-radius: 50%
+
+        +media(720)
+            top: -23px
+            width: 75px
+            height: 75px
+
+
+    
+    
+
+.star
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        right: 0
+        
+        top: -10px
+        width: 40px
+        height: 40px
+        background-size: contain
+        background-repeat: no-repeat
+        background-image: url("../img/price/star.svg")
+
+        +media(720)
+            top: -23px
+            width: 85px
+            height: 85px
+            
+    
+
+.snow
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        right: 0
+        
+        top: -10px
+        width: 40px
+        height: 40px
+        +media(720)
+            top: -23px
+            width: 85px
+            height: 85px
+        background-size: contain
+        background-repeat: no-repeat
+        background-image: url("../img/price/snow.svg")
+    
 
 
 
@@ -246,8 +359,10 @@ ul
         padding-right: 120px
 .left-list
     padding: 10px 10px
-    +media(1280)
+
+    +media(640)
         align-items: flex-start
+    +media(1280)
         padding: 28px 50px
 .left-img    
     left: 15px 
@@ -255,4 +370,5 @@ ul
 .right-img 
     right: 0px
 
-
+.show
+    display: block

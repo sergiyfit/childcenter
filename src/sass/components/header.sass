@@ -32,15 +32,18 @@
             color: #313131
             transition: all 0.5s ease
             &:hover
-                transform: scale(1.1)
                 color: #EA18AA
+                +media(678)
+                    transform: scale(1.1)
 
             &__holder
                 padding: 20px 0
         &__btn
-            margin-top: 5px
+            margin: 5px auto 
             display: none
             +media(678)
+                margin: 0
+                margin-top: 5px
                 display: block
     &__hero
         border-top: 3px solid #FF8B00

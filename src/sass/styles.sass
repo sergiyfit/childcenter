@@ -137,7 +137,7 @@ ul
         +media(678)
             font-size: 24px
     &-nav    
-        display: flex
+        display: flex        
         justify-content: center
         align-items: center
         column-gap: 5px
@@ -158,12 +158,80 @@ ul
             border-color: transparent
 
     &__circle_btn
+        position: relative
         margin: 0 20px
         width: 40px
         height: 40px
         background: #FF8B00
         border: none
         border-radius: 50%
+.arr
+    &-left
+        &::before
+            content: ''
+            position: absolute
+            width: 20px
+            height: 1px
+            left: 10px
+            top: 19px
+            border: 1px solid #0033FF
+            background-color:#0033FF
+        &::after
+            content: ''
+            position: absolute
+            width: 5px
+            height: 5px
+            left: 10px
+            top: 17px
+
+            transform: rotate(45deg)
+            border: 2px solid #0033FF
+            border-right:  none 
+            border-top:  none 
+                
+    &-right
+        &::before
+            content: ''
+            position: absolute
+            width: 20px
+            height: 1px
+            left: 10px
+            top: 19px
+            border: 1px solid #0033FF
+            background-color:#0033FF
+        &::after
+            content: ''
+            position: absolute
+
+            width: 5px
+            height: 5px
+            left: 25px
+            top: 17px
+            transform: rotate(45deg)
+            border: 2px solid #0033FF
+            border-left: none 
+            border-bottom:  none 
+            
+.green
+    background-color: #03CEA4
+    border-color: #03CEA4
+    &:hover
+    background-color: #03CE84   
+.pink
+    background-color: #FF0099
+    &:hover
+    background-color: #FF0079  
+.blue
+    background-color: #0033FF
+    border-color: #0033FF
+    &:hover
+    background-color: #0033CF   
+.yellow
+    background-color: #FFE600
+    border-color: #FFE600
+    &:hover
+    border-color: #FFB600 
+    background-color: #FFB600  
 
 
 

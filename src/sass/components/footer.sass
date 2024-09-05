@@ -23,6 +23,23 @@
         &_container
             justify-content: center
             column-gap: 50px
+        &::before
+            +media(840)
+                width: 100px
+                height: 100px           
+            bottom: 0px
+            top: auto
+            right: auto
+            left: 0
+        &::after
+            +media(840)
+                width: 100px
+                height: 100px
+            // top: calc( 100% - 50px)
+            bottom: 0px
+            top: auto
+
+                
         &_card
             padding: 10px
             box-sizing: border-box

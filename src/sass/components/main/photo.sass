@@ -1,0 +1,75 @@
+/*---------------------------------------------*/
+/*-------------------photo-------------------*/
+/*---------------------------------------------*/
+.main
+    
+    &__photo
+        margin-top: 80px
+        margin-bottom: 50px
+
+        &_btn
+            width: max-content 
+            padding: 8px 6px 6px
+            font-size: 12px
+            +media(640)
+                padding: 10px 30px 8px
+                font-size: 16px
+
+            font-weight: 700
+            background-color: #fff
+            appearance: none
+            &:hover
+                background-color: #fff
+                color: #fff
+
+            &:nth-child(3n+1)
+                color: #0033FF
+                border-color: #0033FF
+                    
+            &:nth-child(3n-1)
+                color: #FF0099
+                border-color: #FF0099
+
+            &:nth-child(3n)
+                color: #03CEA4
+                border-color: #03CEA4
+
+                
+            &_container
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                column-gap: 5px
+                row-gap: 5px
+                margin: 20px 0 17px 
+                +media(640)
+                    row-gap: 10px
+                    column-gap: 10px
+                +media(1280)
+                    column-gap: 50px
+                
+        &_img
+            
+            width: 100%
+            aspect-ratio: 5/4
+
+            border-radius: 20px
+            object-fit: cover
+            object-position: center
+            
+            +media(1280)
+                width: 500px
+                height: 400px
+                border-radius: 50px
+                
+
+            &_container
+                display: flex
+                justify-content: center
+                row-gap: 20px
+                column-gap: 30px
+                overflow: hidden
+                padding: 10px
+                box-sizing: border-box
+
+

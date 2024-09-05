@@ -108,3 +108,43 @@
    
 
 
+.burger
+    width: 40px
+    height: 40px
+    margin: 10px
+    border: 1px solid #FF0099
+    position: relative
+    +media(678)
+        display: none
+
+    span, span::before,span::after
+        position: absolute
+        transform: translate(-50% , -50%)
+        top: 50%
+        left: 50%
+        width: 30px
+        height: 4px
+        border-radius: 2px
+        background-color: #FF0099
+        transition: all 1s ease, width 0.1s ease
+    span::before,span::after
+        content: ''
+    span::before   
+        top: 13px
+    span::after
+        top: -10px  
+
+.burger-close               
+
+    span
+        width: 0
+    span::before,span::after
+        top: 50%
+        left: -15px
+    span::before   
+        transform: rotate(135deg)
+    span::after
+        transform: rotate(225deg)
+        
+.show
+    display: block

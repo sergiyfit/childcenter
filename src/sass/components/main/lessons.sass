@@ -1,0 +1,51 @@
+/*---------------------------------------------*/
+/*-----------------LESSONS---------------------*/
+/*---------------------------------------------*/
+.main
+    
+    &__lessons
+        margin-top: 120px
+        &_header
+            padding: 20px 10px
+        &_container
+            margin: auto
+            width: max-content
+            justify-content: center
+            max-width: 1380px
+            flex-wrap: wrap
+            column-gap: 30px
+        &_card
+            margin-bottom: 45px
+            border-radius: 20px
+            
+            text-align: center
+            box-sizing: border-box
+            padding: 15px 15px
+            width: 100vw
+
+            +media(640)
+                width: 40%
+                border-radius: 40px
+                padding: 25px 25px
+            +media(1280)
+                width: 630px 
+                border-radius: 80px
+                padding: 33px 50px
+
+            img
+                display: block
+                overflow: hidden
+                width: 100%
+                object-fit: cover
+                object-position: center center
+                border-radius: 20px
+                margin-top: 5px
+                aspect-ratio: 53/30
+
+                +media(640)
+                    margin-top: 10px
+                    width: 40%
+                +media(1280)
+                    margin-top: 20px
+                    width: 530px
+                    height: 300px

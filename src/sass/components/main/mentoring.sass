@@ -1,0 +1,47 @@
+/*---------------------------------------------*/
+/*---------------mentoring-------------------*/
+/*---------------------------------------------*/
+.main
+    
+    &__mentoring
+        margin-top: 110px
+        padding: 15px 10px 80px
+        box-sizing: border-box
+
+        &_header
+            margin: 40px auto 35px
+            max-width: 1280px
+            +media(1280)
+                line-height: 59px
+            
+        &_container
+            justify-content: center
+            align-items: center
+            column-gap: 10px
+            +media(640)
+                column-gap: 20px
+            row-gap: 50px
+        &_card
+            padding: 15px 25px
+            border-radius: 20px
+            width: 100%
+            +media(640)
+                padding: 30px 50px
+                border-radius: 50px
+                width: 500px
+            text-align: center
+            background-color: #fff
+            box-sizing: border-box
+
+            img
+                margin-top: 25px
+                border-radius: 20px
+                display: block
+                width: 100%
+                aspect-ratio: 40 / 23
+                object-fit: cover
+                object-position: center
+
+                +media(640)
+                    width: 400px
+                    height: 230px

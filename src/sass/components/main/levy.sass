@@ -1,0 +1,79 @@
+/*---------------------------------------------*/
+/*-------------------levy----------------------*/
+/*---------------------------------------------*/
+.main
+    
+    &__levy
+        margin-top: 60px
+        padding: 58px 10px
+        box-sizing: border-box
+        &_header
+            margin-bottom: 30px
+        &_container
+            margin: auto
+            max-width: max-content
+            column-gap: 20px
+            row-gap: 20px
+            justify-content: center
+            align-items: center
+
+        &_card
+            font-size: 16px
+            line-height: 22px
+            background-color: #fff 
+            border-radius: 20px
+            padding: 20px 15px
+
+            +media(640)
+                padding: 35px 30px
+                width: 40%
+            +media(1280)
+                border-radius: 50px
+                width: 312px
+            
+
+            &_header
+                color: #FF8B00
+                margin: 25px 0 5px
+            &_btn
+                width: 100%
+                margin-top: 15px
+        &_time
+            width: 150px
+            padding: 8px
+            font-size: 16px
+            color: #FFFFFF
+
+        &_text
+            color: #313131
+            margin: 0
+            padding: 0
+
+        strong
+            display: block
+            margin-top: 10px
+            margin-bottom: 5px
+        li
+            display: block
+            padding: 1px
+            padding-left: 25px
+            padding-bottom: 0
+            font-size: 16px
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                display: block
+                width: 4px
+                height: 4px
+                border-radius: 50%
+                top: 10px
+                left: 8px
+                background-color: #000
+
+
+        &_in-month 
+            display: block
+            font-size: 18px !important
+            padding-top: 15px 
+

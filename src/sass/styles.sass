@@ -33,47 +33,13 @@ ul
         flex-direction: row
 
 .milk-background
-    background-image: url("../img/background.png")
+    // background-image: url("../img/background.png")
+    background-image: url("../img/pattern.svg")
+    background-size: 400px
     background-color: #fdf5e2
+    background-repeat: repeat
     box-shadow: 0px 5px 7px rgba(42, 42, 42, 0.1)
 
-.burger
-    width: 40px
-    height: 40px
-    margin: 10px
-    border: 1px solid #FF0099
-    position: relative
-    +media(678)
-        display: none
-
-    span, span::before,span::after
-        position: absolute
-        transform: translate(-50% , -50%)
-        top: 50%
-        left: 50%
-        width: 30px
-        height: 4px
-        border-radius: 2px
-        background-color: #FF0099
-        transition: all 1s ease, width 0.1s ease
-    span::before,span::after
-        content: ''
-    span::before   
-        top: 13px
-    span::after
-        top: -10px  
-
-.burger-close               
-
-    span
-        width: 0
-    span::before,span::after
-        top: 50%
-        left: -15px
-    span::before   
-        transform: rotate(135deg)
-    span::after
-        transform: rotate(225deg)
 
          
 
@@ -130,7 +96,6 @@ ul
             border-bottom: none
         &:hover
             color: #0033FF
-
             
         
     &__huge_text
@@ -166,122 +131,24 @@ ul
             line-height: 29px
         +media(678)
             font-size: 24px
-    &-nav    
-        display: flex        
-        justify-content: center
-        align-items: center
-        column-gap: 5px
-        margin: 10px 0
-        +media(640)
-            column-gap: 10px
-            margin: 25px
-            
-    &-dot
-        width: 15px
-        height: 15px
-        border-radius: 50%
-        box-sizing: border-box
-        border: 1px solid #0033FF
-        
-        &--active
-            background: #FF8B00
-            border-color: transparent
 
-    &__circle_btn
-        position: relative
-        margin: 0 20px
-        width: 40px
-        height: 40px
-        background: #FF8B00
-        border: none
-        border-radius: 50%
-.arr
-    &-left
-        &::before
-            content: ''
-            position: absolute
-            width: 20px
-            height: 1px
-            left: 10px
-            top: 19px
-            border: 1px solid #0033FF
-            background-color:#0033FF
-        &::after
-            content: ''
-            position: absolute
-            width: 5px
-            height: 5px
-            left: 10px
-            top: 17px
-
-            transform: rotate(45deg)
-            border: 2px solid #0033FF
-            border-right:  none 
-            border-top:  none 
-                
-    &-right
-        &::before
-            content: ''
-            position: absolute
-            width: 20px
-            height: 1px
-            left: 10px
-            top: 19px
-            border: 1px solid #0033FF
-            background-color:#0033FF
-        &::after
-            content: ''
-            position: absolute
-
-            width: 5px
-            height: 5px
-            left: 25px
-            top: 17px
-            transform: rotate(45deg)
-            border: 2px solid #0033FF
-            border-left: none 
-            border-bottom:  none 
-            
-.green
-    background-color: #03CEA4
-    border-color: #03CEA4
-    &:hover
-        background-color: #03CE84   
-.pink
-    background-color: #FF0099
-    &:hover
-        background-color: #FF0079  
-.blue
-    background-color: #0033FF
-    border-color: #0033FF
-    &:hover
-        background-color: #0033CF   
-.yellow
-    background-color: #FFE600
-    border-color: #FFE600
-    &:hover
-        border-color: #FFB600 
-        background-color: #FFB600  
 
 .diamond
     position: relative
     &::before
         content: ''
         position: absolute
-        right: 0
-        
-        top: -10px
-        width: 40px
-        height: 40px
+        right: 0        
+        top: -23px
+        width: 50px
+        height: 50px
         background-size: contain
         background-repeat: no-repeat
         background-image: url("../img/price/diamond.svg")
 
         +media(720)
-            top: -23px
             width: 85px
-            height: 85px
-    
+            height: 85px    
 
 .circle
     position: relative
@@ -290,7 +157,7 @@ ul
         position: absolute
         right: 0
         
-        top: -10px
+        top: -23px
         width: 35px
         height: 35px
 
@@ -298,33 +165,27 @@ ul
         border-radius: 50%
 
         +media(720)
-            top: -23px
             width: 75px
             height: 75px
 
 
-    
-    
-
 .star
     position: relative
-    &::before
+    &::after
         content: ''
         position: absolute
         right: 0
         
-        top: -10px
-        width: 40px
-        height: 40px
+        top: -23px
+        width: 50px
+        height: 50px
         background-size: contain
         background-repeat: no-repeat
         background-image: url("../img/price/star.svg")
 
         +media(720)
-            top: -23px
             width: 85px
-            height: 85px
-            
+            height: 85px            
     
 
 .snow
@@ -334,11 +195,10 @@ ul
         position: absolute
         right: 0
         
-        top: -10px
-        width: 40px
-        height: 40px
+        top: -23px
+        width: 50px
+        height: 50px
         +media(720)
-            top: -23px
             width: 85px
             height: 85px
         background-size: contain
@@ -346,29 +206,6 @@ ul
         background-image: url("../img/price/snow.svg")
     
 
-
-
 @import components/header
 @import components/main
 @import components/footer
-
-
-.left-container
-    +media(1280)
-        padding-left: 10px
-        padding-right: 120px
-.left-list
-    padding: 10px 10px
-
-    +media(640)
-        align-items: flex-start
-    +media(1280)
-        padding: 28px 50px
-.left-img    
-    left: 15px 
-
-.right-img 
-    right: 0px
-
-.show
-    display: block

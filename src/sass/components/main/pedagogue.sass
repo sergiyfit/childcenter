@@ -1,0 +1,71 @@
+.main
+    &__pedagogue
+        justify-content: center
+        align-items: center
+        column-gap: 10px
+        row-gap: 10px
+
+        +media(520)
+            flex-direction: row        
+        
+        &_header
+            margin: 78px auto 22px
+
+
+        &__card
+            padding: 20px 15px
+            box-sizing: border-box
+
+
+            +media(520)
+                border-radius: 20px
+                width: 40%
+            +media(959)
+                width: 22%
+            +media(1439)
+                border-radius: 50px
+                padding: 43px 25px
+                width: 370px
+            
+        &__name
+            width: max-content
+            color: #FFFFFF
+
+            font-size: 16px
+            padding: 8px 30px
+
+            margin-bottom: 20px
+            +media(520)
+                font-size: 14px
+                padding: 5px 20px
+            +media(1439)
+                font-size: 16px
+                padding: 8px 30px
+        &_img
+            margin: 10px auto 
+            display: block
+            width: 100%
+            aspect-ratio: 32/33
+            border-radius: 20px
+            object-fit: cover
+            object-position: top center
+
+
+        &_text 
+            font-weight: 500
+            font-size: 16px
+            line-height: 22px
+            vertical-align: center
+            height: 39px
+            +media(520)
+                font-size: 10px
+            +media(670)
+                font-size: 13px
+            +media(959)
+                font-size: 10px
+            +media(1439)
+                font-size: 16px
+
+
+
+ 

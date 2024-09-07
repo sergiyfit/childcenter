@@ -16,15 +16,18 @@
             row-gap: 20px
             justify-content: center
             align-items: center
+            align-content: stretch
+            +media(1280)
+                flex-wrap: nowrap
 
         &_card
             font-size: 16px
+            
             line-height: 22px
             background-color: #fff 
             border-radius: 20px
             padding: 20px 15px
-
-            +media(640)
+            +media(720)
                 padding: 35px 30px
                 width: 40%
             +media(1280)

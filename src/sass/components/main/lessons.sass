@@ -9,10 +9,11 @@
             padding: 20px 10px
         &_container
             margin: auto
-            width: max-content
+            // width: max-content
             justify-content: center
             max-width: 1380px
             flex-wrap: wrap
+            flex-direction: row
             column-gap: 30px
         &_card
             margin-bottom: 45px
@@ -32,6 +33,14 @@
                 border-radius: 80px
                 padding: 33px 50px
 
+            h3
+                +media(480)
+                    font-size: 13px
+                +media(720)
+                    font-size: 16px
+                +media(1280)
+                    font-size: 24px
+
             img
                 display: block
                 overflow: hidden
@@ -44,7 +53,6 @@
 
                 +media(640)
                     margin-top: 10px
-                    width: 40%
                 +media(1280)
                     margin-top: 20px
                     width: 530px

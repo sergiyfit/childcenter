@@ -136,6 +136,7 @@ ul
 .diamond
     position: relative
     &::before
+        z-index: 1
         content: ''
         position: absolute
         right: 0        
@@ -144,7 +145,7 @@ ul
         height: 50px
         background-size: contain
         background-repeat: no-repeat
-        background-image: url("../img/price/diamond.svg")
+        background-image: url("../img/levy/diamond.svg")
 
         +media(720)
             width: 85px
@@ -153,6 +154,7 @@ ul
 .circle
     position: relative
     &::before
+        z-index: 1
         content: ''
         position: absolute
         right: 0
@@ -172,6 +174,7 @@ ul
 .star
     position: relative
     &::after
+        z-index: 1
         content: ''
         position: absolute
         right: 0
@@ -181,7 +184,7 @@ ul
         height: 50px
         background-size: contain
         background-repeat: no-repeat
-        background-image: url("../img/price/star.svg")
+        background-image: url("../img/levy/star.svg")
 
         +media(720)
             width: 85px
@@ -191,6 +194,7 @@ ul
 .snow
     position: relative
     &::before
+        z-index: 1
         content: ''
         position: absolute
         right: 0
@@ -203,7 +207,7 @@ ul
             height: 85px
         background-size: contain
         background-repeat: no-repeat
-        background-image: url("../img/price/snow.svg")
+        background-image: url("../img/levy/snow.svg")
     
 
 @import components/header

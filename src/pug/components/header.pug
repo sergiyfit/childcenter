@@ -50,25 +50,26 @@
         }
     ];
 
+mixin printHeader(hasHero)
+    header.header 
+        .header__menu.flex
+            .header__menu__logo
+                img(src="img/header/Logo.svg", alt="Laboratory_malenkih_vihakhidnikiv_Khmalnytskiy")
+                .burger
+                    span
+            nav.header__menu__container 
+                ul.header__menu__elements.flex
+                    for item in menu
+                        li.header__menu__item__holder
+                            a(href=item.url).header__menu__item #{item.name}  
 
-header.header 
-    .header__menu.flex
-        .header__menu__logo
-            img(src="img/header/Logo.svg", alt="Laboratory_malenkih_vihakhidnikiv_Khmalnytskiy")
-            .burger
-                span
-        nav.header__menu__container 
-            ul.header__menu__elements.flex
-                for item in menu
-                    li.header__menu__item__holder
-                        a(href=item.url).header__menu__item #{item.name}  
-
-        a.global__btn.header__menu__btn Записати дитину
-    .header__hero.milk-background
-        img(src="img/header/srtichka.svg", alt="strichka").header__hero-strip
-        h1.global__huge_text.header__hero_header Ваша дитина починає розвиватись тут
-        p.header__hero__text Від немовля до дошкільнятки, більше 9 років співпраці з батьками і дітьми!
-        a.global__btn.header__hero__btn Записати дитину
-        .header__hero_img_container.flex
-            for item in headImage
-                img(src=item.url alt=item.alt).header__hero_img
+            a.global__btn.header__menu__btn Записати дитину
+        if hasHero    
+            .header__hero.milk-background
+                img(src="img/header/srtichka.svg", alt="strichka").header__hero-strip
+                h1.global__huge_text.header__hero_header Ваша дитина починає розвиватись тут
+                p.header__hero__text Від немовля до дошкільнятки, більше 9 років співпраці з батьками і дітьми!
+                a.global__btn.header__hero__btn Записати дитину
+                .header__hero_img_container.flex
+                    for item in headImage
+                        img(src=item.url alt=item.alt).header__hero_img

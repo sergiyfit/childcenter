@@ -1,0 +1,210 @@
+.global
+    &__btn        
+        display: block
+        width: 205px
+        padding: 13.5px
+        height: min-content
+        box-sizing: border-box
+        font-family: 'Balsamiq Sans'
+        font-weight: 700
+        font-size: 14px
+        text-align: center
+        letter-spacing: 0.03em
+        text-transform: uppercase
+        color: #0033FF  
+        background: #FDF5E2
+        border: 3px solid #FF0099
+        border-radius: 100px
+        transition: all 0.5s ease
+
+        &:hover
+            background-color: #FF0099
+            color: #FDF5E2
+            
+
+    &__link        
+        position: relative
+        font-family: 'Balsamiq Sans'
+        font-style: normal
+        font-weight: 700
+        font-size: 16px
+        width: max-content
+        transition: all 0.5s ease
+        color: #FF8B00
+        &::before
+            content: ""
+            position: absolute
+            width: 10px
+            right: -20px
+            top: 11px
+            border: 1px solid #03CEA4
+        &::after            
+            content: ""
+            position: absolute
+            transform: rotate(45deg)
+            width: 4px
+            height: 4px
+            right: -20px
+            top: 9px
+            border: 2px solid #03CEA4
+            border-left: none
+            border-bottom: none
+        &:hover
+            color: #0033FF
+            
+        
+    &__huge_text
+        font-family: 'Balsamiq Sans'
+        font-style: normal
+        font-weight: 700
+        padding: 10px
+        box-sizing: border-box
+        font-size: 24px
+        line-height: 32px
+        +media(480)
+            font-size: 36px
+            line-height: 67px
+        +media(678)
+            font-size: 56px
+        letter-spacing: 0.03em
+        text-transform: uppercase         
+        color:#FF8B00
+        align-self: stretch
+        text-align: center 
+
+    &__middle_text 
+        font-family: 'Balsamiq Sans'
+        font-weight: 700
+        font-size: 16px
+        line-height: 29px
+        letter-spacing: 0.03em
+        text-transform: uppercase
+        color: #0035F7
+
+        +media(480)
+            font-size: 18px
+            line-height: 29px
+        +media(678)
+            font-size: 24px
+
+    &-nav    
+        display: flex        
+        justify-content: center
+        align-items: center
+        column-gap: 5px
+        margin: 10px 0
+        +media(640)
+            column-gap: 10px
+            margin: 25px
+            
+    &-dot
+        width: 15px
+        height: 15px
+        border-radius: 50%
+        box-sizing: border-box
+        border: 1px solid #0033FF
+        
+        &--active
+            background: #FF8B00
+            border-color: transparent
+
+    &__circle_btn
+        position: relative
+        margin: 0 20px
+        width: 40px
+        height: 40px
+        background: #FF8B00
+        border: none
+        border-radius: 50%
+
+.arr
+    &-left
+        &::before
+            content: ''
+            position: absolute
+            width: 17px
+            height: 1px
+            left: 11px
+            top: 19px
+            border: 1px solid #0033FF
+            background-color:#0033FF
+        &::after
+            content: ''
+            position: absolute
+            width: 5px
+            height: 5px
+            left: 12px
+            top: 17px
+
+            transform: rotate(45deg)
+            border: 2px solid #0033FF
+            border-right:  none 
+            border-top:  none 
+                
+    &-right
+        &::before
+            content: ''
+            position: absolute
+            width: 17px
+            height: 1px
+            left: 11px
+            top: 19px
+            border: 1px solid #0033FF
+            background-color:#0033FF
+        &::after
+            content: ''
+            position: absolute
+
+            width: 5px
+            height: 5px
+            left: 22px
+            top: 17px
+            transform: rotate(45deg)
+            border: 2px solid #0033FF
+            border-left: none 
+            border-bottom:  none 
+
+.positive
+    max-width: 1270px
+    width: 100%
+    box-sizing: border-box 
+    margin: auto
+    position: relative
+    padding-left: 10px
+    padding-right: 10px
+    +media(678)
+        padding-right: 20%
+    +media(1280)
+        padding-right: 250px
+    &_box
+        width: 100%
+        border-radius: 20px
+        box-sizing: border-box 
+        padding: 10px 10px 30px
+        +media(640)
+            border-radius: 50px
+        +media(680)
+            padding: 30px 30px 30px
+        +media(1280)
+            padding: 110px 120px 90px
+            width: 1000px
+            border-radius: 150px
+
+    &_image
+        position: absolute
+        top: 0
+        right: 0
+        width: 50%
+        display: none
+        +media(640)
+            display: block
+        +media(790)
+            width: 400px
+        +media(1000)
+            width: 500px
+        +media(1280)            
+            width: 655px
+        +media(1349)            
+            top: -40px
+            right: -25px
+        

@@ -12,7 +12,10 @@ html(lang="en")
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     body
     
+        include components/mixins 
+
         include components/header 
+        +printHeader(true)
         include components/main 
         include components/footer 
 

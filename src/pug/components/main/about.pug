@@ -1,32 +1,41 @@
+- 
+    let aboutArray = [
+        {
+            image:"img/about/comfort_dlya_ditiny.png",
+            alt:"comfort_dlya_ditiny",
+            header:"Комфортний простір для дитини ",
+            items:[
+                "Ігровий майданчик",
+                "Красиві та затишні приміщення",
+                "Якісні іграшки та навчальні матеріали",
+                "5-разове харчування"
+            ]
+        },
+        
+        {
+            image:"img/about/fizicni_vpravi_dlya_ditiny.png",
+            alt:"fizicni_vpravi_dlya_ditiny",
+            header:"Комфортний простір для дитини",
+            items:[
+                "Заняття з фізкультури", 
+                "Прогулянки на свіжому повітрі",
+                "Хореографія",
+                "Спортивні розваги та квести"
+            ]
+        } ,
+        {
+            image:"img/about/intelektualni_navichky_dytyny.png",
+            alt:"intelektualni_navichky_dytyny",
+            header:"інтелектуальний розвиток",
+            items:[
+                "Образотворче мистецтво та музика",
+                "Математика, логіка та читання",
+                "Англійська мова",
+                "Пізнаємо світ та розвиток мовлення"
+            ]
+        }
+    ];
+
 .main__about.milk-background 
     h2.global__huge_text.main__about_header Про нас
-    .main__about_box.flex
-        img(src="img/about/comfort_dlya_ditiny.png", alt="comfort_dlya_ditiny").left-img 
-        .main__about_text 
-            ul.main__about_list
-                h3.global__middle_text.main__about_list_header Комфортний простір для дитини 
-                li.main__about_list_item Ігровий майданчик 
-                li.main__about_list_item Красиві та затишні приміщення
-                li.main__about_list_item Якісні іграшки та навчальні матеріали
-                li.main__about_list_item 5-разове харчування
-                a.global__btn.main__about__btn Записати дитину
-    .main__about_box.flex.left-container
-        .main__about_text.left-list  
-            ul.main__about_list
-                h3.global__middle_text.main__about_list_header Гармонійний фізичний розвиток
-                li.main__about_list_item Заняття з фізкультури
-                li.main__about_list_item Прогулянки на свіжому повітрі
-                li.main__about_list_item Хореографія
-                li.main__about_list_item Спортивні розваги та квести
-                a.global__btn.main__about__btn Записати дитину
-        img(src="img/about/fizicni_vpravi_dlya_ditiny.png", alt="fizicni_vpravi_dlya_ditiny").right-img 
-    .main__about_box.flex
-        img(src="img/about/intelektualni_navichky_dytyny.png", alt="intelektualni_navichky_dytyny").left-img
-        .main__about_text
-            ul.main__about_list
-                h3.global__middle_text.main__about_list_header інтелектуальний розвиток
-                li.main__about_list_item Образотворче мистецтво та музика
-                li.main__about_list_item Математика, логіка та читання
-                li.main__about_list_item Англійська мова
-                li.main__about_list_item Пізнаємо світ та розвиток мовлення
-                a.global__btn.main__about__btn Записати дитину
+    +printListsWithImage(aboutArray, "about")

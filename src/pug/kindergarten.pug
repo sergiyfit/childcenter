@@ -1,0 +1,15 @@
+html(lang="en")
+    head
+        include components/head 
+    body    
+        include components/mixins 
+        include components/header 
+        +printHeader(false)
+        include components/pages/kindergarten/afterheader
+        //- include components/pages/kindergarten/lessons
+        //- include components/pages/kindergarten/programs
+        //- include components/pages/kindergarten/questions
+        include components/footer 
+        +printFooter(false)
+
+        script(src="js/scripts.js") 

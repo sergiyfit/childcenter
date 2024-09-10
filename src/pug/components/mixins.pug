@@ -1,5 +1,10 @@
-mixin printListsWithImage(arr, nameClass)
+//- Print clouded blocks with medium image 
+//- Міксин який допомагає розібрати массив з зображеннями - хмаринками 
+mixin printListsWithImage(arr, nameClass, leftToRight)
     - let index = 0
+    if leftToRight
+        - index = 1
+        
     for list in arr
         - let leftContainer = "" 
         - let leftClass = "" 
@@ -7,19 +12,26 @@ mixin printListsWithImage(arr, nameClass)
             - leftContainer = " left-container"
             - leftClass = " left-list"
 
-        div(class=("main__"+nameClass+"_box" +leftContainer)).flex
+        div(class=("main__"+nameClass+"_box img-block__box" +leftContainer)).flex
             if index % 2 == 1            
-                img(src=list.image, alt=list.alt).left-img 
-            div(class=("main__"+nameClass+"_text" + leftClass))
-                ul(class=("main__"+nameClass+"_list"))
-                    h3(class=("main__"+nameClass+"_list_header")).global__middle_text #{list.header}
-                    for item in list.items
-                        li(class=("main__"+nameClass+"_list_item")) #{item}
-                    a(class=("main__"+nameClass+"__btn")).global__btn Записати дитину
+                img(src=list.image, alt=list.alt).left-img.img-block__image 
+            div(class=("main__"+nameClass+"_text" + leftClass)).img-block__list
+                div(class=("main__"+nameClass+"_list")).img-block__content
+                    h3(class=("main__"+nameClass+"_list_header")).global__middle_text.img-block__list_header #{list.header}
+                    
+                    if list.items.length == 1
+                        p(class=("main__"+nameClass+"_list_text"))  #{list.items[0]}
+                    else 
+                        ul
+                            for item in list.items
+                                li(class=("main__"+nameClass+"_list_item")).img-block__list_item #{item}
+                    a(class=("main__"+nameClass+"__btn")).global__btn.img-block__btn Записати дитину
             if index % 2 == 0            
-                img(src=list.image, alt=list.alt).right-img 
-            div(class=("main__"+nameClass+"_btn"))
+                img(src=list.image, alt=list.alt).right-img.img-block__image  
 
+
+
+    
 //- mixin printPositive(content, image, nameClass) 
 //-     div(class=("main__"+nameClass+"_container")).positive
 //-     div(class=("main__"+nameClass+"_box")).positive.milk-background 

@@ -1,41 +1,67 @@
-- let lessonList = [
-    [
-        "Читання",
-        "Математика",
-        "Навколишній світ",
-        "Розвиток мовлення"
-    ],[
-        "Образотворче мистецтво",
-        "Аплікація",
-        "Ліплення",
-        "Лего-конструювання"
-    ]
-
-];
-
-- let lessonCards = [
-    {
-        head:"англійська мова",
-        image:"",
+- 
+    let lessonList = {
+        header:"Розвиваюче заняття відповідно до віку дітей:",
+        img:"img/pages/kindergarten/lessons.png",
         alt:"",
-        timatable:"5 разів на тиждень";
-    },
-    {
-        head:"хореографія",
-        image:"",
-        alt:"",
-        timatable:"2 рази на тиждень";
-    },
-    {
-        head:"музичні заняття",
-        image:"",
-        alt:"",
-        timatable:"2 рази на тиждень";
-    }
-]
+        items: [[
 
-- let groupDetail = [
-    "Для діток, які залишаються на повний день, організовані ліжечка для відпочинку з 13.00 до 15.30 години.",
-    "Для діток віком від 4 до 7 років, які категорично відмовляються від сну, організовано окрему групу з 13:00 до 16:00.",
-    "В цей час для дітей проводиться творче заняття, також відведено час для ігор та прогулянки."
-]
+                    "Читання",
+                    "Математика",
+                    "Навколишній світ",
+                    "Розвиток мовлення"
+                ] , [
+                    "Образотворче мистецтво",
+                    "Аплікація",
+                    "Ліплення",
+                    "Лего-конструювання"
+                ]
+            ]
+        }; 
+
+- 
+    let lessonCardsList = [
+        {
+            head:"англійська мова",
+            image:"img/pages/kindergarten/english.png",
+            alt:"",
+            color: "pink",
+            timetable:"5 разів на тиждень"
+        },
+        {
+            head:"хореографія",
+            image:"img/pages/kindergarten/dancing.png",
+            alt:"",
+            color: "orange",
+            timetable:"2 рази на тиждень"
+        },
+        {
+            head:"музичні заняття",
+            image:"img/pages/kindergarten/music.png",
+            alt:"",
+            color: "green",
+            timetable:"2 рази на тиждень"
+        }
+    ];
+
+- 
+    let groupDetail = {
+        header:"Наповнюваність груп - 12-15 діток у групі",
+        img:"img/pages/kindergarten/group.png",
+        alt:"",
+        items: [
+            "Для діток, які залишаються на повний день, організовані ліжечка для відпочинку з 13.00 до 15.30 години.",
+            "Для діток віком від 4 до 7 років, які категорично відмовляються від сну, організовано окрему групу з 13:00 до 16:00.",
+            "В цей час для дітей проводиться творче заняття, також відведено час для ігор та прогулянки."
+            ]
+        }
+
+.main__kindergarten-lessons.milk-background 
+    h2.global__huge_text.main__kindergarten-lessons_header заняття у нашому садочку
+    +printQuadro(lessonList, "kindergarten-lessons")
+    .main__kindergarten-lessons-card__container.flex
+        for lessonCard in lessonCardsList
+            .main__kindergarten-lessons-card
+                h3.global__middle_text.main__kindergarten-lessons-card__header #{lessonCard.head}
+                img(src=lessonCard.image alt=lessonCard.alt).main__kindergarten-lessons-card__image
+                div(class=lessonCard.color).main__kindergarten-lessons-card__time.global__btn.global_smal-btn #{lessonCard.timetable}
+    +printQuadro(groupDetail, "kindergarten-groups")

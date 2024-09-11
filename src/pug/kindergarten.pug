@@ -3,12 +3,15 @@ html(lang="en")
         include components/head 
     body    
         include components/mixins 
+        include components/photo 
+                    
         include components/header 
         +printHeader(false)
-        include components/pages/kindergarten/afterheader
-        //- include components/pages/kindergarten/lessons
-        //- include components/pages/kindergarten/programs
-        //- include components/pages/kindergarten/questions
+        main 
+            include components/pages/kindergarten/afterheader
+            include components/pages/kindergarten/lessons
+            include components/pages/kindergarten/programs
+            include components/pages/kindergarten/questions
         include components/footer 
         +printFooter(false)
 

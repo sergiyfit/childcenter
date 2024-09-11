@@ -24,12 +24,43 @@ mixin printListsWithImage(arr, nameClass, leftToRight)
                     else 
                         ul
                             for item in list.items
-                                li(class=("main__"+nameClass+"_list_item")).img-block__list_item #{item}
+                                li(class=("main__"+nameClass+"_list_item")).img-block__list_item.marker-list #{item}
                     a(class=("main__"+nameClass+"__btn")).global__btn.img-block__btn Записати дитину
             if index % 2 == 0            
                 img(src=list.image, alt=list.alt).right-img.img-block__image  
 
 
+- 
+    let ages = [
+    {
+        img:"img/age/kids.svg",
+        alt:"",
+        text:"маленькі розумники"
+    },
+    {
+        img:"img/age/baby.svg",
+        alt:"",
+        text:"маленькі дослідники"
+    },
+    {
+        img:"img/age/juniors.svg",
+        alt:"",
+        text:"маленькі генії"
+    },
+    {
+        img:"img/age/pre_school.svg",
+        alt:"",
+        text:"pre-school"
+    }
+    
+    ];
+mixin printAge(hasText)
+    .main__age_container.flex 
+        for item in ages 
+            .main__age_item 
+                img(src=item.img, alt=item.alt).main__age_image
+                if hasText==true
+                    h4.global__middle_text.main__age__header #{item.text}
 
     
 //- mixin printPositive(content, image, nameClass) 
@@ -37,3 +68,36 @@ mixin printListsWithImage(arr, nameClass, leftToRight)
 //-     div(class=("main__"+nameClass+"_box")).positive.milk-background 
 //-         #{content}
 //-     img(class=("main__"+nameClass+"_image") src=image.src, alt=image.alt).positive.img
+mixin printQuadro(content, nameClass)
+    div(class=("main__"+nameClass+"_container")).quadro
+
+        img(class=("main__"+nameClass+"_image") src=content.img alt=content.alt).quadro-image
+        div(class=("main__"+nameClass+"_box")).quadro-box 
+            h3(class=("main__"+nameClass+"_header")).global__middle_text.quagro-header #{content.header}
+            if content.items.length == 2
+                div(class=("main__"+nameClass+"list-box")).quadro-list-box
+                    for list in content.items 
+                        ul(class=("main__"+nameClass+"_list")).quadro-list
+                            for item in list
+                                li(class=("main__"+nameClass+"_list-item")).quadro-list-item.marker-list #{item}
+            else 
+                div(class=("main__"+nameClass+"list-box")).quadro-list-box
+                    ul(class=("main__"+nameClass+"_list")).quadro-list
+                        for item in content.items
+                            li(class=("main__"+nameClass+"_list-item")).quadro-list-item.marker-list #{item}          
+            a(class=("main__"+nameClass+"__btn")).global__btn.img-block__btn Записати дитину
+
+mixin printCardsWithFigure(allContent, nameClass)
+    div(class=("main__"+nameClass+"_container")).card-with-fig_container.flex
+        for cardWithFig in allContent
+            div(class=("main__"+nameClass+"_card "+cardWithFig.figure)).card-with-fig.milk-background
+                div(class=("main__"+nameClass+"_sticker "+cardWithFig.color)).global__btn.global_smal-btn.card-with-fig_sticker #{cardWithFig.header}
+                h3(class=("main__"+nameClass+"_header")).global__middle_text.card-with-fig_header #{cardWithFig.title}        
+                if cardWithFig.list == false
+                    for item in cardWithFig.content
+                        p(class=("main__"+nameClass+"_text")).card-with-fig_text #{item}
+                else 
+                    ul(class=("main__"+nameClass+"_list")).card-with-fig_list
+                        for item in cardWithFig.content
+                            li(class=("main__"+nameClass+"_list-item")).card-with-fig_list-item #{item}          
+                a(class=("main__"+nameClass+"__btn")).global__btn.card-with-fig__btn Записати дитину                    

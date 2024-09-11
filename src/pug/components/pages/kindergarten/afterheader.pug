@@ -26,4 +26,24 @@
         }
     ];
 
-+printListsWithImage(itemsKindergarten, "about", true)
+
+.main__kindergarten-page.milk-background 
+    h1.global__huge_text.main__kindergarten-page_header дитячий садок
+    +printListsWithImage(itemsKindergarten, "kindergarten-page", true)
+
+.main__kindergarten-page-graphic
+    h2.global__huge_text.main__kindergarten-page_subheader Графік роботи та умови перебування у дитсадку
+    .positive.main__kindergarten-page-graphic_container.flex
+        .main__kindergarten-page-graphic_box.positive_box.milk-background  
+            h3.main__kindergarten-page-graphic_header.global__middle_text працюємо з понеділка по п'ятницю, крім державних вихідних днів.
+            p.main__kindergarten-page-graphic_text На вибір батьків пропонуємо 3 варіанти відвідвідування садочку:
+            .main__kindergarten-page-graphic__time-container.flex
+                .main__kindergarten-page-graphic__time.global__btn.global_smal-btn.green 8:00-13:00
+                .main__kindergarten-page-graphic__time.global__btn.global_smal-btn.orange 8:00-19:00
+                .main__kindergarten-page-graphic__time.global__btn.global_smal-btn.pink 8:00-17:00
+            
+        img.main__kindergarten-page-graphic_image.positive_image.left-img(src="img/pages/kindergarten/graphic.png", alt="kindergarten_Ukraine")
+
+.main__kindergarten-page-age.milk-background 
+    h2.global__huge_text.main__kindergarten-page-age_header працює 4 вікові групи:
+    +printAge(false)

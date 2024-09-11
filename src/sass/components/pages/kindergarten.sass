@@ -1,0 +1,223 @@
+.main__kindergarten
+    &-page
+        border-top: $border-top-orange-line
+        padding-top: 35px
+        padding-bottom: 20px
+        &_header
+            color: $global-blue
+            padding: 25px 10px
+        &_box:last-child .img-block__content
+            +media(1280)
+                max-width: 550px
+            
+        &_text
+            +media(1280)
+                padding: 28px 45px
+        &_list_header
+            color: $global-orange
+            +media(928)
+                margin: 80px 0 15px
+        &_box:last-child &_list_header
+            +media(928)
+                margin: 55px 0 15px
+        &_box:last-child &_list_text
+            max-width: 500px
+        &__btn
+            +media(928)
+                margin: 35px 0 75px
+        &_box:last-child &__btn 
+            +media(928)
+                margin: 33px 0 70px      
+        /*---------------------------------------------------------*/
+        /*-------------------Card with huge image------------------*/
+        /*---------------------------------------------------------*/
+        &_subheader
+            max-width: 1300px
+            text-align: center
+            margin: 40px auto
+        
+        &-graphic
+            padding-top: 38px
+            padding-bottom: 135px
+
+            &_container
+                +media(678)
+                    padding-right: 0
+                    padding-left: 20%
+                +media(1280)
+                    padding-right: 0
+                    padding-left: 250px
+            &_box
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                +media(640)
+                    border-radius: 50px
+                +media(680)
+                    padding: 30px 30px 30px
+                +media(1280)
+                    padding: 110px 30px 90px
+                    border-radius: 150px
+                +media(1440)
+                    width: 1200px
+                    padding: 95px 15px 90px
+
+
+            &_header
+                color: $global-blue
+                width: 55%
+                padding: 20px 0 10px
+                +media(1440)
+                    padding: 50px 0 40px
+                    width: 575px
+
+            &_text
+                font-family: 'Open Sans'
+                font-style: normal
+                font-weight: 500
+                font-size: 18px
+                line-height: 23px
+                width: 55%
+                +media(1440)
+                    width: 575px
+
+            &__time
+                color: white
+                padding: 10px
+                width: 150px
+                margin-right: 10px 
+
+                &:hover
+                    color: white
+                &-container
+                    width: 55%
+                    padding: 20px 0
+                    +media(1440)
+                        padding: 44px 0 40px
+                        width: 575px
+            &_image
+                //
+
+                +media(1440)
+                    left: -5px
+        /*------------------------------------*/
+        &-age
+            padding: 45px 0 60px 
+            &_header
+                padding: 20px 0   
+            .main__age_container
+                +media(1280)
+                    column-gap: 125px
+    &-lessons
+        margin-top: 100px
+        padding: 30px 0 70px
+        &_header
+            padding: 20px 0 35px
+        &__btn
+            +media(928)
+                margin: 17px 0
+        /*----------------------------------------*/
+        /*---------------- 3 cards ---------------*/
+        /*----------------------------------------*/
+        &-card
+            position: relative
+            background-color: #fff
+            border-radius: 20px
+            max-width: 33%
+            box-sizing: border-box
+            padding: 20px 10px
+
+            +media(1280)
+                padding: 30px 50px 60px
+                border-radius: 50px
+
+            &__container
+                display: flex
+                flex-wrap: nowrap
+                justify-content: center
+                align-items: center
+                flex-direction: column
+                column-gap: 10px
+                margin: 55px auto 
+                max-width: 1540px
+
+                +media(640)
+                    flex-direction: row
+                     
+            &__header
+                text-align: center
+                margin-bottom: 20px
+            &__image
+                width: 100%    
+            &__time
+                position: absolute
+                transform: translateX(-50%)
+                left: 50%
+                color: #fff
+                bottom: 40px
+                height: 45px
+                width: 230px
+                font-family: 'Balsamiq Sans'
+                font-style: normal
+                font-weight: 700
+                font-size: 16px
+    &-groups
+
+        &_container
+            box-shadow: $global-shadow
+            +media(640)
+                flex-direction: row
+            +media(1240)
+                padding: 30px 30px 30px
+            +media(1580)
+                padding: 60px 115px 50px
+        &_box
+            +media(640)
+            padding-left: 30px
+            +media(1580)
+                padding-left: 50px
+        &_list
+            margin-top: 30px
+            &-item
+                margin-top: 15px
+        &__btn
+            margin: 15px 0
+            +media(928)
+                margin: 17px 0
+
+    /*-----------------------------------------*/
+    /*----------------Porgrams-----------------*/
+    /*-----------------------------------------*/
+    &-programs
+        padding-bottom: 90px
+        &_header
+            margin-top: 70px   
+            margin-bottom: 30px   
+
+
+    /*-----------------------------------------*/
+    /*----------------Questios-----------------*/
+    /*-----------------------------------------*/
+    &-questions
+        padding: 30px 0
+        //
+        &_header  
+            padding: 15px 0 15px           
+            +media(928)
+                padding: 35px 0 5px
+        &_container 
+            //
+        &-item 
+            position: relative
+            &_text
+                //
+            &_answer
+                //
+            &_button
+                &::before
+                    content: ''
+                    position: absolute
+                &::after
+                    content: ''
+                    position: absolute
+                        

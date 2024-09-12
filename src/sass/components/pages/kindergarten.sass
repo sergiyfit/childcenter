@@ -199,25 +199,76 @@
     /*----------------Questios-----------------*/
     /*-----------------------------------------*/
     &-questions
-        padding: 30px 0
+        padding: 30px 0 45px
+        margin-bottom: 105px 
         //
         &_header  
             padding: 15px 0 15px           
             +media(928)
-                padding: 35px 0 5px
+                padding: 35px 0 15px
         &_container 
-            //
+            padding: 10px
+            box-sizing: border-box
+
         &-item 
             position: relative
+            padding: 35px 45px 36px
+            border-radius: 50px
+            box-sizing: border-box
+            margin: 10px auto
+            max-width: 1020px
+            background-color: #fff
             &_text
-                //
+                color: $global-black
+                
             &_answer
-                //
+                opacity: 0
+                font-size: 0px
+                margin-top: 0px 
+                &-show
+                    opacity: 1
+                    margin-top: 10px 
+                    font-family: 'Open Sans'
+                    font-style: normal
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 23px
+
             &_button
+                position: absolute
+                transform: translate(50%,-50%)
+                top: 50%
+                right: 65px
+                border-radius: 50%
+                width: 45px
+                height: 45px
+                border: 3px solid $global-pink
+                background-color: $global-milk
+
+                &:hover 
+                    background-color: #fff
+                /*---------vertical-line----------*/
                 &::before
                     content: ''
                     position: absolute
+                    transform: translate(50%,-50%)
+                    top: 50%
+                    right: 22px
+                    width: 17px
+                    height: 2px
+                    background-color: $global-green
+
+
+                /*---------horizontal-line----------*/
                 &::after
                     content: ''
                     position: absolute
+                    transform: translate(50%,-50%)
+                    top: 50%
+                    right: 21px
+                    width: 2px
+                    height: 16px
+                    background-color: $global-green
+
+
                         

@@ -1,0 +1,172 @@
+.main__course
+    &-page
+        padding-top: 30px
+        padding-bottom: 25px
+        &_header
+            color: $global-blue
+            margin: 25px 0 35px
+        //
+        &_list
+            +media(1280)
+                margin: 40px 80px 
+            &_header
+                color: $global-orange
+                +media(928)
+                    margin-bottom:15px 
+        &__btn
+            +media(928)
+                margin: 20px 0 45px
+
+        /*----------------------------------*/
+        /*---------INFO-KURS----------------*/
+        /*----------------------------------*/
+
+        &-info
+            padding-top: 130px
+            padding-bottom: 150px
+
+            &_container
+                +media(678)
+                    padding-right: 0
+                    padding-left: 20%
+                +media(1280)
+                    padding-right: 0
+                    padding-left: 250px
+            &_box
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                +media(640)
+                    border-radius: 50px
+                +media(680)
+                    padding: 30px 30px 30px
+                +media(1280)
+                    padding: 110px 30px 90px
+                    border-radius: 150px
+                +media(1440)
+                    width: 1200px
+                    padding: 85px 0px 90px
+
+
+            &_header
+                color: $global-blue
+                width: 55%
+                padding: 20px 0 10px
+                +media(1440)
+                    padding: 50px 0 25px
+                    width: 575px
+
+            &_list
+                font-family: 'Open Sans'
+                font-style: normal
+                font-weight: 500
+                font-size: 18px
+                line-height: 23px
+                width: 55%
+                +media(1440)
+                    width: 575px
+          
+            &_image
+                //
+                +media(1440)
+                    left: -5px
+        &_btn
+            width: 260px
+            +media(928)
+                margin: 30px 0 30px            
+        /*----------------------------------*/
+        /*---------LESSONS-KURS-------------*/
+        /*----------------------------------*/
+    &-lessons
+        padding: 40px 10px 60px
+        margin-bottom: 100px
+        box-sizing: border-box
+        &_header
+            padding: 20px 0 40px
+        &-container
+            display: flex
+            flex-wrap: wrap
+            column-gap: 20px
+            row-gap: 35px
+            justify-content: space-between
+            align-items: stretch
+            margin: 0 auto
+            max-width: 1560px
+            padding: 0 10px
+            box-sizing: border-box
+        &-card
+            position: relative
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            padding: 40px
+            background-color: #fff
+            box-sizing: border-box
+            border-radius: 40px
+            +media(640)
+                width: calc( 50% - 40px )
+                border-radius: 30px
+                padding: 20px
+            +media(928)
+                width: calc( 33% - 20px )
+                border-radius: 20px
+                padding: 20px
+            +media(1440)
+                width: calc( 25% - 16px )
+                border-radius: 50px
+                padding: 70px 20px 55px
+            &__header
+                display: flex
+                align-items: center
+                justify-content: center
+                position: absolute
+                text-align: center
+                transform: translateX(-50%)
+                top: 25px
+                height: 60px
+                left: 50%
+                width: 83%
+            &__image
+                margin: 25px 30px 0px 
+                display: block
+                aspect-ratio: 23/25.5
+                object-fit: cover
+                object-position: top center
+                border-radius: 20px
+    /*------------------------------------------*/
+    /*----------------RESULTS-------------------*/
+    /*------------------------------------------*/
+    &-result
+        padding-top: 40px
+        padding-bottom: 15px
+        &_header-huge
+            margin: 10px 0 20px
+
+        &_header
+            margin-top: 15px
+            margin-bottom: 35px
+            /*------------Quadro blocks-------------*/
+        &_container
+            margin-bottom: 50px
+            flex-direction: row
+            .marker-list
+                margin-bottom: 22px
+                &:last-child
+                    margin-bottom: 0px
+        &__btn
+            +media(928)
+                margin: 40px 0 15px
+        &_image
+            +media(640)
+                width: 60%
+
+    /*-----------------------------------*/
+    /*----------INVESTIGATION------------*/
+    /*-----------------------------------*/
+    &-investigation
+        padding-top: 80px
+        padding-bottom: 40px
+        &_header
+            padding-bottom: 35px
+        .main__photo_header
+            padding-top: 52px

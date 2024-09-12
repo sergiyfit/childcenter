@@ -1,0 +1,17 @@
+html(lang="en")
+    head
+        include components/head 
+    body    
+        include components/mixins 
+        include components/photo 
+                    
+        include components/header 
+        +printHeader(false)
+        main 
+            include components/pages/course/head
+            include components/pages/course/lessons
+            include components/pages/course/results
+        include components/footer 
+        +printFooter(false)
+
+        script(src="js/scripts.js") 

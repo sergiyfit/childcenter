@@ -1,16 +1,32 @@
 -
     let itemsCourse = [
         {
-            image:"img/pages/prepare/.png",
+            image:"img/pages/course/mother-kids.png",
             alt:"",
             header:"Як проходить заняття?",
             items:[
                 "Заняття з курсу «Мама + малюк» складається із блоків, кожен з яких триває близько 5 хвилин. Вправи за столом чергуються з іграми на килимі, музичними та динамічними паузами. Кожна дитина займається разом з мамою або іншим дорослим (татом, нянею, бабусею та ін.). Курс розрахований на 10 місяців навчання."
                 ]
         }]
-- courseHuge = [
-    "Заняття проводяться двічі на тиждень",
-    "Тривалість заняття - 50хв",
-    "Кількість дітей у групі – 8-10",
-    "10 місяців навчання"
-]
+- 
+    let courseHuge = [
+        "Заняття проводяться двічі на тиждень",
+        "Тривалість заняття - 50хв",
+        "Кількість дітей у групі - 6 - 8"
+    ]
+
+
+.main__course-page.milk-background 
+    h1.global__huge_text.main__course-page_header Курс «Мама + Малюк»
+    +printListsWithImage(itemsCourse, "course-page", true)
+
+.main__course-page-info   
+    .positive.main__course-page-info_container.flex
+        .main__course-page-info_box.positive_box.milk-background  
+            h3.main__course-page-info_header.global__middle_text Інформація про курс:
+            ul.main__course-page-info_list
+                for courseItem in courseHuge
+                    li.main__course-page-info_list-item.marker-list #{courseItem}
+                a.global__btn.main__course-page_btn Записати дитину
+            
+        img.main__course-page-info_image.positive_image.left-img(src="img/pages/course/mother-kids-kurs.png", alt="course_Ukraine")

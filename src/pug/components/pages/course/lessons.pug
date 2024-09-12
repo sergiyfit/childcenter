@@ -1,62 +1,72 @@
-- courseCard = [
-    {
-        header:"малюють",
-        image:"",
-        alt:""   
-    },
-    {
-        header:"ліплять з пластиліну",
-        image:"",
-        alt:""   
-    },
-    {
-        header:"роблять аплікації",
-        image:"",
-        alt:""   
-    },
-    {
-        header:"вивчають кольори",
-        image:"",
-        alt:""   
-    },
-    {
-        header:"виконують вправи на логіку",
-        image:"",
-        alt:""   
-    },
-    {
-        header:"вивчають щось цікаве",
-        image:"",
-        alt:""   
-    },
-    {
-        header:"грають з сипучими матеріалами",
-        image:"",
-        alt:""   
-    },
-    {
-        header:"грають з водичкою",
-        image:"",
-        alt:""   
-    },
-    {
-        header:"грають з кінетичним піском",
-        image:"",
-        alt:""   
-    },
-    {
-        header:"розвивають дрібну моторику",
-        image:"",
-        alt:""   
-    },
-    {
-        header:"вчаться рахувати",
-        image:"",
-        alt:""   
-    },
-    {
-        header:"проводять досліди",
-        image:"",
-        alt:""   
-    }
-]
+- 
+    let courseCards = [
+        {
+            header:"малюють",
+            image:"img/pages/course/kids-draw.png",
+            alt:""   
+        },
+        {
+            header:"ліплять з пластиліну",
+            image:"img/pages/course/kids-sticky.png",
+            alt:""   
+        },
+        {
+            header:"роблять аплікації",
+            image:"img/pages/course/kids-origami.png",
+            alt:""   
+        },
+        {
+            header:"вивчають кольори",
+            image:"img/pages/course/kids-color.png",
+            alt:""   
+        },
+        {
+            header:"виконують вправи на логіку",
+            image:"img/pages/course/kids-games.png",
+            alt:""   
+        },
+        {
+            header:"вивчають щось цікаве",
+            image:"img/pages/course/kids-interesting.png",
+            alt:""   
+        },
+        {
+            header:"грають з сипучими матеріалами",
+            image:"img/pages/course/kids-play-sand.png",
+            alt:""   
+        },
+        {
+            header:"грають з водичкою",
+            image:"img/pages/course/kids-water-play.png",
+            alt:""   
+        },
+        {
+            header:"грають з кінетичним піском",
+            image:"img/pages/course/kids-kinetic.png",
+            alt:""   
+        },
+        {
+            header:"розвивають дрібну моторику",
+            image:"img/pages/course/kids-motoric.png",
+            alt:""   
+        },
+        {
+            header:"вчаться рахувати",
+            image:"img/pages/course/kids-count.png",
+            alt:""   
+        },
+        {
+            header:"проводять досліди",
+            image:"img/pages/course/kids-investigrate.png",
+            alt:""   
+        }
+    ]
+
+.main__course-lessons.milk-background 
+    h2.global__huge_text.main__course-lessons_header 
+        span на заняттях діти:
+    .main__course-lessons-container
+        for courseCard in courseCards
+            .main__course-lessons-card
+                h3.main__course-lessons-card__header.global__middle_text #{courseCard.header}
+                img(src=courseCard.image alt=courseCard.alt).main__course-lessons-card__image

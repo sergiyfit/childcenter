@@ -1,7 +1,7 @@
 -
     let itemsPrepare = [
         {
-            image:"img/pages/prepare/.png",
+            image:"img/pages/prepare/exparience.png",
             alt:"",
             header:"Наявність досвіду читання – одна з головних умов успішного навчання у школі.",
             items:[
@@ -9,7 +9,7 @@
                 ]
         },
         {
-            image:"img/pages/prepare/.png",
+            image:"img/pages/prepare/math.png",
             alt:"",
             header:"На заняттях з математики ми використовуємо програму NUMICON.",
             items:[
@@ -17,7 +17,7 @@
                 ]
         },
         {
-            image:"img/pages/prepare/.png",
+            image:"img/pages/prepare/writing.png",
             alt:"",
             header:"Важливою частиною підготовчої програми до школи є «Підготовка руки до письма»",
             items:[
@@ -25,7 +25,7 @@
                 ]
         },
         {
-            image:"img/pages/prepare/.png",
+            image:"img/pages/prepare/logic.png",
             alt:"",
             header:"Логіка відіграє ключову роль у розвитку критичного мислення.",
             items:[
@@ -33,3 +33,25 @@
                 ]
         }
         ];
+
+- 
+    let successList = [
+        "Заняття проводяться двічі на тиждень",
+        "Тривалість заняття - 50хв",
+        "Кількість дітей у групі – 8-10",
+        "10 місяців навчання"
+    ];
+
+.main__prepare-page.milk-background 
+    h1.global__huge_text.main__prepare-page_header підготовка до школи
+    +printListsWithImage(itemsPrepare, "prepare-page", true)
+
+.main__prepare-page-success  
+    .positive.main__prepare-page-success_container.flex
+        .main__prepare-page-success_box.positive_box.milk-background  
+            h3.main__prepare-page-success_header.global__middle_text Успішність малюка у школі багато в чому залежить від рівня підготовки до школи.
+            ul.main__prepare-page-success_list 
+                for item in successList
+                    li.main__prepare-page-success_list-item.marker-list #{item}
+            a.global__btn.main__prepare-page-success_btn Записати дитину
+        img.main__prepare-page-success_image.positive_image(src="img/pages/prepare/prepare-frame.png", alt="prepare_Ukraine")

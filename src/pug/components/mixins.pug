@@ -73,7 +73,7 @@ mixin printQuadro(content, nameClass)
 
         img(class=("main__"+nameClass+"_image") src=content.img alt=content.alt).quadro-image
         div(class=("main__"+nameClass+"_box")).quadro-box 
-            h3(class=("main__"+nameClass+"_header")).global__middle_text.quagro-header #{content.header}
+            h3(class=("main__"+nameClass+"_header")).global__middle_text.quadro-header #{content.header}
             if content.items.length == 2
                 div(class=("main__"+nameClass+"list-box")).quadro-list-box
                     for list in content.items 

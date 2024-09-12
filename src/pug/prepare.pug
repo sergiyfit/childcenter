@@ -1,0 +1,16 @@
+html(lang="en")
+    head
+        include components/head 
+    body    
+        include components/mixins 
+        include components/photo 
+                    
+        include components/header 
+        +printHeader(false)
+        main 
+            include components/pages/prepare/prepare
+            include components/pages/prepare/result
+        include components/footer 
+        +printFooter(false)
+
+        script(src="js/scripts.js") 

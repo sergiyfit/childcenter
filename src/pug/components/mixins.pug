@@ -103,5 +103,7 @@ mixin printCardsWithFigure(allContent, nameClass)
                 else 
                     ul(class=("main__"+nameClass+"_list")).card-with-fig_list
                         for item in cardWithFig.content
-                            li(class=("main__"+nameClass+"_list-item")).card-with-fig_list-item #{item}          
+                            li(class=("main__"+nameClass+"_list-item")).card-with-fig_list-item #{item}     
+                if cardWithFig.textMore
+                    p(class=("main__"+nameClass+"_text")).card-with-fig_text #{cardWithFig.textMore}    
                 a(class=("main__"+nameClass+"__btn")).global__btn.card-with-fig__btn Записати дитину                    

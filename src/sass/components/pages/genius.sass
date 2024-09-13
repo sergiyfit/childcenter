@@ -1,0 +1,126 @@
+.main__genius
+    &-page        
+        padding-top: 50px
+        padding-bottom: 20px
+        border-top: $border-top-orange-line
+        &_header-main
+            color: $global-blue
+            padding-bottom: 55px
+
+        &_list
+            +media(1280)
+                margin: 55px 40px 60px 80px
+                max-width: 450px   
+                
+            &_header
+                color: $global-orange
+                +media(928)
+                    margin: 25px 0 20px
+
+
+        &__btn
+            +media(928)
+                margin: 20px 0 10px
+
+        &_box:nth-child(3) .img-block__content
+            +media(1280)
+                margin: 30px 10px 0px 20px
+                max-width: 550px  
+
+        &_box:nth-child(3) &_list_header
+            +media(928)
+                margin: 30px 0 46px
+
+        &_box:nth-child(3) &__btn
+            +media(928)
+                margin: 50px 0 45px
+    /**-----------------------------------------**/
+    /**-----------------COURSE------------------**/
+    /**-----------------------------------------**/
+    &-course
+        //
+        padding-top: 80px
+        +media(1540)
+            max-width: 1580px
+            margin: auto
+        &_header
+            margin-bottom: 25px
+
+        &-card
+            &_card
+                padding-bottom: 110px
+                margin-bottom: 35px 
+                +media(640)
+                    width: 45%
+                +media(1240)
+                    width: 33%
+                +media(1580)
+                    max-width: 500px 
+                    width: 500px
+            &_text
+                +media(1580)                    
+                    width: 430px
+
+    /*----------------------------------------*/
+    /*----------BLOCK WITH HUGE IMG-----------*/
+    /*----------------------------------------*/
+    &-info
+        padding-top: 80px
+        padding-bottom: 55px
+
+        &_container
+            +media(678)
+                padding-right: 0
+                padding-left: 20%
+            +media(1280)
+                padding-right: 0
+                padding-left: 250px
+        &_box
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            +media(640)
+                border-radius: 50px
+            +media(680)
+                padding: 30px 30px 30px
+            +media(1280)
+                padding: 110px 30px 90px
+                border-radius: 150px
+            +media(1440)
+                width: 1200px
+                padding: 75px 0px 110px
+
+
+        &_header
+            color: $global-blue
+            width: 55%
+            padding: 20px 0 10px
+            +media(1440)
+                padding: 50px 60px 20px
+                width: 510px
+
+        &_text
+            font-family: 'Open Sans'
+            font-style: normal
+            font-weight: 500
+            font-size: 18px
+            line-height: 23px
+            width: 55%
+            +media(1440)
+                padding: 0 60px
+                width: 510px
+        &_btn
+            margin-top: 20px
+            width: 250px
+        &_image
+            //
+            +media(1440)
+                left: -5px    
+    &_btn
+        width: 260px
+        +media(928)
+            margin: 30px 0 30px        
+
+                
+    &-photoalbum
+        margin-bottom: 100px    

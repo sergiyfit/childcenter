@@ -1,0 +1,15 @@
+html(lang="en")
+    head
+        include components/head 
+    body    
+        include components/mixins 
+        include components/photo 
+                    
+        include components/header 
+        +printHeader(false)
+        main 
+            include components/pages/genius/genius
+        include components/footer 
+        +printFooter(false)
+
+        script(src="js/scripts.js") 

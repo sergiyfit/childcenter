@@ -1,0 +1,76 @@
+-
+    let itemsArt = [
+        {
+            image:"img/pages/art/art-head.png",
+            alt:"",
+            header:"Ваша дитина хоче малювати? Давайте її підтримаємо! ",
+            items:[
+                "Запрошуємо на творчі заняття! ",
+                "Заняття проводять талановиті викладачі, які люблять свою роботу та мають безліч ідей для творчості. ", 
+                "Заняття проходять 3 р. на тиждень у форматі майстер-класів по 60 хв."
+                ]
+        }
+    ];
+
+
+- 
+    let artCards = [
+        {
+            header:"малюють",
+            image:"img/pages/art/art-draw.png",
+            alt:""   
+        },
+        {
+            header:"ліплять",
+            image:"img/pages/art/art-stick.png",
+            alt:""   
+        },
+        {
+            header:"роблять вироби з глини",
+            image:"img/pages/art/art-clay.png",
+            alt:""   
+        },
+        {
+            header:"виготовляють поробки",
+            image:"img/pages/art/art-handmade.png",
+            alt:""   
+        },
+        {
+            header:"варять мило",
+            image:"img/pages/art/art-soap.png",
+            alt:""   
+        },
+        {
+            header:"розписують печиво",
+            image:"img/pages/art/art-cake.png",
+            alt:""   
+        }
+    ]
+
+
+.main__art-page.milk-background 
+    h1.global__huge_text.main__art-page_header-main творчі майстер - класи
+    +printListsWithImage(itemsArt, "art-page", true, true)
+
+.main__art-graphic    
+    .positive.main__art-graphic_container.flex
+        .main__art-graphic_box.positive_box.milk-background  
+            h3.main__art-graphic_header.global__middle_text запрошуємо діток віком 4-8 років. Розклад:
+            .main__art-graphic__time-container
+                .main__art-graphic__time.global__btn.global_smal-btn.green понеділок 17:00
+                .main__art-graphic__time.global__btn.global_smal-btn.orange вівторок 17:00
+                .main__art-graphic__time.global__btn.global_smal-btn.pink середа 17:00
+                a.global__btn.main__logoped-info_btn Записати дитину    
+        img.main__art-graphic_image.positive_image.left-img(src="img/pages/art/art-hugeIMG.png", alt="art_Ukraine")
+
+
+.main__art-tasks.milk-background 
+    h2.global__huge_text.main__art-tasks_header 
+        span на заняттях діти:
+    .main__art-tasks-container.tiny-container
+        for artCard in artCards
+            .main__art-tasks-card.tiny-card
+                h3.main__art-tasks-card__header.global__middle_text.tiny-card__header #{artCard.header}
+                img(src=artCard.image alt=artCard.alt).main__art-tasks-card__image.tiny-card__image
+.main__art-gallery
+    +printPhotoAlbum

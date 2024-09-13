@@ -1,0 +1,92 @@
+.main__art
+    &-page        
+        padding-top: 45px
+        padding-bottom: 20px
+        border-top: $border-top-orange-line
+        &_header-main
+            color: $global-blue
+            padding-bottom: 55px
+
+        &_list
+            +media(1280)
+                margin: 70px 40px 45px 80px
+                max-width: 450px   
+                
+            &_header
+                color: $global-orange
+                +media(928)
+                    margin: 15px 0 20px
+            &_text:nth-child(4)
+                padding-top: 9px
+
+        &__btn
+            +media(928)
+                margin: 20px 0 25px
+
+
+    /*----------------------------------------*/
+    /*----------BLOCK WITH HUGE IMG-----------*/
+    /*----------------------------------------*/
+    &-graphic
+        padding-top: 140px
+        padding-bottom: 145px
+
+        &_container
+            +media(678)
+                padding-right: 0
+                padding-left: 20%
+            +media(1280)
+                padding-right: 0
+                padding-left: 250px
+        &_box
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            +media(640)
+                border-radius: 50px
+            +media(680)
+                padding: 30px 30px 30px
+            +media(1280)
+                padding: 110px 30px 90px
+                border-radius: 150px
+            +media(1440)
+                width: 1200px
+                padding: 60px 20px 80px
+
+
+        &_header
+            color: $global-blue
+            width: 55%
+            padding: 20px 0 10px
+            +media(1440)
+                padding: 50px 0 10px
+                width: 550px
+
+        &__time
+            color: white
+            padding: 10px
+            width: 190px
+            margin-right: 10px 
+            margin-bottom: 15px 
+
+            &:hover
+                color: white
+            &-container
+                width: 55%
+                padding: 20px 0
+                +media(1440)
+                    padding: 15px 0 10px
+                    width: 550px
+        &_image
+            //
+
+            +media(1440)
+                left: -5px
+
+    &-tasks
+        padding-top: 55px
+        padding-bottom: 65px
+        &_header
+            padding-bottom: 35px
+    &-gallery
+        padding-bottom: 55px

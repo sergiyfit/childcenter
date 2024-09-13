@@ -1,0 +1,76 @@
+-
+    let itemSat = [
+        {
+            image:"img/pages/saturday/sat-head.png",
+            alt:"",
+            header:"Цікава Субота: Вихідні ваших дітей стануть незабутніми!",
+            items:[
+                "Якщо ви шукаєте спосіб провести вихідні з максимальною користю та задоволенням для ваших дітей, \"Цікава Субота\" – це те, що вам потрібно! Щосуботи з 10:00 до 14:00 цей захоплюючий захід стане справжнім святом для дітей. Кожна субота має свою унікальну тематику, що робить кожен раз особливим і незабутнім."
+                ]
+        }
+    ];
+-
+    let theme = [
+        {
+            name: "Піжамна вечірка",
+            image: "img/pages/saturday/sat-party-jams.png",
+            alt: "",
+            info:"Діти можуть прийти у своїх найулюбленіших піжамах і насолодитися комфортною атмосферою, граючи у веселі ігри та роблячи творчі поробки."
+        },
+        {
+            name: "Гавайська вечірка",
+            image: "img/pages/saturday/sat-party-hawai.png",
+            alt: "",
+            info:"Тут дітей чекає справжня гавайська феєрія з іграми, танцями під запальні ритми та барвистими декораціями."
+        },
+        {
+            name: "Космічна вечірка",
+            image: "img/pages/saturday/sat-party-cosmic.png",
+            alt: "",
+            info:"Відправтеся в захоплюючу космічну подорож! Діти зможуть створити власні космічні кораблі, малювати зірки та галактики та грати в ігри, пов'язані з космосом."
+        },
+        {
+            name: "Helloween",
+            image: "img/pages/saturday/sat-party-helloween.png",
+            alt: "",
+            info:"Діти можуть прийти у своїх найулюбленіших піжамах і насолодитися комфортною атмосферою, граючи у веселі ігри та роблячи творчі поробки."
+        },
+        {
+            name: "Фруктова вечірка",
+            image: "img/pages/saturday/sat-party-fruit.png",
+            alt: "",
+            info:"Тут дітей чекає справжня гавайська феєрія з іграми, танцями під запальні ритми та барвистими декораціями."
+        }
+    ];
+
+.main__sat-page.milk-background 
+    h1.global__huge_text.main__sat-page_header-main цікава субота
+    +printListsWithImage(itemSat, "sat-page", true, true)
+
+
+.main__sat-theme
+    h2.global__huge_text.main__sat-theme_header Тематичні вечірки для кожного смаку
+    .main__sat-theme.flex 
+
+        each item , i in theme
+            - let classname = ""
+            - let btncolor = ""
+            case i % 3
+                when 0 
+                    #{ classname = "diamond"}
+                    #{ btncolor = "green" }                       
+ 
+                when 1
+                    #{ classname = "snow"}
+                    #{ btncolor = "pink" }
+
+                when 2
+                    #{ classname = "circle"}
+                    #{ btncolor = "blue" }
+                        
+
+            div(class="main__sat-theme__card milk-background "+classname) 
+                h3(class="main__sat-theme__name global__btn global_smal-btn "+btncolor) #{item.name}
+                img(src=item.image alt=item.alt).main__sat-theme_img
+                p.main__sat-theme_text #{item.info}
+                a.global__btn.main__sat-theme_btn Записати дитину

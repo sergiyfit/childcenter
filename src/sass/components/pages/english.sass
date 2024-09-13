@@ -1,0 +1,124 @@
+.main__english
+    &-page
+        
+        padding-top: 45px
+        padding-bottom: 20px
+        border-top: $border-top-orange-line
+        &_header-main
+            color: $global-blue
+            padding-bottom: 55px
+
+        &_list
+            +media(1280)
+                margin: 75px 40px 45px 80px
+                max-width: 500px   
+                
+            &_header
+                color: $global-orange
+                +media(928)
+                    margin: 15px 0 15px
+
+
+        &__btn
+            +media(928)
+                margin: 29px 0 40px
+
+        &_box:nth-child(3) .img-block__content
+            +media(1280)
+                margin: 5px 13px 0px 20px
+                max-width: 550px  
+
+        &_box:nth-child(3) &_list_header
+            +media(928)
+                margin: 55px 0 20px
+
+        &_box:nth-child(3) &__btn
+            +media(928)
+                margin: 35px 0 50px
+                
+        &_box:nth-child(4) 
+            padding-top: 0px
+        &_box:nth-child(4) .img-block__content
+            +media(1280)
+                // margin: 5px 13px 0px 20px
+                margin-top: 0px
+                margin-bottom: 0px
+                max-width: 520px  
+
+        &_box:nth-child(4) &_list_header
+            +media(928)
+                margin: 45px 0 20px
+
+        &_box:nth-child(4) &__btn
+            +media(928)
+                margin: 35px 0 35px
+                
+        &_box:nth-child(5) .img-block__content
+            +media(1280)
+                margin: 5px 13px 0px 20px
+                max-width: 550px  
+
+        &_box:nth-child(5) &_list_text
+            max-width: 500px  
+                
+
+        &_box:nth-child(5) &_list_header
+            +media(928)
+                margin: 45px 0 15px
+
+        &_box:nth-child(5) &__btn
+            +media(928)
+                margin: 35px 0 50px
+
+    /*---------------------------------------------*/
+    /*--------------   Principes  -----------------*/
+    /*---------------------------------------------*/
+    &-principes
+        /**/
+        margin-top: 95px
+        padding-top: 50px 
+        padding-bottom: 30px 
+        &_header-main
+            margin-bottom: 25px
+        &_container
+            margin-bottom: 50px
+            &:last-child
+                +media(640)
+                    flex-direction: row 
+                    column-gap: 20px
+                +media(1440)
+                    column-gap: 40px
+        &_container:last-child &_header
+            margin-top: 20px    
+
+        &_header
+            margin-top: 10px
+            margin-bottom: 27px
+            +media(1440)
+                width: 550px
+        &_list-item
+            +media(840)
+                margin-bottom: 12px
+        &__btn
+            +media(928)
+                margin-top: 18px
+                margin-bottom: 15px
+
+    /*-----------------------------------------------*/
+    /*-------------------WAY-------------------------*/
+    /*-----------------------------------------------*/
+    &-way
+        padding-top: 80px
+        &_header
+            margin-bottom: 30px
+        &-card_card
+            +media(640)
+                width: 45%
+            +media(1240)
+                width: 33%
+            +media(1580)
+                max-width: 502px 
+                width: 502px 
+                
+        &-photoalbum
+            margin-bottom: 90px

@@ -1,6 +1,6 @@
 //- Print clouded blocks with medium image 
 //- Міксин який допомагає розібрати массив з зображеннями - хмаринками 
-mixin printListsWithImage(arr, nameClass, leftToRight)
+mixin printListsWithImage(arr, nameClass, leftToRight,listParagraph)
     - let index = 0
     if leftToRight
         - index = 1
@@ -21,10 +21,14 @@ mixin printListsWithImage(arr, nameClass, leftToRight)
                     
                     if list.items.length == 1
                         p(class=("main__"+nameClass+"_list_text"))  #{list.items[0]}
-                    else 
-                        ul
+                    else
+                        if !listParagraph 
+                            ul
+                                for item in list.items
+                                    li(class=("main__"+nameClass+"_list_item")).img-block__list_item.marker-list #{item}
+                        else
                             for item in list.items
-                                li(class=("main__"+nameClass+"_list_item")).img-block__list_item.marker-list #{item}
+                                p(class=("main__"+nameClass+"_list_text"))  #{item}
                     a(class=("main__"+nameClass+"__btn")).global__btn.img-block__btn Записати дитину
             if index % 2 == 0            
                 img(src=list.image, alt=list.alt).right-img.img-block__image  

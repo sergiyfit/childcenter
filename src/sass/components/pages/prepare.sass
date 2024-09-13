@@ -102,9 +102,11 @@
                 margin-bottom: 50px
                 &:last-child
                     margin-bottom: 65px
-                    flex-direction: row
                     column-gap: 40px
                     padding-top: 40px
+
+                    +media(640)
+                        flex-direction: row
                     .quadro-header
                         padding-bottom: 25px
                     .marker-list

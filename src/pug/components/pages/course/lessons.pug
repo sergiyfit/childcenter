@@ -65,8 +65,8 @@
 .main__course-lessons.milk-background 
     h2.global__huge_text.main__course-lessons_header 
         span на заняттях діти:
-    .main__course-lessons-container
+    .main__course-lessons-container.tiny-container
         for courseCard in courseCards
-            .main__course-lessons-card
-                h3.main__course-lessons-card__header.global__middle_text #{courseCard.header}
-                img(src=courseCard.image alt=courseCard.alt).main__course-lessons-card__image
+            .main__course-lessons-card.tiny-card
+                h3.main__course-lessons-card__header.global__middle_text.tiny-card__header #{courseCard.header}
+                img(src=courseCard.image alt=courseCard.alt).main__course-lessons-card__image.tiny-card__image

@@ -233,10 +233,14 @@
     &__box
         position: relative  
         width: 100%        
-        padding-left: 0px
+        padding-left: 10px
+        padding-right: 10px
+        box-sizing: border-box
+
         margin: 0 auto 50px
         align-items: center
         +media(1280)
+            box-sizing: content-box
             width: 1170px        
             padding-left: 120px
     &__image
@@ -259,9 +263,9 @@
     &__content
         display: block
         margin: 5px 8px
-        width: max-content
-        max-width: 500px
         +media(928)
+            max-width: 500px
+            width: max-content
             margin: 5px 20px
         +media(1280)
             margin: 5px 88px
@@ -370,8 +374,8 @@
     align-items: center
     background-color: #fff
     width: 95%
-    max-width: 1540px
     margin: 0 auto  
+    max-width: 1540px
 
 
     +media(640)
@@ -475,3 +479,59 @@
 
         +media(1580)
             width: 440px
+
+/*----------------------------------------------*/
+/*-----------------Tiny CARDS-------------------*/
+/*----------------------------------------------*/
+.tiny
+    &-container
+        display: flex
+        flex-wrap: wrap
+        column-gap: 20px
+        row-gap: 35px
+        justify-content: center
+        align-items: stretch
+        margin: 0 auto
+        max-width: 1560px
+        padding: 0 10px
+        box-sizing: border-box
+    &-card
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 60px 10px 30px
+        background-color: #fff
+        box-sizing: border-box
+        border-radius: 40px
+        width: 100%
+        +media(640)
+            width: calc( 50% - 40px )
+            border-radius: 30px
+            padding: 60px 20px 30px
+        +media(928)
+            width: calc( 33% - 20px )
+            padding: 70px 10px 50px
+            padding: 20px
+        +media(1440)
+            width: calc( 25% - 16px )
+            border-radius: 50px
+            padding: 70px 20px 55px
+        &__header
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            text-align: center
+            transform: translateX(-50%)
+            top: 25px
+            height: 60px
+            left: 50%
+            width: 83%
+        &__image
+            margin: 25px 30px 0px 
+            display: block
+            aspect-ratio: 23/25.5
+            object-fit: cover
+            object-position: top center
+            border-radius: 20px

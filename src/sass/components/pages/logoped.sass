@@ -78,7 +78,7 @@
             max-width: 1580px
             margin: auto
         &_header
-            margin-bottom: 25px
+            margin-bottom: 35px
 
         &-card
             &_card
@@ -87,12 +87,22 @@
                 +media(640)
                     width: 45%
                 +media(1240)
-                    width: 33%
+                    width: calc(33% - 20px)
                 +media(1580)
                     max-width: 500px 
                     width: 500px
+            &_header
+                +media(678)
+                    font-size: 18px
+                +media(1240)
+                    font-size: 16px
+                    
+                +media(1580)
+                    font-size: 24px
             &_text
+                font-size: 14px
                 +media(1580)                    
+                    font-size: 16px
                     width: 430px
 
     /*----------------------------------------*/

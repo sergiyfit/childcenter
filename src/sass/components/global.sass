@@ -9,7 +9,8 @@
     &__btn        
         display: block
         width: 205px
-        padding: 13.5px
+        // padding: 13.5px
+        padding: 12.5px
         height: 50px
         box-sizing: border-box
         font-family: 'Balsamiq Sans'
@@ -378,7 +379,7 @@
 .quadro
     display: flex
     flex-direction: column
-    padding: 20px
+    padding: 20px 30px
     border-radius: 20px
     box-sizing: border-box  
     justify-content: center
@@ -390,16 +391,20 @@
 
 
     +media(640)
-        justify-content: space-between
         flex-direction: row-reverse
     +media(1440)
+        justify-content: space-between
         border-radius: 80px
         padding: 60px 130px
-
+    &-header
+        +media(678)
+            margin-top: 15px
+            margin-bottom: 35px
     &-image
         display: block
         aspect-ratio: 63/35
         width: 100%
+        border-radius: 20px
         object-fit: cover
         object-position: center
         +media(640)
@@ -452,8 +457,8 @@
         box-sizing: border-box
         justify-content: center
         align-items: stretch
-        column-gap: 10px
-        row-gap: 10px
+        column-gap: 20px
+        row-gap: 20px
 
 
     &_sticker
@@ -538,7 +543,7 @@
         +media(928)
             width: calc( 33% - 20px )
             padding: 70px 10px 50px
-            padding: 20px
+            
         +media(1440)
             width: calc( 25% - 16px )
             border-radius: 50px

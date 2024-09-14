@@ -25,17 +25,27 @@
             position: relative            
             line-height: 22px
             background-color: #fff 
-            border-radius: 20px
+            border-radius: 50px
             padding: 20px 15px 85px
             +media(720)
-                padding: 40px 30px 105px
+                border-radius: 10px
+                padding: 45px 30px 90px
                 width: 40%
+                font-size: 13px
             +media(1280)
+                width: 312px 
+                border-radius: 20px
+                     
+            +media(1440)
                 border-radius: 50px
-                width: 312px          
+                font-size: 16px
             &_header
                 color: #FF8B00
-                margin: 25px 0 5px
+                +media(678)
+                    font-size: 18px
+                    margin: 25px 0 5px 
+                +media(1440)
+                    font-size: 24px
             &_btn
                 position: absolute
                 width: 85%
@@ -64,6 +74,10 @@
             padding-bottom: 0
             font-size: 16px
             position: relative
+            +media(678)
+                font-size: 13px
+            +media(1440)
+                font-size: 16px
             &::before
                 content: ''
                 position: absolute
@@ -72,12 +86,18 @@
                 height: 4px
                 border-radius: 50%
                 top: 10px
-                left: 8px
+                left: 10px
                 background-color: #000
 
 
         &_in-month 
             display: block
-            font-size: 18px !important
+            font-size: 18px 
             padding-top: 15px 
-
+            +media(678)
+                padding-top: 15px 
+                font-size: 15px
+            +media(1440)
+                padding-top: 0px 
+                margin: 20px 0 5px 
+                font-size: 18px

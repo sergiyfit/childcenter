@@ -1,31 +1,61 @@
 -   
     let menu = [
         { 
-            url:"#",
+            url:"#about",
             name:"Про нас"
         },
         { 
-            url:"#",
+            url:"kindergarten.html",
             name:"Дитячий садок"
         },
         { 
             url:"#",
-            name:"Заняття"
+            name:"Заняття",
+            submenu:[
+                { 
+                    url:"prepare.html",
+                    name:"підготовка до школи"
+                },
+                { 
+                    url:"course.html",
+                    name:"курс “Мама та малюк”"
+                },
+                { 
+                    url:"english.html",
+                    name:"Англійська мова"
+                },
+                { 
+                    url:"logoped.html",
+                    name:"логопед-дефектолог"
+                },
+                { 
+                    url:"art.html",
+                    name:"Творчі майстер-класи"
+                },
+                { 
+                    url:"saturday.html",
+                    name:"цікава субота"
+                },
+                { 
+                    url:"genius.html",
+                    name:"курс “маленькі генії”"
+                }
+            ]
         },
         { 
-            url:"#",
+            url:"#levy",
             name:"Ціни"
         },
         { 
-            url:"#",
+            url:"#photoalbum",
             name:"Фотогалерея"
         },
         { 
-            url:"#",
+            url:"#report",
             name:"Відгуки"
         },
         { 
-            url:"#",
+            url:"contact.html",
             name:"Контакти"
         }
     ];
@@ -61,6 +91,12 @@ mixin printHeader(hasHero)
                 ul.header__menu__elements.flex
                     for item in menu
                         li.header__menu__item__holder
+                            if item.submenu
+                                ul.header__menu__subitem__elements
+                                    for subitem in item.submenu
+                                        li.header__menu__subitem__holder
+                                            a(href=subitem.url).header__menu__subitem__link #{subitem.name}  
+
                             a(href=item.url).header__menu__item #{item.name}  
 
             a.global__btn.header__menu__btn Записати дитину

@@ -1,54 +1,162 @@
 .header
     &__menu
-        padding: 30px 10px 27px
+        //padding: 30px 10px 27px
+        padding: 0px 10px 
         box-sizing: border-box
         justify-content: space-between
         margin: 0 auto 
         max-width: 1580px
-        column-gap: 30px
+        column-gap: 10px
+        +media(1200)
+            column-gap: 10px
+        +media(1440)
+            column-gap: 30px
         &__logo
             display: flex
             justify-content: space-between
+            padding: 30px 0 27px 
+            +media(678)
+                display: none            
+            +media(928)
+                display: block            
 
         img
             width: 185px
             display: block
             margin-left: 20px
             height: 60px
+            +media(928)
+                height: 40px
+                width: 120px
+            +media(1200)
+                height: 60px
+                width: 185px
+
         &__container 
             display: none
             +media(678)
                 display: block
         &__elements
-            padding-left: 15px
-            column-gap: 30px   
+            padding-left: 7px
+            column-gap: 5px   
+            +media(1200)
+                padding-left: 10px
+                column-gap: 10px   
+            +media(1440)
+                padding-left: 15px
+                column-gap: 30px   
             
         &__item
             display: block
-            font-weight: 600
-            font-size: 14px
-            letter-spacing: 0.03em
             text-transform: uppercase
             color: #313131
             transition: all 0.5s ease
+            letter-spacing: 0.03em
+            font-weight: 600
+            font-size: 14px
+            +media(678)
+                font-weight: 600
+                font-size: 12px
+                letter-spacing: -0.7px
+            +media(1200)
+                letter-spacing: 0.03em
+                font-weight: 600
+                font-size: 16px
+
             &:hover
-                color: #EA18AA
+                color: $global-blue
                 +media(678)
                     transform: scale(1.1)
 
             &__holder
-                padding: 20px 5px
+                position: relative
+                transition: all 0.5s ease
+                padding: 10px 5px 10px
+                display: flex
+                flex-direction: column-reverse
+                +media(678)
+                    padding: 50px 5px 45px
+
+                &:hover > ul.header__menu__subitem__elements
+                    display: block
+                &:hover > .header__menu__item
+                    color: $global-blue
+                
+        &__subitem
+            &__elements // ul
+                display: none
+                background-color: #fff
+                box-sizing: border-box
+                padding: 20px 00px 20px 20px
+                z-index: 2
+                +media(678)
+                    position: absolute
+                    padding: 0 40px 20px                
+                    left: 50%
+                    top: 0
+                    transform: translate(-50% , 112px)
+                    border: $border-top-orange-line
+                    border-top: none
+                    border-radius: 0 0 40px 40px  
+                +media(1200)
+                    transform: translate(-50% , 116.7px)
+
+
+                &:hover 
+                    display: block
+                &:hover + .header__menu__item
+                    color: $global-blue
+
+            &__holder // li
+                padding-bottom: 20px
+            &__link //a
+                display: block                
+                font-family: 'Open Sans'
+                font-style: normal
+                font-weight: 600
+                font-size: 14px
+                line-height: 19px
+                letter-spacing: 0.03em
+                color: $global-black
+                text-transform: uppercase
+                white-space: none
+                +media(678)
+                    font-weight: 600
+                    font-size: 12px
+                    letter-spacing: -0.7px
+                    width: 140px
+                +media(1200)
+                    width: 190px
+                    letter-spacing: 0.03em
+                    font-weight: 600
+                    font-size: 14px
+                &:hover
+                    color: $global-blue
+
+
         &__btn
-            margin: 5px auto 
+            margin: 5px 15px 
             display: none
+            margin-bottom: 15px
             +media(678)
                 margin: 0
-                margin-top: 5px
+                margin-top: 35px
                 display: block
+                width: 134px
+                font-size: 11px
+                padding-top: 10px
+
+            +media(726)
+                padding-top: 15px
+                width: 180px
+                font-size: 14px
+
+            +media(1280)
+                width: 200px
     &__hero
         border-top: 3px solid #FF8B00
         text-align: center
-        padding-bottom: 45px
+        padding-bottom: 40px
         margin-bottom: 140px
         box-sizing: border-box
         
@@ -59,7 +167,7 @@
             width: 100%
 
         &_header
-            margin: 40px auto 5px
+            margin: 30px auto 8px
             color: #0033FF
 
         &__text

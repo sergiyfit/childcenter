@@ -65,8 +65,8 @@
     /*----------BLOCK WITH HUGE IMG-----------*/
     /*----------------------------------------*/
     &-info
-        padding-top: 80px
-        padding-bottom: 55px
+        padding-top: 115px
+        padding-bottom: 61px
 
         &_container
             +media(678)
@@ -78,8 +78,8 @@
         &_box
             display: flex
             flex-direction: column
-            align-items: flex-end
             +media(640)
+                align-items: flex-end
                 border-radius: 50px
             +media(680)
                 padding: 30px 30px 30px
@@ -93,8 +93,10 @@
 
         &_header
             color: $global-blue
-            width: 55%
             padding: 20px 0 10px
+            +media(678)
+                width: 55%
+
             +media(1440)
                 padding: 50px 60px 20px
                 width: 510px
@@ -105,7 +107,8 @@
             font-weight: 500
             font-size: 18px
             line-height: 23px
-            width: 55%
+            +media(678)
+                width: 55%
             +media(1440)
                 padding: 0 60px
                 width: 510px

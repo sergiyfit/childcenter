@@ -42,11 +42,11 @@
 
 .main__course-result.milk-background 
     h2.global__huge_text.main__course-result_header-huge результат навчання
-    +printQuadro(courseResult, "course-result")
+    +printQuadro(courseResult, "course-result", courseUrl)
 
 .main__course-investigation
     h2.main__course-investigation_header.global__huge_text досягнення дитини
 
-    +printCardsWithFigure(investigateCards,"course-investigation-card")
+    +printCardsWithFigure(investigateCards,"course-investigation-card",courseUrl)
 
     +printPhotoAlbum

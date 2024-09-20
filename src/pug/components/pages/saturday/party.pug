@@ -18,14 +18,14 @@
 
 .main__sat-activity.milk-background 
     h2.global__huge_text.main__sat-activity_header-main Яскраві активності та смачні перекуси 
-    +printQuadro(allItemsActivity[0], "sat-activity")
+    +printQuadro(allItemsActivity[0], "sat-activity",satUrl)
 
 .main__sat-info   
     .positive.main__sat-info_container.flex
         .main__sat-info_box.positive_box.milk-background  
             h3.main__sat-info_header.global__middle_text Чому варто приєднатися?
             .main__sat-info_text "Цікава Субота" – це ідеальний спосіб для дітей провести вихідні цікаво і корисно. Нестандартні теми кожної суботи, захоплюючі ігри та творчі заняття допоможуть вашим дітям розвивати свою уяву та соціальні навички, водночас насолоджуючись спілкуванням з однолітками.
-                a.global__btn.main__sat-info_btn Записати дитину    
+                a.global__btn.main__sat-info_btn(href=satUrl) Записати дитину    
         img.main__sat-info_image.positive_image.left-img(src="img/pages/saturday/sat-huge.png", alt="course_Ukraine")
 
 .main__sat-galery 

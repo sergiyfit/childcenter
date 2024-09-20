@@ -1,3 +1,4 @@
+
 html(lang="en")
     head
         include components/head 
@@ -8,6 +9,7 @@ html(lang="en")
         include components/header 
         +printHeader(false)
         main 
+            - let geniusUrl = "contact.html?choise=genius"
             include components/pages/genius/genius
         include components/footer 
         +printFooter(false)

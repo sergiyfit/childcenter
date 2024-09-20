@@ -8,6 +8,7 @@ html(lang="en")
         include components/header 
         +printHeader(false)
         main 
+            - let prepareUrl = "contact.html?choise=prepare"
             include components/pages/prepare/prepare
             include components/pages/prepare/result
         include components/footer 

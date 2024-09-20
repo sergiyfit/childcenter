@@ -48,9 +48,10 @@
     ]
 
 
+
 .main__art-page.milk-background 
     h1.global__huge_text.main__art-page_header-main творчі майстер - класи
-    +printListsWithImage(itemsArt, "art-page", true, true)
+    +printListsWithImage(itemsArt, "art-page", true, true, artUrl)
 
 .main__art-graphic    
     .positive.main__art-graphic_container.flex
@@ -60,7 +61,7 @@
                 .main__art-graphic__time.global__btn.global_smal-btn.green понеділок 17:00
                 .main__art-graphic__time.global__btn.global_smal-btn.orange вівторок 17:00
                 .main__art-graphic__time.global__btn.global_smal-btn.pink середа 17:00
-                a.global__btn.main__logoped-info_btn Записати дитину    
+                a.global__btn.main__logoped-info_btn(href=artUrl) Записати дитину    
         img.main__art-graphic_image.positive_image.left-img(src="img/pages/art/art-hugeIMG.png", alt="art_Ukraine")
 
 

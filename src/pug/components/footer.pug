@@ -6,8 +6,8 @@ mixin printFooter(hasLocation)
                 .footer__location_container.flex
                     .footer__location_card 
                         h3.global__middle_text.footer__location_header наша локація
-                        a(href="#").footer__location_strong.marker вул. Вайсера, 4/2  
-                        a(href="#").global__link.footer__location_link подивитися мапу 
+                        a(href=urlMap).footer__location_strong.marker вул. Вайсера, 4/2  
+                        a(href=urlMap).global__link.footer__location_link подивитися мапу 
                             span.footer__location_arrow 
                     .footer__location_card 
                         h3.global__middle_text.footer__location_header Графік роботи
@@ -34,5 +34,6 @@ mixin printFooter(hasLocation)
                     p.footer__contact_links-copywright &copy; Лабораторія маленьких геніїв 2015-2024. Усі права захищені
                 .footer__contact_links-left        
                     .footer__contact_links__logo 
-                        img(src="img/header/Logo.svg", alt="Laboratory_malenkih_vihakhidnikiv_Khmalnytskiy")
+                        a(href="index.html") 
+                            img(src="img/header/Logo.svg", alt="Laboratory_malenkih_vihakhidnikiv_Khmalnytskiy")
                     a.footer__contact_links-left--politic(href="#") Політика конфіденційності

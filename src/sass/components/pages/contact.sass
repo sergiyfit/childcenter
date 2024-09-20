@@ -12,16 +12,28 @@
 
     &_container
         max-width: 1280px
+        width: 100%
         margin: auto
         display: flex
+        flex-direction: column
+        column-gap: 20px
         justify-content: space-between
+        +media(840)
+            flex-direction: row
+
+
     &_links_container
+        flex-direction: column
         padding-top: 13px
         padding-bottom: 13px
         display: flex
         justify-content: space-between
-        min-width: 645px
-        column-gap: 10px
+        width: 100%
+        max-width: 645px
+        column-gap: 30px
+        +media(478)
+            flex-direction: row
+
         
         a
             font-weight: 500
@@ -47,28 +59,74 @@
                 height: 25px       
 
     &_subheader
-        max-width: 500px
-        color: $global-orange 
+        
+        color: $global-orange     
+        +media(1028)
+            max-width: 500px
+    
+    &_map
+        &_container
+            padding-top: 40px
+            
+        &_overflow 
+            margin: auto
+            margin-top: 30px
+            overflow: hidden
+            max-width: 630px
+            max-height: 315px
+            +media(840)
+                max-width: 55vw
+
+            +media(1360)
+                max-width: 630px
+            iframe
+                margin-top: -70px
+                margin-left: -2px
+                
+
 
     &_form
         max-width: 500px
+        margin: auto
         margin-top: 25px
-        border-radius: 40px
-        padding: 70px 50px 
+        margin-bottom: 83px
+        border-radius: 20px
         box-sizing: border-box
+        padding: 20px 20px 
+        +media(680)
+            border-radius: 40px
+            padding: 40px 30px 
+        +media(1280)
+            padding: 70px 50px 
 
         &_label    
             display: block
             font-family: 'Open Sans'
             font-style: normal
             font-weight: 500
-            font-size: 18px
+            font-size: 14px
+            margin-bottom: 8px
             line-height: 25px
-            margin-bottom: 13px
+            +media(680)
+                font-size: 18px
+                margin-bottom: 13px
+            +media(840)
+                font-size: 14px
+                margin-bottom: 8px
+            +media(1280)
+                font-size: 18px
+                margin-bottom: 13px
+
         
         &_textfield
             margin-top: 5px
-            padding: 16px 11px
+            padding: 8px 6px
+            +media(680)
+                padding: 16px 11px
+            +media(840)
+                padding: 8px 6px
+            +media(1280)
+                padding: 16px 11px
             display: block
             width: 100%
             border-radius: 10px
@@ -110,3 +168,5 @@
         font-size: 16px
         &__selected
             color: $global-blue
+select option
+    display: none

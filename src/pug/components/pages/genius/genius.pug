@@ -123,20 +123,21 @@
         }
     ]
 
+
 .main__genius-page.milk-background 
     h1.global__huge_text.main__genius-page_header-main Курс «Маленькі генії»
-    +printListsWithImage(itemGenius, "genius-page", true, false)
+    +printListsWithImage(itemGenius, "genius-page", true, false, geniusUrl)
 
 .main__genius-course
     h2.main__genius-course_header.global__huge_text Курс «Маленькі генії» передбачає:
-    +printCardsWithFigure(geniusCards,"genius-course-card")
+    +printCardsWithFigure(geniusCards,"genius-course-card", geniusUrl)
 
 .main__genius-info   
     .positive.main__genius-info_container.flex
         .main__genius-info_box.positive_box.milk-background  
             h3.main__genius-info_header.global__middle_text Чому варто приєднатися?
             .main__genius-info_text За умови РЕГУЛЯРНОГО відвідування занять студенти курсу «МАЛЕНЬКІ ГЕНІЇ» збагатять свої знання про навколишній світ, розширять свій лексичний запас, опанують логіку читання, навчаться виконувати елементарні математичні операції та підготують свою руку до письма.
-                a.global__btn.main__genius-info_btn Записати дитину    
+                a(href=geniusUrl).global__btn.main__genius-info_btn Записати дитину    
         img.main__genius-info_image.positive_image.left-img(src="img/pages/genius/genius-hugeIMG.png", alt="course_Ukraine")
 
 .main__genius-photoalbum

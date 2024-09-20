@@ -18,7 +18,7 @@
 
 .main__course-page.milk-background 
     h1.global__huge_text.main__course-page_header Курс «Мама + Малюк»
-    +printListsWithImage(itemsCourse, "course-page", true)
+    +printListsWithImage(itemsCourse, "course-page", true, null , courseUrl)
 
 .main__course-page-info   
     .positive.main__course-page-info_container.flex
@@ -27,6 +27,6 @@
             ul.main__course-page-info_list
                 for courseItem in courseHuge
                     li.main__course-page-info_list-item.marker-list #{courseItem}
-                a.global__btn.main__course-page_btn Записати дитину
+                a.global__btn.main__course-page_btn(href=courseUrl) Записати дитину
             
         img.main__course-page-info_image.positive_image.left-img(src="img/pages/course/mother-kids-kurs.png", alt="course_Ukraine")

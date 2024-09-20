@@ -244,7 +244,9 @@
                 opacity: 0
                 font-size: 0px
                 margin-top: 0px 
+                transition: all 0.5s ease 0.5s, opacity 0.5s ease  
                 &-show
+                    transition: all 0.5s ease, opacity 0.5s ease 0.5s 
                     opacity: 1
                     margin-top: 10px 
                     font-family: 'Open Sans'
@@ -256,7 +258,7 @@
             &_button
                 position: absolute
                 transform: translate(50%,-50%)
-                top: 50%
+                top: 50px
                 right: 65px
                 border-radius: 50%
                 width: 45px
@@ -288,6 +290,9 @@
                     width: 2px
                     height: 16px
                     background-color: $global-green
+                    transition: all 0.5s ease
+                &-show::after
+                    height: 1px
 
 
                         

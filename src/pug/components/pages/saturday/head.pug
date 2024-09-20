@@ -45,7 +45,7 @@
 
 .main__sat-page.milk-background 
     h1.global__huge_text.main__sat-page_header-main цікава субота
-    +printListsWithImage(itemSat, "sat-page", true, true)
+    +printListsWithImage(itemSat, "sat-page", true, true, satUrl)
 
 
 .main__sat-theme
@@ -73,4 +73,4 @@
                 h3(class="main__sat-theme__name global__btn global_smal-btn "+btncolor) #{item.name}
                 img(src=item.image alt=item.alt).main__sat-theme_img
                 p.main__sat-theme_text #{item.info}
-                a.global__btn.main__sat-theme_btn Записати дитину
+                a.global__btn.main__sat-theme_btn(href=satUrl) Записати дитину

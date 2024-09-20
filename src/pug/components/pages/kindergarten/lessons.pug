@@ -57,11 +57,11 @@
 
 .main__kindergarten-lessons.milk-background 
     h2.global__huge_text.main__kindergarten-lessons_header заняття у нашому садочку
-    +printQuadro(lessonList, "kindergarten-lessons")
+    +printQuadro(lessonList, "kindergarten-lessons", kindergartenUrlCont)
     .main__kindergarten-lessons-card__container.flex
         for lessonCard in lessonCardsList
             .main__kindergarten-lessons-card
                 h3.global__middle_text.main__kindergarten-lessons-card__header #{lessonCard.head}
                 img(src=lessonCard.image alt=lessonCard.alt).main__kindergarten-lessons-card__image
                 div(class=lessonCard.color).main__kindergarten-lessons-card__time.global__btn.global_smal-btn #{lessonCard.timetable}
-    +printQuadro(groupDetail, "kindergarten-groups")
+    +printQuadro(groupDetail, "kindergarten-groups", kindergartenUrlCont)

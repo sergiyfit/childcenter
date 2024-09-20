@@ -44,7 +44,7 @@
 
 .main__prepare-page.milk-background 
     h1.global__huge_text.main__prepare-page_header підготовка до школи
-    +printListsWithImage(itemsPrepare, "prepare-page", true)
+    +printListsWithImage(itemsPrepare, "prepare-page", true, null, prepareUrl)
 
 .main__prepare-page-success  
     .positive.main__prepare-page-success_container.flex
@@ -53,5 +53,5 @@
             ul.main__prepare-page-success_list 
                 for item in successList
                     li.main__prepare-page-success_list-item.marker-list #{item}
-            a.global__btn.main__prepare-page-success_btn Записати дитину
+            a.global__btn.main__prepare-page-success_btn(href=prepareUrl) Записати дитину
         img.main__prepare-page-success_image.positive_image(src="img/pages/prepare/prepare-frame.png", alt="prepare_Ukraine")

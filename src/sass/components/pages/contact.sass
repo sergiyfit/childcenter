@@ -1,0 +1,112 @@
+.main__contact
+    padding-top: 50px
+    padding-bottom: 20px
+    border-top: $border-top-orange-line
+    padding-right: 10px
+    padding-left: 10px
+    box-sizing: border-box
+
+    &_header
+        color: $global-blue
+        padding-bottom: 30px
+
+    &_container
+        max-width: 1280px
+        margin: auto
+        display: flex
+        justify-content: space-between
+    &_links_container
+        padding-top: 13px
+        padding-bottom: 13px
+        display: flex
+        justify-content: space-between
+        min-width: 645px
+        column-gap: 10px
+        
+        a
+            font-weight: 500
+            font-size: 18px
+            color: $global-black
+            padding-left: 30px
+            margin-top: 10px
+            &::before
+                left: 0
+
+    &_social  
+
+        a
+            font-weight: 500
+            font-size: 18px
+            color: $global-black
+            padding-left: 35px
+            margin-top: 10px
+            &::before
+                top: 5px
+                left: 0 
+                width: 25px
+                height: 25px       
+
+    &_subheader
+        max-width: 500px
+        color: $global-orange 
+
+    &_form
+        max-width: 500px
+        margin-top: 25px
+        border-radius: 40px
+        padding: 70px 50px 
+        box-sizing: border-box
+
+        &_label    
+            display: block
+            font-family: 'Open Sans'
+            font-style: normal
+            font-weight: 500
+            font-size: 18px
+            line-height: 25px
+            margin-bottom: 13px
+        
+        &_textfield
+            margin-top: 5px
+            padding: 16px 11px
+            display: block
+            width: 100%
+            border-radius: 10px
+            font-size: 16px
+            box-sizing: border-box
+            appearance: none
+            outline: none
+            border: $input-border
+            &:focus
+                border-color: $global-pink
+                border-width: 2px
+            &:placeholder
+                font-size: 16px
+                color: $placeholder-color
+
+
+        &_container
+            padding-top: 15px
+            box-sizing: border-box
+
+            .main__contact_subheader
+                text-align: center
+        
+        &_btn
+            margin-top: 35px
+            width: 100%
+            border-color: $global-orange 
+            background-color: $global-pink
+            color: #fff
+            &:hover
+                border-color: $global-pink
+                background-color: $global-green
+
+.custom-select
+    display: none
+    border: $input-border
+    background-color: #fff
+    &-item
+        font-size: 16px
+        &__selected
+            color: $global-blue

@@ -83,26 +83,27 @@
 
 
 mixin printHeader(hasHero)
-    header.header 
-        .header__menu.flex
-            .header__menu__logo
-                a(href="index.html") 
-                    img(src="img/header/Logo.svg", alt="Laboratory_malenkih_vihakhidnikiv_Khmalnytskiy")
-                .burger
-                    span
-            nav.header__menu__container 
-                ul.header__menu__elements.flex
-                    for item in menu
-                        li.header__menu__item__holder
-                            if item.submenu
-                                ul.header__menu__subitem__elements
-                                    for subitem in item.submenu
-                                        li.header__menu__subitem__holder
-                                            a(href=subitem.url).header__menu__subitem__link #{subitem.name}  
+    header.header
+        .header__menu__moving-part 
+            .header__menu.flex
+                .header__menu__logo
+                    a(href="index.html") 
+                        img(src="img/header/Logo.svg", alt="Laboratory_malenkih_vihakhidnikiv_Khmalnytskiy")
+                    .burger
+                        span
+                nav.header__menu__container 
+                    ul.header__menu__elements.flex
+                        for item in menu
+                            li.header__menu__item__holder
+                                if item.submenu
+                                    ul.header__menu__subitem__elements
+                                        for subitem in item.submenu
+                                            li.header__menu__subitem__holder
+                                                a(href=subitem.url).header__menu__subitem__link #{subitem.name}  
 
-                            a(href=item.url).header__menu__item #{item.name}  
+                                a(href=item.url).header__menu__item #{item.name}  
 
-            a.global__btn.header__menu__btn(href=defaultUrlContact) Записати дитину
+                a.global__btn.header__menu__btn(href=defaultUrlContact) Записати дитину
         if hasHero    
             .header__hero.milk-background
                 img(src="img/header/srtichka.svg", alt="strichka").header__hero-strip

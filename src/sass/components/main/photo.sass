@@ -4,9 +4,10 @@
 .main
     
     &__photo
+        margin: auto
         margin-top: 80px
         margin-bottom: 50px
-
+        max-width: 1580px
         &_btn
             width: max-content 
             padding: 8px 6px 6px
@@ -41,7 +42,7 @@
                 justify-content: center
                 column-gap: 5px
                 row-gap: 5px
-                margin: 20px 0 17px 
+                margin: 25px 0 30px 
                 +media(640)
                     row-gap: 10px
                     column-gap: 10px
@@ -50,27 +51,103 @@
                 
         &_img
             
-            width: 100%
-            aspect-ratio: 5/4
+            //width: 100%
+            // aspect-ratio: 5/4
 
             border-radius: 20px
             object-fit: cover
             object-position: center
             +media(678)
-                width: 30%
+                //width: 30%
             +media(1280)
-                width: 500px
-                height: 400px
+                max-width: 500px
+                //height: 400px
                 border-radius: 50px
+
+
+.dots-container
+    display: flex
+    justify-content: center
+    row-gap: 20px
+    column-gap: 10px
+    overflow: hidden
+    padding: 10px
+    box-sizing: border-box
+    transform: translateX(-50%)
+    left: 50%
+    align-items: center
+
+.slider-dot 
+    display: inline-block
+    width: 15px
+    height: 15px
+    border-radius: 50%
+    box-sizing: border-box
+    border: 1px solid #0033FF
+    
+.activeFade
+    background-color: #FF8B00
+    border-color: transparent
+
+.slider_navigation  
+    position: relative
+    margin: 0 20px
+    width: 40px
+    height: 40px
+    border: 1px solid #FF8B00
+    box-sizing: border-box
+    background-color: #FF8B00    
+    border-radius: 50%
+    &:hover
+        background-color: #FFF
+        
+
+
+.left
+    &::before
+        content: ''
+        position: absolute
+        width: 17px
+        height: 1px
+        left: 11px
+        top: 19px
+        border-top: 1px solid #0033FF
+        background-color:#0033FF
+    &::after
+        content: ''
+        position: absolute
+        width: 5px
+        height: 5px
+        left: 12px
+        top: 17px
+
+        transform: rotate(45deg)
+        border: 2px solid #0033FF
+        border-right:  none 
+        border-top:  none 
                 
+.right
+    &::before
+        content: ''
+        position: absolute
+        width: 17px
+        height: 1px
+        left: 11px
+        top: 19px
+        border-top: 1px solid #0033FF
+        background-color:#0033FF
+    &::after
+        content: ''
+        position: absolute
 
-            &_container
-                display: flex
-                justify-content: center
-                row-gap: 20px
-                column-gap: 30px
-                overflow: hidden
-                padding: 10px
-                box-sizing: border-box
+        width: 5px
+        height: 5px
+        left: 22px
+        top: 17px
+        transform: rotate(45deg)
+        border: 2px solid #0033FF
+        border-left: none 
+        border-bottom:  none 
 
-
+.hidden-sliders
+    display: none

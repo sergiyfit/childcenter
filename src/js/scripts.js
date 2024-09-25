@@ -109,7 +109,7 @@ if (choise) {
 
 /*----------------------------------------------*/
 /*-----------SHOW AND HIDE QUESTUIONS-----------*/
-/*---Показати иа сховати відповіді на питання---*/
+/*---Показати та сховати відповіді на питання---*/
 /*----------------------------------------------*/
 let kindergartenQuestionsBtn = document.querySelectorAll(".main__kindergarten-questions-item_button")
 if (kindergartenQuestionsBtn) {
@@ -135,22 +135,4 @@ window.onwheel = (event) =>{
         menu.style.top = "0px"
         
     }
-    console.log("scroling window")
 }
-
-
-const photoSlider = new InfinitySlider(".slider", {
-    isArrows: true,
-    isSlidesToScrollAll: true,
-    baseCardWidth: "263rem",
-    gap: 20,
-    isAutoplay: true,
-    autoplaySpeed: 5000,
-    transitionCard: "all 1.5s ease-in-out",
-});
-
-photoSlider.init();
-
-window.onresize = function () {
-    photoSlider.init();
-};

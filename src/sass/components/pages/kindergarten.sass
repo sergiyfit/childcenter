@@ -117,7 +117,11 @@
         margin-top: 100px
         padding: 30px 0 70px
         &_header
-            padding: 20px 0 35px
+            padding: 0 
+            +media(480)
+                padding: 5px 0 0
+            &-huge
+                padding: 20px 10px 35px
         &__btn
             +media(928)
                 margin: 17px 0
@@ -187,7 +191,7 @@
             +media(1240)
                 padding: 30px 30px 30px
             +media(1580)
-                padding: 60px 115px 50px
+                padding: 55px 115px 50px
         &_box
             +media(640)
             padding-left: 30px
@@ -196,13 +200,13 @@
         &_list
             
             +media(678)
-                margin-top: 30px
+                margin-top: 0px
             &-item
-                margin-top: 15px
+                margin-bottom: 15px
         &__btn
             margin: 15px 0
             +media(928)
-                margin: 17px 0
+                margin: 20px 0
 
     /*-----------------------------------------*/
     /*----------------Porgrams-----------------*/

@@ -418,6 +418,9 @@
     &-list
         &-box
             display: flex
+            flex-direction: column
+            +media(640)
+                flex-direction: row
         &-item
             font-weight: 500
             box-sizing: border-box

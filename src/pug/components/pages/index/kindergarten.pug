@@ -1,7 +1,7 @@
 -
     kintergardenList = [
         {
-            img:"img/kindergarten/food.svg",
+            img:"img/pages/index/kindergarten/food.svg",
             alt:"#",
             head:"Ми любимо нашу їжу",
             text:"і готуємо її з любовʼю до дітей",
@@ -9,7 +9,7 @@
             linkText:"подивитися меню"
         },
         {
-            img:"img/kindergarten/age.svg",
+            img:"img/pages/index/kindergarten/age.svg",
             alt:"#",
             head:"9 років",
             text:"ми працюємо з дітками",
@@ -17,7 +17,7 @@
             linkText:"#"
         },
         {
-            img:"img/kindergarten/nanny.svg",
+            img:"img/pages/index/kindergarten/nanny.svg",
             alt:"#",
             head:"Наші працівники тут", 
             text:"тому-що люблять свою роботу та дітей",
@@ -25,7 +25,7 @@
             linkText:"#"
         }
     ];
-- titleImage = {image:"img/kindergarten/kindergarten_Ukraine.png", alt:"kindergarten_Ukraine"}
+- titleImage = {image:"img/pages/index/kindergarten/kindergarten_Ukraine.png", alt:"kindergarten_Ukraine"}
 
 mixin printKindergartenList(items)
     ul.main__kindergarten_list
@@ -43,4 +43,4 @@ mixin printKindergartenList(items)
     .positive.main__kindergarten_container.flex
         .main__kindergarten_box.positive_box.milk-background  
             +printKindergartenList(kintergardenList)
-        img.main__kindergarten_image.positive_image(src="img/kindergarten/kindergarten_Ukraine.png", alt="kindergarten_Ukraine")
+        img.main__kindergarten_image.positive_image(src="img/pages/index/kindergarten/kindergarten_Ukraine.png", alt="kindergarten_Ukraine")

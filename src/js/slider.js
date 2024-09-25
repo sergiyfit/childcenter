@@ -22,7 +22,7 @@
 //         isAutoplay: true,                         - автоскролл
 //         autoplaySpeed: 3000                     - швидкість автоскролла
 //         isDots: false,                            - наявність точок знизу слайдера
-//         distanceToDots: 0,                      - паддінг для відображення точок, якщо потрібен
+//         left: 0,                      - паддінг для відображення точок, якщо потрібен
 //         baseCardWidth: widthSliderContainer,    - базова ширина карточок слайдера
 //         transitionCard: "all .8s ease-in-out",  - єффект появи карточок
 //         isEffectFadeOut: false                  - тип слайдера (з плавною появою, або скролом вбік)
@@ -64,7 +64,7 @@ class InfinitySlider {
         gap: 0,
         isArrows: false,
         isDots: false,
-        distanceToDots: 0,
+        left: 0,
         isAutoplay: false,
         autoplaySpeed: 3000,
         baseCardWidth: null,
@@ -96,16 +96,6 @@ class InfinitySlider {
         this.widthCards = (this.widthSliderContainer - ((this.cardsCount - 1) * this.distanceCards)) / this.cardsCount;
         this.positionCards = 0 - (this.distanceCards + this.widthCards);
 
-        if (this.settings.isArrows) this.creationArrows();
-        this.prevBtnSlider = this.slider.querySelector('.left.slider_navigation');
-        this.nextBtnSlider = this.slider.querySelector('.right.slider_navigation');
-        if (this.settings.isArrows && this.sliderCards.length <= this.cardsCount) {
-            this.prevBtnSlider.style.display = "none";
-            this.nextBtnSlider.style.display = "none";
-        } else if (this.settings.isArrows) {
-            this.prevBtnSlider.style.display = "block";
-            this.nextBtnSlider.style.display = "block";
-        }
         if (this.settings.isDots && this.realCardsLength > 1) {
             this.creationDots();
             this.sliderDots = document.querySelectorAll('.slider-dot');
@@ -117,6 +107,16 @@ class InfinitySlider {
             }
             this.sliderDots[0].classList.add("activeFade");
             this.sliderCards[0].classList.add("activeFade");
+        }
+        if (this.settings.isArrows) this.creationArrows();
+        this.prevBtnSlider = this.slider.querySelector('.left.slider_navigation');
+        this.nextBtnSlider = this.slider.querySelector('.right.slider_navigation');
+        if (this.settings.isArrows && this.sliderCards.length <= this.cardsCount) {
+            this.prevBtnSlider.style.display = "none";
+            this.nextBtnSlider.style.display = "none";
+        } else if (this.settings.isArrows) {
+            this.prevBtnSlider.style.display = "block";
+            this.nextBtnSlider.style.display = "block";
         }
 
         if (!this.settings.isEffectFadeOut) {
@@ -209,11 +209,15 @@ class InfinitySlider {
         const areArrowsExist = this.slider.querySelectorAll('.slider_navigation').length;
         if (areArrowsExist < 1) {
             this.prevBtnSlider = document.createElement("span");
-            this.nextBtnSlider = document.createElement("span");
             this.prevBtnSlider.className = "left slider_navigation";
+            this.nextBtnSlider = document.createElement("span");
             this.nextBtnSlider.className = "right slider_navigation";
-            this.slider.insertAdjacentElement("afterbegin", this.prevBtnSlider);
-            this.slider.insertAdjacentElement("beforeend", this.nextBtnSlider);
+            // this.slider.insertAdjacentElement("afterbegin", this.prevBtnSlider);
+            // this.slider.insertAdjacentElement("beforeend", this.nextBtnSlider);
+            //upgrage
+            let slideNav = this.slider.querySelector('.dots-container')
+            slideNav.insertAdjacentElement("afterbegin", this.prevBtnSlider);
+            slideNav.insertAdjacentElement("beforeend", this.nextBtnSlider);
 
             let isClickUnabled = true;
             const clickUnabled = () => {
@@ -358,3 +362,58 @@ class InfinitySlider {
 }
 
 
+
+    const photoSlider = new InfinitySlider(".slider", {
+        isArrows: true,
+        isSlidesToScrollAll: true,
+        baseCardWidth: "500rem",
+        gap: 10,
+        isAutoplay: true,
+        isDots: true,
+        distanceToDots: 80,
+        autoplaySpeed: 5000,
+        transitionCard: "all 1.5s ease-in-out",
+    });
+    
+    window.onload = function(){
+        photoSlider.init();
+    }
+    
+    window.onresize = function () {
+        photoSlider.init();
+    };
+
+    /* ----------------------------------------------- */
+    /* Loading Gallery and work with it. Refresh Photo */
+    /* ----------------------------------------------- */
+
+    let album = document.querySelectorAll(".album")
+    let photoBtn = document.querySelectorAll(".main__photo_btn")
+    photoBtn.forEach( (btn,index) => {
+        btn.onclick = function(){
+            photoBtn.forEach(resetColorBtn => {
+                const resetClr = getComputedStyle(resetColorBtn).borderColor
+                resetColorBtn.style.backgroundColor = "#fff"            
+                resetColorBtn.style.color = resetClr
+            })
+
+            const clr = getComputedStyle(btn).borderColor
+            btn.style.backgroundColor = clr            
+            btn.style.color = "#fff"
+
+            let slideCont = document.querySelector(".slider-container")
+            slideCont.querySelectorAll("img").forEach(el => el.remove());
+            let newImgs = album[index+1].querySelectorAll("img")
+            newImgs.forEach(img => {
+                let cloneImg = img.cloneNode(true)
+                cloneImg.classList.add("main__photo_img")
+                slideCont.appendChild(cloneImg )
+            });
+            setTimeout(()=> photoSlider.init() , 50)
+            
+        }
+    })
+
+    if(document.querySelector(".main__pedagogue")){
+
+    }

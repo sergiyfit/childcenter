@@ -4,60 +4,111 @@
             name: "ірина",
             image: "img/pages/index/pedagogue/director.png",
             alt: "",
-            info:"Керівник. Досвід роботи - 18 років."
+            info:"Керівник. Досвід роботи - 18 років.",
+            picture:"diamond",
+            btncolor:"green"
+
         },
         {
             name: "Ірина",
             image: "img/pages/index/pedagogue/kids-pedagogue.png",
             alt: "",
-            info:"Вихователь групи «Маленькі розумники», досвід роботи - 3 роки."
+            info:"Вихователь групи «Маленькі розумники», досвід роботи - 3 роки.",
+            picture:"snow",
+            btncolor:"pink" 
+
         },
         {
             name: "катерина",
             image: "img/pages/index/pedagogue/child-pedagogue.png",
             alt: "",
-            info:"Вихователь групи «Маленькі дослідники», досвід роботи - 3 роки."
+            info:"Вихователь групи «Маленькі дослідники», досвід роботи - 3 роки.",
+            picture:"circle",
+            btncolor:"blue" 
         },
         {
             name: "жанна",
             image: "img/pages/index/pedagogue/junior-pedagogue.png",
             alt: "",
-            info:"Вихователь групи «Маленькі генії», досвід роботи 3 роки."
-        }
+            info:"Вихователь групи «Маленькі генії», досвід роботи 3 роки.",
+            picture:"star",
+            btncolor:"yellow" 
+        },
+        {
+            name: "олена",
+            image: "img/pages/index/pedagogue/pedagogue_pre-school.png",
+            alt: "",
+            info:"Вихователь групи «Pre-school”, досвід роботи - 8 років.",
+            picture:"diamond",
+            btncolor:"green" 
+        },
+        {
+            name: "Альона",
+            image: "img/pages/index/pedagogue/pedagogue-english.png",
+            alt: "",
+            info:"Викладач англійської мови, досвід роботи - 7 років.",
+            picture:"snow",
+            btncolor:"pink" 
+
+        },
+        {
+            name: "світлана",
+            image: "img/pages/index/pedagogue/pegagogue_school.png",
+            alt: "",
+            info:"Викладач підготовки до школи, досвід роботи - 11 років.",
+            picture:"circle",
+            btncolor:"blue" 
+        },
+        {
+            name: "Лариса",
+            image: "img/pages/index/pedagogue/pedagogue-choreography.png",
+            alt: "",
+            info:"Хореограф, досвід роботи - 20 років.",
+            picture:"star",
+            btncolor:"yellow" 
+        },
+        {
+            name: "Людмила",
+            image: "img/pages/index/pedagogue/pedagogue_master-class.png",
+            alt: "",
+            info:"Ведуча майстер-класів, досвід роботи - 7 років.",
+            picture:"diamond",
+            btncolor:"green" 
+        },
+        {
+            name: "Лариса",
+            image: "img/pages/index/pedagogue/pedagogue_music.png",
+            alt: "",
+            info:"Музичний керівник, досвід роботи - 22 роки.",
+            picture:"snow",
+            btncolor:"pink" 
+
+        },
+        {
+            name: "світлана",
+            image: "img/pages/index/pedagogue/administrator-kindergarten.png",
+            alt: "",
+            info:"Адміністратор дитячого садка, досвід роботи - 17 років.",
+            picture:"circle",
+            btncolor:"blue" 
+        },
+        {
+            name: "Оксана",
+            image: "img/pages/index/pedagogue/administrator-centre.png",
+            alt: "",
+            info:"Адміністратор центру розвитку. Досвід роботи - 5 років.",
+            picture:"star",
+            btncolor:"yellow" 
+        },
     ];
 
 .main__pedagogue
     h2.global__huge_text.main__pedagogue_header наша команда
-    .main__pedagogue.flex 
-
-        each item , i in pedagogue
-            - let classname = ""
-            - let btncolor = ""
-            case i 
-                when 0 
-                    #{ classname = "diamond"}
-                    #{ btncolor = "green" }                       
- 
-                when 1
-                    #{ classname = "snow"}
-                    #{ btncolor = "pink" }
-
-                when 2
-                    #{ classname = "circle"}
-                    #{ btncolor = "blue" }
-                        
-                when 3
-                    #{ classname = "star"}
-                    #{ btncolor = "yellow" }
-
-            div(class="main__pedagogue__card milk-background "+classname) 
-                h3(class="main__pedagogue__name global__btn global_smal-btn "+btncolor) #{item.name}
-                img(src=item.image alt=item.alt).main__pedagogue_img
-                p.main__pedagogue_text #{item.info}
-    .main__pedagogue_nav_container.global-nav
-        button.global__circle_btn.main__pedagogue_nav__circle_btn--left.arr-left
-        .global-dot.main__pedagogue_nav__dot.global-dot--active 
-        .global-dot.main__pedagogue_nav__dot 
-        .global-dot.main__pedagogue_nav__dot 
-        button.global__circle_btn.main__pedagogue_nav__circle_btn--right.arr-right 
-               
+    .main__pedagogue.flex.slider_pedagogue 
+        .slider-container
+            for item in pedagogue
+                div(class=item.picture).main__pedagogue__card.milk-background 
+                    h3(class=item.btncolor).main__pedagogue__name.global__btn.global_smal-btn #{item.name}
+                    img(src=item.image alt=item.alt).main__pedagogue_img
+                    p.main__pedagogue_text #{item.info}
+      

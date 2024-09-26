@@ -361,7 +361,9 @@ class InfinitySlider {
     }
 }
 
-
+    /* ----------------------------------------------- */
+    /* ------------------PHOTOALBUM------------------- */
+    /* ----------------------------------------------- */ 
 
     const photoSlider = new InfinitySlider(".slider", {
         isArrows: true,
@@ -401,19 +403,62 @@ class InfinitySlider {
             btn.style.backgroundColor = clr            
             btn.style.color = "#fff"
 
-            let slideCont = document.querySelector(".slider-container")
+            let slideCont = document.querySelector(".slider .slider-container")
             slideCont.querySelectorAll("img").forEach(el => el.remove());
             let newImgs = album[index+1].querySelectorAll("img")
+            slideCont.style.opacity = "0"
             newImgs.forEach(img => {
                 let cloneImg = img.cloneNode(true)
                 cloneImg.classList.add("main__photo_img")
                 slideCont.appendChild(cloneImg )
             });
-            setTimeout(()=> photoSlider.init() , 50)
+            slideCont.style.opacity = "0"
+            setTimeout(function(){
+                photoSlider.init() 
+                slideCont.style.opacity = "1"
+
+            } , 500)
             
         }
     })
 
-    if(document.querySelector(".main__pedagogue")){
-
+    /* ----------------------------------------------- */
+    /* -----------Loading PEDAGOGUE SLIDER------------ */
+    /* ----------------------------------------------- */ 
+    let padagogueSlider = document.querySelector(".main__pedagogue")
+    if(padagogueSlider){
+        const padagogueSlider = new InfinitySlider(".slider_pedagogue", {
+            isArrows: true,
+            isSlidesToScrollAll: true,
+            baseCardWidth: "370rem",
+            gap: 30,
+            isAutoplay: true,
+            isDots: true,
+            distanceToDots: 100,
+            autoplaySpeed: 5000,
+            transitionCard: "all 1.5s ease-in-out",
+        });
+        const reportSlider = new InfinitySlider(".main__report_container", {
+            isArrows: true,
+            isSlidesToScrollAll: true,
+            baseCardWidth: "500rem",
+            gap: 20,
+            isAutoplay: true,
+            isDots: true,
+            distanceToDots: 100,
+            autoplaySpeed: 5000,
+            transitionCard: "all 1.5s ease-in-out",
+        });
+        
+        window.onload = function(){
+            photoSlider.init();
+            padagogueSlider.init();
+            reportSlider.init();
+        }
+        
+        window.onresize = function () {
+            photoSlider.init();
+            padagogueSlider.init();
+            reportSlider.init();
+        };
     }

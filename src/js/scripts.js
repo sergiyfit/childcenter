@@ -126,13 +126,47 @@ if (kindergartenQuestionsBtn) {
 /*------------scrolling-------------*/
 /*---------------menu---------------*/
 /*----------------------------------*/
+let lastScroll = 0
 
-window.onwheel = (event) =>{
+window.onscroll = (event) =>{
     let menu = document.querySelector(".header__menu__moving-part")
-    if(event.deltaY > 0) {
+    if(window.scrollY > 130 && lastScroll < window.scrollY) {
         menu.style.top = "-130px"
     } else {
-        menu.style.top = "0px"
-        
+        menu.style.top = "0px"        
     }
+    lastScroll = window.scrollY
 }
+
+/**************************************/
+/*------------------------------------*/
+/*------------REED MORE---------------*/
+/*------------------------------------*/
+/**************************************/
+
+let reports = document.querySelectorAll(".main__report_card_text")
+reports.forEach( report => {
+    const numSymbol = 388
+    const text = report.innerText
+    if (text.length > numSymbol){
+        const limitSymbol = text.slice(0, numSymbol).lastIndexOf(" ")
+        const firstPart = text.slice(0, limitSymbol+1)
+        const secondPart = text.slice(limitSymbol+1)
+        report.innerText = firstPart
+        let reedMore = document.createElement("strong")
+        reedMore.innerText = " більше.."
+        report.appendChild(reedMore)
+
+        let textMore = document.createElement("span")
+        textMore.innerText = secondPart
+        textMore.style.display = "none"
+        report.appendChild(textMore)
+        
+        reedMore.onclick = function(){
+            reedMore.style.display = "none"
+            textMore.style.display = "inline"            
+        } 
+
+
+    }
+})

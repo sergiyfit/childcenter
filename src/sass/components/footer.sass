@@ -6,13 +6,14 @@
 
     &__location
         max-width: 1280px
-        width: 100%
+        width: calc( 100% - 20px )
         margin: 100px auto
         box-sizing: border-box 
-        border-radius: 50px
+        border-radius: 20px
         padding: 25px 10px 25px
 
         +media(728)
+            border-radius: 50px
             padding: 45px 10px 45px
             border-radius: 100px
 
@@ -27,7 +28,8 @@
             +media(840)
                 width: 100px
                 height: 100px           
-            bottom: 0px
+                bottom: 0px
+            bottom: -20px
             top: auto
         &::after
             right: auto
@@ -35,8 +37,9 @@
             +media(840)
                 width: 100px
                 height: 100px
+                bottom: 0px
             // top: calc( 100% - 50px)
-            bottom: 0px
+            bottom: -20px
             top: auto
 
                 

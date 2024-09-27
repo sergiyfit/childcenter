@@ -56,6 +56,7 @@ class InfinitySlider {
         this.maxHeight;
         this.sliderDots;
         this.touchPoint;
+        this.activeDot = 0; // UPGRADE
         // InfinitySlider.defaultSettings.baseCardWidth = this.widthSliderContainer;
     };
 
@@ -98,14 +99,14 @@ class InfinitySlider {
 
         if (this.settings.isDots && this.realCardsLength > 1) {
             this.creationDots();
-            this.sliderDots = document.querySelectorAll('.slider-dot');
+            this.sliderDots = this.slider.querySelectorAll('.slider-dot');
             for (let i = 0; i < this.sliderCards.length; i++) {
                 if (this.sliderCards[i].classList.contains("activeFade")) {
                     this.sliderDots[i].classList.remove("activeFade");
                     this.sliderCards[i].classList.remove("activeFade");
                 }
             }
-            this.sliderDots[0].classList.add("activeFade");
+            // this.sliderDots[0].classList.add("activeFade");
             this.sliderCards[0].classList.add("activeFade");
         }
         if (this.settings.isArrows) this.creationArrows();
@@ -141,21 +142,23 @@ class InfinitySlider {
 
         this.settings.isDots ? this.sliderContainer.style.height = this.heightCards + this.settings.distanceToDots + 'px' : this.sliderContainer.style.height = this.heightCards + 'px';
         
-        this.sliderDots = document.querySelectorAll('.slider-dot');
-        this.sliderDots.forEach(element => {
-            element.onclick = () => {
-                clearInterval(localStorage[this.slider.id + "Interval"]);
-                for (let index = 0; index < this.realCardsLength; index++) {
-                    this.sliderDots[index].classList.remove("activeFade");
-                    this.sliderCards[index].classList.remove("activeFade");
-                }
-                this.sliderCards[element.dataset.order].classList.add("activeFade");
-                element.classList.add("activeFade");
-            }
-        });
+        this.sliderDots = this.slider.querySelectorAll('.slider-dot');
+        // this.sliderDots.forEach(element => {
+        //     element.onclick = () => {
+        //         clearInterval(localStorage[this.slider.id + "Interval"]);
+        //         // for (let index = 0; index < this.realCardsLength; index++) {
+        //         for (let index = 0; index < this.realCardsLength; index++) {
+        //             this.sliderDots[index].classList.remove("activeFade");
+        //             this.sliderCards[index].classList.remove("activeFade");
+        //         }
+        //         this.sliderCards[element.dataset.order].classList.add("activeFade");
+        //         element.classList.add("activeFade");
+        //     }
+        // });
         if (this.settings.isAutoplay && this.realCardsLength > this.cardsCount) {
             this.startAutoPlay();
         }
+        
         this.slider.addEventListener('touchend', () => {
             if (this.settings.isAutoplay && this.realCardsLength > this.cardsCount) {
                 this.startAutoPlay();
@@ -163,6 +166,7 @@ class InfinitySlider {
         });
         
         this.touchSlider = this.touchSlider.bind(this);
+        
 
         this.slider.addEventListener('touchstart', (e) => {
             this.touchPoint = e.touches[0].pageX;
@@ -218,7 +222,7 @@ class InfinitySlider {
             let slideNav = this.slider.querySelector('.dots-container')
             slideNav.insertAdjacentElement("afterbegin", this.prevBtnSlider);
             slideNav.insertAdjacentElement("beforeend", this.nextBtnSlider);
-
+            /* - e n d - */
             let isClickUnabled = true;
             const clickUnabled = () => {
                 isClickUnabled = false;
@@ -250,7 +254,8 @@ class InfinitySlider {
             dotContainer.className = "dots-container";
             dotContainer.style.bottom = "0";
             this.slider.insertAdjacentElement("beforeend", dotContainer);
-            for (let index = 0; index < this.realCardsLength; index++) {
+            // for (let index = 0; index < this.realCardsLength; index++) {
+            for (let index = 0; index < 3; index++) {
                 const slideDot = document.createElement("span");
                 slideDot.className = "slider-dot";
                 slideDot.dataset.order = index;
@@ -288,6 +293,11 @@ class InfinitySlider {
                 for (let index = 0; index < this.cardsCount; index++) {
                     this.sliderContainer.insertAdjacentElement("afterbegin", this.sliderCards[this.sliderCards.length - 1]);
                 }
+                this.sliderDots[this.activeDot].classList.remove("activeFade");
+                this.activeDot = this.activeDot < 1 ? 2 : --this.activeDot 
+                this.sliderDots[this.activeDot].classList.add("activeFade");
+
+
             } else if (this.settings.isEffectFadeOut) {
                 setTimeout(() => this.sliderCards[slideIndex].classList.add("activeFade"), 800);
                 setTimeout(() => this.sliderDots[slideIndex].classList.add("activeFade"), 800);
@@ -306,6 +316,10 @@ class InfinitySlider {
                 for (let index = 0; index < this.cardsCount; index++) {
                     this.sliderContainer.insertAdjacentElement("beforeend", this.sliderCards[0]);
                 }
+                this.sliderDots[this.activeDot].classList.remove("activeFade");
+                this.activeDot = this.activeDot > 1 ? 0: ++this.activeDot
+                this.sliderDots[this.activeDot].classList.add("activeFade");
+
             } else if (this.settings.isEffectFadeOut) {
                 setTimeout(() => this.sliderCards[slideIndex].classList.add("activeFade"), 800);
                 setTimeout(() => this.sliderDots[slideIndex].classList.add("activeFade"), 800);
@@ -351,10 +365,10 @@ class InfinitySlider {
     }
 
     touchSlider(e) {
-        if ((this.touchPoint + 20) < e.touches[0].pageX) {
+        if ((this.touchPoint + 100) < e.touches[0].pageX) {
             this.changeSlide('left');
             this.slider.removeEventListener('touchmove', this.touchSlider);
-        } else if ((this.touchPoint - 20) > e.touches[0].pageX) {
+        } else if ((this.touchPoint - 100) > e.touches[0].pageX) {
             this.changeSlide('right');
             this.slider.removeEventListener('touchmove', this.touchSlider);
         }
@@ -438,6 +452,7 @@ class InfinitySlider {
             autoplaySpeed: 5000,
             transitionCard: "all 1.5s ease-in-out",
         });
+
         const reportSlider = new InfinitySlider(".main__report_container", {
             isArrows: true,
             isSlidesToScrollAll: true,

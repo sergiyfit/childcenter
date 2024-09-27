@@ -195,6 +195,9 @@
     position: relative
     padding-left: 10px
     padding-right: 10px
+    padding-bottom: 100vw
+    +media(640)
+        padding-bottom: 0
     +media(678)
         padding-right: 20%
     +media(1280)
@@ -204,6 +207,7 @@
         border-radius: 20px
         box-sizing: border-box 
         padding: 10px 10px 30px
+        
         +media(640)
             border-radius: 50px
         +media(680)
@@ -215,12 +219,16 @@
 
     &_image
         position: absolute
-        top: 50%
-        transform: translateY(-50%)
         right: 0
-        width: 50%
-        display: none
+        bottom: 0
+        // display: none
+        width: 100%
+
         +media(640)
+            transform: translateY(-50%)
+            bottom: auto
+            top: 50%
+            width: 50%
             display: block
         +media(790)
             width: 400px
@@ -242,18 +250,30 @@
         width: 100%        
         padding-left: 10px
         padding-right: 10px
+        padding-bottom: 65vw
         box-sizing: border-box
 
         margin: 0 auto 50px
         align-items: center
+        +media(480)
+            padding-bottom: 0
         +media(1280)
             box-sizing: content-box
             width: 1170px        
             padding-left: 120px
+        
     &__image
+        width: 100%
+        bottom: 0
         position: absolute
-        display: none
+        // display: none
+        +media(480)
+            bottom: auto
+            width: 40%
+            transform: translate(-20px,-50%)
+            top: 50%
         +media(640)
+            bottom: auto
             width: 40%
             display: block
             // top: 20%
@@ -365,7 +385,10 @@
     +media(1280)
         padding: 28px 50px
 .left-img    
-    left: 15px 
+    right: 0
+    +media(640)
+        left: 15px
+        right: auto
 
 .right-img 
     right: 0px

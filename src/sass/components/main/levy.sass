@@ -17,34 +17,47 @@
             justify-content: center
             align-items: stretch
             align-content: stretch
+            +media(576)
+                flex-direction: row
             +media(1280)
                 flex-wrap: nowrap
 
         &_card
             font-size: 16px
             position: relative            
-            line-height: 22px
             background-color: #fff 
             border-radius: 30px
+            line-height: 22px
             padding: 20px 15px 85px
+            +media(576)
+                width: 40%
+                font-size: 12px
+                line-height: 18px
+
             +media(720)
+                font-size: 13px
+                line-height: 20px
                 border-radius: 10px
                 padding: 45px 30px 90px
                 width: 40%
-                font-size: 13px
             +media(1280)
                 width: 312px 
                 border-radius: 20px
                      
-            +media(1440)
+            +media(1450)
                 border-radius: 50px
+                line-height: 22px
                 font-size: 16px
             &_header
                 color: #FF8B00
+                +media(576)
+                    font-size: 15px
+                    margin: 15px 0 5px 
+                    
                 +media(678)
                     font-size: 18px
                     margin: 25px 0 5px 
-                +media(1440)
+                +media(1450)
                     font-size: 24px
             &_btn
                 position: absolute
@@ -62,6 +75,7 @@
             color: #313131
             margin: 0
             padding: 0
+            text-align: justify
 
         strong
             display: block
@@ -74,9 +88,13 @@
             padding-bottom: 0
             font-size: 16px
             position: relative
+            +media(576)
+                font-size: 12px
+                padding-left: 15px
             +media(678)
                 font-size: 13px
-            +media(1440)
+                padding-left: 25px
+            +media(1450)
                 font-size: 16px
             &::before
                 content: ''
@@ -88,6 +106,12 @@
                 top: 10px
                 left: 10px
                 background-color: #000
+                +media(576)
+                    top: 8px
+                    left: 5px
+                +media(1450)
+                    top: 10px
+                    left: 10px
             &:last-child
                 margin-bottom: 15px
 
@@ -95,6 +119,9 @@
             display: block
             font-size: 18px 
             padding-top: 15px 
+            +media(576)
+                // padding-top: 15px 
+                font-size: 15px
             +media(678)
                 padding-top: 15px 
                 font-size: 15px

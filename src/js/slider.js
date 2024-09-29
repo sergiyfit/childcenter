@@ -183,6 +183,10 @@ class InfinitySlider {
                 this.startAutoPlay();
             }
         };
+
+        this.switchCardWidth = function(newWidth){
+            this.settings.baseCardWidth = newWidth
+        }
     }
 
     creationClons() {
@@ -472,8 +476,48 @@ class InfinitySlider {
         }
         
         window.onresize = function () {
+            let newCardPhotoSize = "500rem"
+            if (window.innerWidth >=520 && window.innerWidth <= 800){
+                newCardPhotoSize = "200rem"                
+            } else  if (window.innerWidth > 800 && window.innerWidth <= 959){
+                newCardPhotoSize = "250rem"
+            } else  if (window.innerWidth >=960 && window.innerWidth <= 1160){
+                newCardPhotoSize = "300rem"            
+            } else  if (window.innerWidth > 1160 && window.innerWidth <= 1350){
+                newCardPhotoSize = "350rem"
+            } else  if (window.innerWidth > 1350 && window.innerWidth <= 1640){
+                newCardPhotoSize = "400rem"
+            }
+            photoSlider.switchCardWidth( newCardPhotoSize )
+
             photoSlider.init();
+            let newCardPedSize = "370rem"
+            if (window.innerWidth >=520 && window.innerWidth <= 717){
+                newCardPedSize = "200rem"                
+            } else  if (window.innerWidth > 717 && window.innerWidth <= 959){
+                newCardPedSize = "250rem"
+            } else  if (window.innerWidth >=960 && window.innerWidth <= 1160){
+                newCardPedSize = "200rem"            
+            } else  if (window.innerWidth > 1160 && window.innerWidth <= 1350){
+                newCardPedSize = "250rem"
+            } else  if (window.innerWidth > 1350 && window.innerWidth <= 1640){
+                newCardPedSize = "300rem"
+            }
+            padagogueSlider.switchCardWidth( newCardPedSize )
             padagogueSlider.init();
+
+            let newCardReportSize = "500rem"
+            if (window.innerWidth >=520 && window.innerWidth <= 800){
+                newCardReportSize = "200rem"                
+            } else  if (window.innerWidth > 800 && window.innerWidth <= 959){
+                newCardReportSize = "250rem"
+            } else  if (window.innerWidth >=960 && window.innerWidth <= 1160){
+                newCardReportSize = "300rem"            
+            } else  if (window.innerWidth > 1160 && window.innerWidth <= 1350){
+                newCardReportSize = "350rem"
+            } else  if (window.innerWidth > 1350 && window.innerWidth <= 1640){
+                newCardReportSize = "400rem"
+            }
             reportSlider.init();
         };
     }

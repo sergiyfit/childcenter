@@ -212,17 +212,20 @@
             border-radius: 50px
         +media(680)
             padding: 30px 30px 30px
-        +media(1280)
+        +media(928)
+            border-radius: 100px
+            padding: 50px 80px 30px
+        +media(1080)
             padding: 110px 120px 90px
             width: 1000px
             border-radius: 150px
 
     &_image
         position: absolute
-        right: 0
+        right: 10px
         bottom: 0
         // display: none
-        width: 100%
+        width: calc(100% - 20px)
 
         +media(640)
             transform: translateY(-50%)
@@ -234,6 +237,10 @@
             width: 400px
         +media(1000)
             width: 500px
+        +media(1080)
+            width: 540px
+        +media(1200)            
+            width: 600px
         +media(1280)            
             width: 655px
         +media(1349)            
@@ -312,7 +319,7 @@
         // align-items: center
         box-sizing: border-box
         padding: 10px 10px
-        border-radius: 50px
+        border-radius: 20px
         background: #FFFFFF
         box-shadow: $global-shadow
         width: 100%
@@ -320,13 +327,18 @@
         line-height: 18px
         color: #313131
         +media(640)
+            padding: 20px 20px
             align-items: flex-end
+            border-radius: 50px
+        +media(684)
+            padding: 30px 30px
 
-            +media(928)
-                font-size: 18px
-                line-height: 23px
-                padding: 40px 40px
-                border-radius: 150px          
+        +media(928)
+            font-size: 18px
+            line-height: 23px
+            padding: 40px 40px
+            border-radius: 150px    
+
         &_header
             font-size: 12px
             margin: 15px 0
@@ -334,8 +346,11 @@
 
             +media(678)
                 font-size: 14px
-            +media(928)
+                margin-bottom: 15px
+            +media(840)
+                font-size: 18px
                 text-align: left
+            +media(928)
                 font-size: 18px
                 margin: 45px 0
             +media(1280)

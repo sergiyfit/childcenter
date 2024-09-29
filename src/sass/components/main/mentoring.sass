@@ -19,25 +19,52 @@
             align-items: center
             column-gap: 10px
             margin: auto
+            +media(480)
+                flex-direction: row
+                padding: 0 5px
+                column-gap: 10px
+                row-gap: 20px
             +media(640)
                 column-gap: 20px
+                row-gap: 30px
             +media(1540)
+                row-gap: 50px
                 max-width: 1580px    
             row-gap: 50px
         &_card
             padding: 15px 25px
             border-radius: 20px
             width: 100%
+            +media(480)
+                border-radius: 15px
+                padding: 10px 15px
+                width: 45%
             +media(640)
+                padding: 20px 25px 35px
+                border-radius: 30px
+            +media(780)
                 padding: 20px 50px 35px
+                border-radius: 30px
+            +media(1280)
                 border-radius: 50px
                 width: 500px
             text-align: center
             background-color: #fff
             box-sizing: border-box
-
+            h3
+                +media(480)
+                    font-size: 12px        
+                +media(640)
+                    font-size: 16px        
+                +media(780)       
+                    font-size: 18px        
+                +media(960)       
+                    font-size: 24px        
             img
                 margin-top: 25px
+                +media(480)
+                    margin-top: 15px
+
                 border-radius: 20px
                 display: block
                 width: 100%
@@ -45,6 +72,6 @@
                 object-fit: cover
                 object-position: center
 
-                +media(640)
+                +media(1280)
                     width: 400px
                     height: 230px

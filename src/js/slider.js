@@ -505,19 +505,20 @@ class InfinitySlider {
             }
             padagogueSlider.switchCardWidth( newCardPedSize )
             padagogueSlider.init();
-
+            
             let newCardReportSize = "500rem"
-            if (window.innerWidth >=520 && window.innerWidth <= 800){
-                newCardReportSize = "200rem"                
-            } else  if (window.innerWidth > 800 && window.innerWidth <= 959){
-                newCardReportSize = "250rem"
-            } else  if (window.innerWidth >=960 && window.innerWidth <= 1160){
-                newCardReportSize = "300rem"            
-            } else  if (window.innerWidth > 1160 && window.innerWidth <= 1350){
+            if (window.innerWidth >=560 && window.innerWidth <= 800){
+                newCardReportSize = "250rem"                
+            } else  if (window.innerWidth > 800 && window.innerWidth <= 1080){
                 newCardReportSize = "350rem"
-            } else  if (window.innerWidth > 1350 && window.innerWidth <= 1640){
+            } else  if (window.innerWidth >=1080 && window.innerWidth <= 1280){
+                newCardReportSize = "300rem"            
+            } else  if (window.innerWidth > 1280 && window.innerWidth <= 1580){
+                newCardReportSize = "380rem"
+            } else  if (window.innerWidth > 1580 && window.innerWidth <= 1640){
                 newCardReportSize = "400rem"
             }
+            reportSlider.switchCardWidth( newCardReportSize )
             reportSlider.init();
         };
     }

@@ -1,6 +1,6 @@
 .main__kindergarten
     &-page
-        border-top: $border-top-orange-line
+        // border-top: $border-top-orange-line
         padding-top: 35px
         padding-bottom: 20px
         &_header
@@ -9,10 +9,19 @@
         &_box:last-child .img-block__content
             +media(1280)
                 max-width: 550px
-            
+
+        &_box .img-block__image
+            +media(640)
+                width: 50%
         &_text
             +media(1280)
                 padding: 28px 45px
+            p
+                +media(480)
+                    max-width: 55%
+                +media(640)
+                    max-width: 100%
+
         &_list_header
             color: $global-orange
             +media(928)
@@ -21,13 +30,25 @@
             +media(928)
                 margin: 55px 0 15px
         &_box:last-child &_list_text
-            max-width: 500px
+            +media(480)
+                max-width: 55%
+            +media(640)
+                max-width: 100%
+            +media(1024)
+                max-width: 500px
+
         &__btn
+            +media(480)
+                max-width: 70%            
+                margin: 10px 0 15px
+            +media(678)
+                min-width: 250px
             +media(928)
                 margin: 35px 0 75px
         &_box:last-child &__btn 
             +media(928)
-                margin: 33px 0 70px      
+                margin: 33px 0 70px   
+
         /*---------------------------------------------------------*/
         /*-------------------Card with huge image------------------*/
         /*---------------------------------------------------------*/
@@ -65,9 +86,14 @@
 
             &_header
                 color: $global-blue
-                +media(678)
-                    width: 55%
                 padding: 20px 0 10px
+                +media(480)
+                    font-size: 20px
+                +media(640)
+                    width: 47%
+                    font-size: 16px
+                +media(860)
+                    width: 55%
                 +media(1440)
                     padding: 50px 0 40px
                     width: 575px
@@ -76,25 +102,52 @@
                 font-family: 'Open Sans'
                 font-style: normal
                 font-weight: 500
-                font-size: 18px
+                font-size: 13px
                 line-height: 23px
-                +media(678)
+                +media(480)
+                    font-size: 18px
+                +media(640)
+                    font-size: 13px
+                    width: 47%
+                +media(860)
                     width: 55%
                 +media(1440)
+                    font-size: 18px
                     width: 575px
 
             &__time
                 color: white
                 padding: 10px
-                width: 150px
-                margin-right: 10px 
+                width: 130px
+                +media(380)
+                    width: 100px
+                +media(480)
+                    width: 130px
+                +media(578)
+                    width: 150px
+                    margin-right: 10px 
+                +media(640)
+                    margin-right: 0px 
+                    width: 80px
+                    padding: 5px
+                    height: 30px
+                +media(810)
+                    width: 100px
+                +media(1280)
+                    width: 150px
+                    margin-right: 10px 
 
                 &:hover
                     color: white
                 &-container
+                    display: flex
                     width: 100%
+                    +media(640)
+                        width: 47%
                     row-gap: 10px
-                    +media(678)
+                    column-gap: 10px
+                    flex-wrap: wrap
+                    +media(860)
                         width: 55%
                     padding: 20px 0
                     +media(1440)
@@ -113,15 +166,60 @@
             .main__age_container
                 +media(1280)
                     column-gap: 125px
+    /*----------------------------------------------------*/                    
+    /*-------------------QUADRO IMAGES--------------------*/                    
+    /*----------------------------------------------------*/                    
+    .quadro-image
+        +media(640)
+            width: 35%
+            aspect-ratio: 35/50
+        +media(678)
+            width: 38%
+            aspect-ratio: 35/40
+        +media(700)
+            width: 42%
+            aspect-ratio: 35/38
+        +media(728)
+            width: 45%
+            aspect-ratio: 35/32
+        +media(810)
+            width: 50%
+            aspect-ratio: 63/40
+        +media(840)
+            width: 38%
+            aspect-ratio: 45/50
+        +media(912)
+            width: 42%
+            aspect-ratio: 45/38
+        +media(976)
+            width: 45%
+            aspect-ratio: 45/32
+        +media(1200)
+            width: 50%
+            aspect-ratio: 63/35
+
     &-lessons
         margin-top: 100px
         padding: 30px 0 70px
+
+        &_container
+            column-gap: 10px
+
         &_header
             padding: 0 
             +media(480)
                 padding: 5px 0 0
             &-huge
                 padding: 20px 10px 35px
+        &_list-item
+            
+            +media(840)
+                font-size: 14px
+            +media(1280)
+                font-size: 16px
+            +media(1440)
+                font-size: 18px
+
         &__btn
             +media(928)
                 margin: 17px 0
@@ -178,10 +276,22 @@
                 font-style: normal
                 font-weight: 700
                 font-size: 16px
+                +media(640)
+                    font-size: 12px
+                    height: 35px
+                    width: 160px
                 +media(678)
                     bottom: 20px
+                +media(740)
+                    font-size: 14px
+                    height: 40px
+                    width: 200px
+
                 +media(1280)
+                    font-size: 16px
                     bottom: 40px
+                    height: 45px
+                    width: 230px
     &-groups
 
         &_container
@@ -194,7 +304,7 @@
                 padding: 55px 115px 50px
         &_box
             +media(640)
-            padding-left: 30px
+                padding-left: 30px
             +media(1580)
                 padding-left: 50px
         &_list
@@ -203,8 +313,15 @@
                 margin-top: 0px
             &-item
                 margin-bottom: 15px
+                +media(640)
+                    margin-bottom: 0
+                    line-height: 19px
+                +media(1280)
+                    margin-bottom: 15px
         &__btn
             margin: 15px 0
+            +media(640)
+                margin: 10px 0
             +media(928)
                 margin: 20px 0
 
@@ -235,12 +352,15 @@
 
         &-item 
             position: relative
-            padding: 35px 75px 36px 45px
-            border-radius: 50px
+            padding: 10px 70px 10px 25px
+            border-radius: 30px
             box-sizing: border-box
             margin: 10px auto
             max-width: 1020px
             background-color: #fff
+            +media(678)
+                border-radius: 50px
+                padding: 35px 75px 36px 45px
             &_text
                 color: $global-black
                 
@@ -252,18 +372,25 @@
                 &-show
                     transition: all 0.5s ease, opacity 0.5s ease 0.5s 
                     opacity: 1
-                    margin-top: 10px 
+                    margin-top: 5px 
                     font-family: 'Open Sans'
                     font-style: normal
                     font-weight: 500
-                    font-size: 16px
-                    line-height: 23px
+                    font-size: 13px
+                    line-height: 19px
+                    +media(1280)
+                        margin-top: 10px 
+                        font-size: 16px
+                        line-height: 23px
 
             &_button
                 position: absolute
                 transform: translate(50%,-50%)
-                top: 50px
-                right: 65px
+                top: 35px
+                right: 35px
+                +media(678)
+                    top: 50px
+                    right: 65px
                 border-radius: 50%
                 width: 45px
                 height: 45px
@@ -295,6 +422,9 @@
                     height: 16px
                     background-color: $global-green
                     transition: all 0.5s ease
+                &-show
+                    background-color: #fff
+
                 &-show::after
                     height: 1px
 

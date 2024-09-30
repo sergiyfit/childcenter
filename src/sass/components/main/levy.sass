@@ -57,7 +57,11 @@
                 +media(678)
                     font-size: 18px
                     margin: 25px 0 5px 
+                +media(1280)
+                    margin: 15px 0 5px 
+                    font-size: 17px
                 +media(1450)
+                    margin: 25px 0 5px 
                     font-size: 24px
             &_btn
                 position: absolute
@@ -66,10 +70,23 @@
                 transform: translateX(-50%)
                 left: 50%
         &_time
-            width: 150px
-            padding: 8px
-            font-size: 16px
+            width: 120px
+            padding: 5px
+            font-size: 14px
             color: #FFFFFF
+            height: 35px
+
+            +media(480)
+                width: 135px
+                padding: 9px
+                font-size: 15px
+                height: 40px  
+
+            +media(1280)
+                width: 150px
+                padding: 8px
+                font-size: 16px
+                height: 40px
 
         &_text
             color: #313131
@@ -119,6 +136,13 @@
             display: block
             font-size: 18px 
             padding-top: 15px 
+            font-family: 'Balsamiq Sans'
+            font-weight: 700
+            line-height: 19px
+            letter-spacing: 0.03em
+            text-transform: uppercase
+            color: #0035F7
+
             +media(576)
                 // padding-top: 15px 
                 font-size: 15px

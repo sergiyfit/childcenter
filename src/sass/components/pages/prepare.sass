@@ -15,6 +15,12 @@
         &_text
             +media(1280)
                 padding: 15px 45px
+                
+        &_list_text
+            +media(480)
+                max-width: 55%
+            +media(640)
+                max-width: 100%
         &_list_header
             color: $global-orange
             +media(928)
@@ -73,7 +79,9 @@
 
             &_header
                 color: $global-blue
-                width: 55%
+
+                +media(480)
+                    width: 55%
                 padding: 20px 0 10px
                 +media(1440)
                     padding: 50px 0 25px
@@ -83,13 +91,17 @@
                 font-family: 'Open Sans'
                 font-style: normal
                 font-weight: 500
-                font-size: 18px
-                line-height: 23px
-                width: 55%
+                font-size: 14px
+                line-height: 29px
+                
+                +media(480)
+                    width: 55%
                 +media(1440)
                     width: 575px
+                    font-size: 18px
+                    line-height: 23px
             &_btn
-                
+                margin-top: 15px
                 width: 250px
             &_image
                 +media(1440)

@@ -9,14 +9,13 @@
     &__btn        
         display: block
         width: 205px
+        font-size: 12px
         // padding: 13.5px
-        padding: 12.5px
-        height: 50px
+        padding: 10px
+        height: 45px
         box-sizing: border-box
         font-family: 'Balsamiq Sans'
         vertical-align: middle
-        font-weight: 700
-        font-size: 14px
         text-align: center
         letter-spacing: 0.03em
         text-transform: uppercase
@@ -26,6 +25,11 @@
         border-radius: 100px
         transition: all 0.5s ease
 
+        +media(1280)
+            font-weight: 700
+            font-size: 14px
+            padding: 12.5px
+            height: 50px
         &:hover
             background-color: #FF0099
             border-color: $global-orange
@@ -98,12 +102,16 @@
         margin-bottom: 15px
 
         +media(480)
-            font-size: 18px
-            line-height: 29px
+            font-size: 14px
+            line-height: 19px
         +media(678)
+            line-height: 24px
+            font-size: 18px
             margin-top: 0px
             margin-bottom: 0px
+        +media(1280)
             font-size: 24px
+            line-height: 29px
 
     &-nav    
         display: flex        
@@ -259,15 +267,17 @@
         padding-right: 10px
         padding-bottom: 65vw
         box-sizing: border-box
-
+        justify-content: center
         margin: 0 auto 50px
         align-items: center
         +media(480)
             padding-bottom: 0
         +media(1280)
-            box-sizing: content-box
             width: 1170px        
+        +media(1440)     
             padding-left: 120px
+            box-sizing: content-box
+
         
     &__image
         width: 100%
@@ -289,23 +299,27 @@
         +media(728)
             // top: 10%
             width: 50%
-            transform: translateX(0px,-50%)
+            transform: translate(0px,-50%)
 
         +media(1280)
             // top: 50px
+            width: 600px            
+        +media(1440)
             width: 630px            
     &__content
         display: block
         margin: 5px 8px
-        +media(678)
+        +media(640)
             max-width: 45%
             width: max-content
         +media(928)
             margin: 5px 20px
         +media(1280)
             max-width: 500px
-            margin: 5px 88px
+            margin: 5px 20px
             min-width: 470px
+        +media(1440)
+            margin: 5px 88px
     &__text
         white-space: break-spaces
         font-weight: 500
@@ -343,7 +357,7 @@
             font-size: 12px
             margin: 15px 0
             text-align: center
-
+            
             +media(678)
                 font-size: 14px
                 margin-bottom: 15px
@@ -357,6 +371,10 @@
                 font-size: 24px           
         &_item
             margin-bottom: 16px
+            +media(480)
+                margin-bottom: 5px
+            +media(1280)
+                margin-bottom: 16px
 
     &__btn
         margin: 20px auto 
@@ -365,7 +383,8 @@
             width: 255px
         +media(928)
             margin: 50px 0 35px
-        padding: 12px
+        +media(1280)
+            padding: 12px
 
 .marker-list
     padding-left: 25px
@@ -391,7 +410,9 @@
 .left-container
     +media(1280)
         padding-left: 10px
-        padding-right: 120px
+        padding-right: 180px
+    +media(1440)
+        padding-left: 10px
 .left-list
     padding: 10px 10px
 
@@ -401,12 +422,15 @@
         padding: 28px 50px
 .left-img    
     right: 0
+    left: auto
     +media(640)
         left: 15px
         right: auto
 
 .right-img 
     right: 0px
+
+
 
 /*-----------------------------------*/
 /*------------Прямокутний------------*/
@@ -464,6 +488,9 @@
             box-sizing: border-box
             font-size: 14px
             +media(640)
+                font-size: 12px
+
+            +media(840)
                 font-size: 18px
                 
             line-height: 23px
@@ -485,9 +512,13 @@
     padding: 25px 10px 100px  
 
     +media(640)
-        padding: 25px 20px 100px  
-        width:30% 
+        padding: 20px 10px 100px  
+        width: calc( 50% - 10px ) 
         border-radius: 20px
+    +media(840)
+        width:30% 
+        width: calc( 33% - 10px )
+
     +media(1580)
         border-radius: 50px
         max-width: 500px
@@ -498,9 +529,18 @@
         box-sizing: border-box
         justify-content: center
         align-items: stretch
-        column-gap: 20px
+        column-gap: 15px
         row-gap: 20px
 
+
+        +media(640)
+            justify-content: flex-start
+            flex-direction: row
+        +media(840)
+            justify-content: center
+        +media(1280)
+            column-gap: 20px
+            row-gap: 20px
 
     &_sticker
         background-color: #000
@@ -511,26 +551,46 @@
         font-weight: 700
         font-size: 14px
         +media(640)
+            font-size: 11px
+            padding: 7px 7px
+        +media(1280)
             font-size: 16px
-            padding: 7px 30px
+            padding: 12px 30px
 
 
     &_header
         color: $global-orange
+        +media(640)
+            margin: 12px 0
+        +media(678)
+            margin: 15px 0
         +media(928)
             margin: 23px 0 20px
     &_text
         margin-bottom: 10px
+        +media(640)
+            font-size: 12px
+            line-height: 16px
+        +media(1280)
+            font-size: 16px
+            line-height: 22px
+
     &_list
 
         &-item
             display: block
+            position: relative
             padding: 1px
             padding-left: 17px
             padding-bottom: 0
             font-size: 16px
             line-height: 21px
-            position: relative
+            +media(640)
+                font-size: 12px
+                line-height: 16px
+            +media(1280)
+                line-height: 21px
+                font-size: 16px
             &::before
                 content: ''
                 position: absolute

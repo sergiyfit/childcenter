@@ -61,6 +61,20 @@
         &_box:nth-child(5) &_list_text
             max-width: 500px  
                 
+        &_box:nth-child(2n) &_list_text
+            +media(1280)
+                width: 400px  
+            +media(1440)
+                width: auto  
+
+        &_box:nth-child(2n+1) &_list_text
+            +media(1280)
+                width: 500px
+                padding-left: 60px
+                box-sizing: border-box  
+            +media(1440)
+                width: auto  
+                padding-left: 0px
 
         &_box:nth-child(5) &_list_header
             +media(928)
@@ -112,14 +126,22 @@
         padding-top: 80px
         &_header
             margin-bottom: 30px
-        &-card_card
-            +media(640)
-                width: 45%
-            +media(1240)
-                width: 33%
-            +media(1580)
-                max-width: 502px 
-                width: 502px 
+        &-card
+            &_container
+                +media(640)
+                    justify-content: center
+
+            &_card
+                +media(640)
+                    width: 45%
+                +media(1240)
+                    width: 33%
+                +media(840)
+                    padding: 20px
+                    padding-bottom: 90px
+                +media(1580)
+                    max-width: 502px 
+                    width: 502px 
                 
         &-photoalbum
             margin-bottom: 90px

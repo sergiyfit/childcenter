@@ -41,8 +41,8 @@
         &_box
             display: flex
             flex-direction: column
-            align-items: flex-end
             +media(640)
+                align-items: flex-end
                 border-radius: 50px
             +media(680)
                 padding: 30px 30px 30px
@@ -56,7 +56,10 @@
 
         &_header
             color: $global-blue
-            width: 55%
+            +media(640)
+                width: 45%
+            +media(678)
+                width: 55%
             padding: 20px 0 10px
             +media(1440)
                 padding: 50px 0 10px
@@ -72,7 +75,10 @@
             &:hover
                 color: white
             &-container
-                width: 55%
+                +media(640)
+                    width: 45%
+                +media(678)
+                    width: 55%
                 padding: 20px 0
                 +media(1440)
                     padding: 15px 0 10px

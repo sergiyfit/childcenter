@@ -320,6 +320,11 @@
             min-width: 470px
         +media(1440)
             margin: 5px 88px
+        p
+            +media(480)
+                max-width: 55%
+            +media(640)
+                max-width: 100%
     &__text
         white-space: break-spaces
         font-weight: 500
@@ -459,6 +464,7 @@
         border-radius: 80px
         padding: 60px 130px
     &-header
+        
         +media(678)
             margin-top: 15px
             margin-bottom: 35px
@@ -471,6 +477,36 @@
         object-position: center
         +media(640)
             width: 50%
+    
+    &-image // details
+        +media(640)
+            width: 35%
+            aspect-ratio: 35/50
+        +media(678)
+            width: 38%
+            aspect-ratio: 35/40
+        +media(700)
+            width: 42%
+            aspect-ratio: 35/38
+        +media(728)
+            width: 45%
+            aspect-ratio: 35/32
+        +media(810)
+            width: 50%
+            aspect-ratio: 63/40
+        +media(840)
+            width: 38%
+            aspect-ratio: 45/50
+        +media(912)
+            width: 42%
+            aspect-ratio: 45/38
+        +media(976)
+            width: 45%
+            aspect-ratio: 45/32
+        +media(1200)
+            width: 50%
+            aspect-ratio: 63/35
+
     &_box
         padding: 10px
         box-sizing: border-box    
@@ -549,7 +585,9 @@
         width: max-content
         font-family: 'Balsamiq Sans'
         font-weight: 700
-        font-size: 14px
+        font-size: 11px
+        +media(360)
+            font-size: 14px
         +media(640)
             font-size: 11px
             padding: 7px 7px
@@ -632,15 +670,19 @@
         display: flex
         flex-direction: column
         justify-content: space-between
-        padding: 60px 10px 30px
+        padding: 35px 10px 30px
         background-color: #fff
         box-sizing: border-box
         border-radius: 40px
         width: 100%
+        +media(480)
+            width: calc( 50% - 20px )
+            border-radius: 20px
+            padding: 50px 5px 30px
         +media(640)
             width: calc( 50% - 40px )
             border-radius: 30px
-            padding: 60px 20px 30px
+            padding: 40px 20px 30px
         +media(928)
             width: calc( 33% - 20px )
             padding: 70px 10px 50px
@@ -656,7 +698,9 @@
             position: absolute
             text-align: center
             transform: translateX(-50%)
-            top: 25px
+            top: 0px
+            +media(928)
+                top: 25px
             height: 60px
             left: 50%
             width: 83%

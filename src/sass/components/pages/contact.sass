@@ -31,6 +31,7 @@
         width: 100%
         max-width: 645px
         column-gap: 30px
+        row-gap: 30px
         +media(478)
             flex-direction: row
 
@@ -41,6 +42,10 @@
             color: $global-black
             padding-left: 30px
             margin-top: 10px
+            +media(840)
+                margin-top: 0
+            +media(1280)
+                margin-top: 10px
             &::before
                 left: 0
 
@@ -67,7 +72,10 @@
     &_map
         &_container
             padding-top: 40px
-            
+            +media(840)
+                padding-top: 20px
+            +media(1280)
+                padding-top: 40px
         &_overflow 
             margin: auto
             margin-top: 30px
@@ -75,11 +83,23 @@
             max-width: 630px
             max-height: 315px
             +media(840)
+                margin-top: 10px
                 max-width: 55vw
+                max-height: 300px
+            +media(1280)
+                margin-top: 30px
 
             +media(1360)
+                max-height: 315px
                 max-width: 630px
             iframe
+                +media(840)
+                    margin-top: -85px
+                    margin-left: -2px
+
+                +media(1280)
+                    margin-top: -70px
+                    margin-left: -2px
                 margin-top: -70px
                 margin-left: -2px
                 

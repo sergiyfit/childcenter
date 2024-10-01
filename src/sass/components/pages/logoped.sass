@@ -58,7 +58,8 @@
                 max-width: 550px  
 
         &_box:nth-child(5) &_list_text
-            max-width: 500px  
+            +media(678)
+                max-width: 500px  
                 
 
         &_box:nth-child(5) &_list_header
@@ -68,6 +69,21 @@
         &_box:nth-child(5) &__btn
             +media(928)
                 margin: 35px 0 70px
+
+        &_box:nth-child(2n) &_list_text
+            +media(1280)
+                width: 400px  
+            +media(1440)
+                width: auto  
+
+        &_box:nth-child(2n+1) &_list_text
+            +media(1280)
+                width: 500px
+                padding-left: 60px
+                box-sizing: border-box  
+            +media(1440)
+                width: auto  
+                padding-left: 0px
     /**-----------------------------------------**/
     /**------------------NORMS------------------**/
     /**-----------------------------------------**/
@@ -81,6 +97,9 @@
             margin-bottom: 35px
 
         &-card
+            &_container
+                +media(640)
+                    justify-content: center
             &_card
                 padding-bottom: 110px
                 margin-bottom: 75px 
@@ -137,7 +156,8 @@
 
         &_header
             color: $global-blue
-            width: 55%
+            +media(640)
+                width: 55%
             padding: 20px 0 10px
             +media(1440)
                 padding: 50px 60px 20px
@@ -147,9 +167,19 @@
             font-family: 'Open Sans'
             font-style: normal
             font-weight: 500
-            font-size: 18px
-            line-height: 23px
-            width: 55%
+            font-size: 14px
+            line-height: 19px
+            +media(640)
+                box-sizing: border-box
+                padding-left: 60px
+                width: 55%
+            +media(678)
+                padding-left: 0px
+                box-sizing: content-box
+
+            +media(1280)
+                font-size: 18px
+                line-height: 23px
             +media(1440)
                 padding: 0 60px
                 width: 510px

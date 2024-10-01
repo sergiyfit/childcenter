@@ -35,8 +35,8 @@
             &_box
                 display: flex
                 flex-direction: column
-                align-items: flex-end
                 +media(640)
+                    align-items: flex-end
                     border-radius: 50px
                 +media(680)
                     padding: 30px 30px 30px
@@ -50,7 +50,8 @@
 
             &_header
                 color: $global-blue
-                width: 55%
+                +media(640)
+                    width: 55%
                 padding: 20px 0 10px
                 +media(1440)
                     padding: 50px 0 25px
@@ -62,7 +63,15 @@
                 font-weight: 500
                 font-size: 18px
                 line-height: 23px
-                width: 55%
+                +media(640)
+                    font-size: 14px
+                    width: 45%
+                    padding-left: 60px
+                +media(678)
+                    padding-left: 0px
+                    width: 55%
+                +media(1280)
+                    font-size: 18px
                 +media(1440)
                     width: 575px
           
@@ -71,6 +80,7 @@
                 +media(1440)
                     left: -5px
         &_btn
+            margin-top: 15px
             width: 260px
             +media(928)
                 margin: 30px 0 30px            
@@ -103,9 +113,12 @@
             /*------------Quadro blocks-------------*/
         &_container
             margin-bottom: 50px
-            flex-direction: row
+            +media(640)
+                flex-direction: row
+                gap: 30px
             .marker-list
-                margin-bottom: 22px
+                +media(1280)
+                    margin-bottom: 22px
                 &:last-child
                     margin-bottom: 0px
         &__btn
@@ -113,6 +126,8 @@
                 margin: 40px 0 15px
         &_image
             +media(640)
+                // width: 50%
+            +media(1280)
                 width: 60%
 
     /*-----------------------------------*/

@@ -102,7 +102,7 @@ class InfinitySlider {
             this.activeDot = 0
             this.sliderDots = this.slider.querySelectorAll('.slider-dot');
             for (let i = 0; i < this.sliderCards.length; i++) {
-                if (this.sliderCards[i].classList.contains("activeFade") || this.sliderDots[i].classList.contains("activeFade")) {
+                if (this.sliderCards[i].classList.contains("activeFade") ) {
                     this.sliderDots[i].classList.remove("activeFade");
                     this.sliderCards[i].classList.remove("activeFade");
                 }

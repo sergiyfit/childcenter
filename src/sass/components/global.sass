@@ -428,12 +428,14 @@
 .left-img    
     right: 0
     left: auto
+    animation: leftAnim 2s infinite linear alternate
     +media(640)
         left: 15px
         right: auto
 
 .right-img 
     right: 0px
+    animation: rightAnim 2s infinite linear alternate
 
 
 
@@ -763,3 +765,16 @@ a.icon-link
     &--facebook::before
         top: 12px
         background-image: url("../img/icons/facebook.svg")
+
+
+@keyframes leftAnim 
+    from
+        left: 0
+    to
+        left: 20px
+
+@keyframes rightAnim 
+    from
+        right: 0
+    to
+        right: 20px

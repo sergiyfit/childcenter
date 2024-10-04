@@ -383,6 +383,22 @@ class InfinitySlider {
     /* ------------------PHOTOALBUM------------------- */
     /* ----------------------------------------------- */ 
 
+    let getPhotosliderWidth = () => {
+        let newCardPhotoSize = "500rem"
+        if (window.innerWidth >=520 && window.innerWidth <= 800){
+            newCardPhotoSize = "200rem"                
+        } else  if (window.innerWidth > 800 && window.innerWidth <= 959){
+            newCardPhotoSize = "250rem"
+        } else  if (window.innerWidth >=960 && window.innerWidth <= 1160){
+            newCardPhotoSize = "300rem"            
+        } else  if (window.innerWidth > 1160 && window.innerWidth <= 1350){
+            newCardPhotoSize = "350rem"
+        } else  if (window.innerWidth > 1350 && window.innerWidth <= 1640){
+            newCardPhotoSize = "400rem"
+        }
+        return newCardPhotoSize
+    }
+
     const photoSlider = new InfinitySlider(".slider", {
         isArrows: true,
         isSlidesToScrollAll: true,
@@ -470,9 +486,8 @@ class InfinitySlider {
         });
         
         window.onload = function(){
-            photoSlider.switchCardWidth( getPhotosliderWidth() )
-            photoSlider.init();
 
+            photoSlider.init();
             padagogueSlider.init();
             reportSlider.init();
         }
@@ -515,19 +530,3 @@ class InfinitySlider {
             reportSlider.init();
         };
     }
-
-let getPhotosliderWidth = () =>{
-    let newCardPhotoSize = "500rem"
-    if (window.innerWidth >=520 && window.innerWidth <= 800){
-        newCardPhotoSize = "200rem"                
-    } else  if (window.innerWidth > 800 && window.innerWidth <= 959){
-        newCardPhotoSize = "250rem"
-    } else  if (window.innerWidth >=960 && window.innerWidth <= 1160){
-        newCardPhotoSize = "300rem"            
-    } else  if (window.innerWidth > 1160 && window.innerWidth <= 1350){
-        newCardPhotoSize = "350rem"
-    } else  if (window.innerWidth > 1350 && window.innerWidth <= 1640){
-        newCardPhotoSize = "400rem"
-    }
-    return newCardPhotoSize
-}

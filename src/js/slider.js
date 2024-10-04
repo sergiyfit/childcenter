@@ -258,8 +258,8 @@ class InfinitySlider {
             dotContainer.className = "dots-container";
             dotContainer.style.bottom = "0";
             this.slider.insertAdjacentElement("beforeend", dotContainer);
-            // for (let index = 0; index < this.realCardsLength; index++) {
-            for (let index = 0; index < 3; index++) {
+            //for (let index = 0; index < this.realCardsLength; index++) {
+             for (let index = 0; index < 3; index++) {
                 const slideDot = document.createElement("span");
                 slideDot.className = "slider-dot";
                 slideDot.dataset.order = index;

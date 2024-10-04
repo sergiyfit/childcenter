@@ -235,7 +235,7 @@
         // display: none
         width: calc(100% - 20px)
         animation: rightAnim 2s infinite linear alternate
-        
+
         +media(640)
             transform: translateY(-50%)
             bottom: auto
@@ -429,14 +429,18 @@
 .left-img    
     right: 0
     left: auto
-    animation: leftAnim 2s infinite linear alternate
+    animation: animSmall 2s infinite linear alternate
+    
     +media(640)
+        animation: leftAnim 2s infinite linear alternate
         left: 15px
         right: auto
 
 .right-img 
     right: 0px
-    animation: rightAnim 2s infinite linear alternate
+    animation: animSmall 2s infinite linear alternate
+    +media(640)
+        animation: rightAnim 2s infinite linear alternate
 
 
 
@@ -773,6 +777,12 @@ a.icon-link
         left: 0
     to
         left: 20px
+
+@keyframes animSmall
+    from
+        left: -10px
+    to
+        left: 10px
 
 @keyframes rightAnim 
     from

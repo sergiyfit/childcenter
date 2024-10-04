@@ -73,8 +73,11 @@
 .dots-container
     display: flex
     justify-content: center
+    column-gap: 3px
+    +media(640)
+        column-gap: 10px
+
     row-gap: 20px
-    column-gap: 10px
     overflow: hidden
     padding: 10px
     box-sizing: border-box
@@ -84,8 +87,16 @@
 
 .slider-dot 
     display: inline-block
-    width: 15px
-    height: 15px
+
+    width: 7px
+    height: 7px
+    +media(400)    
+        width: 10px
+        height: 10px
+    +media(640)    
+        width: 15px
+        height: 15px
+
     border-radius: 50%
     box-sizing: border-box
     border: 1px solid #0033FF
@@ -97,7 +108,9 @@
 
 .slider_navigation  
     position: relative
-    margin: 0 20px
+    margin: 0 10px
+    +media(640)    
+        margin: 0 20px
     width: 40px
     height: 40px
     border: 1px solid #FF8B00

@@ -99,14 +99,15 @@ class InfinitySlider {
 
         if (this.settings.isDots && this.realCardsLength > 1) {
             this.creationDots();
+            this.activeDot = 0
             this.sliderDots = this.slider.querySelectorAll('.slider-dot');
             for (let i = 0; i < this.sliderCards.length; i++) {
-                if (this.sliderCards[i].classList.contains("activeFade")) {
+                if (this.sliderCards[i].classList.contains("activeFade") || this.sliderDots[i].classList.contains("activeFade")) {
                     this.sliderDots[i].classList.remove("activeFade");
                     this.sliderCards[i].classList.remove("activeFade");
                 }
             }
-            // this.sliderDots[0].classList.add("activeFade");
+            this.sliderDots[0].classList.add("activeFade");
             this.sliderCards[0].classList.add("activeFade");
         }
         if (this.settings.isArrows) this.creationArrows();
@@ -258,8 +259,8 @@ class InfinitySlider {
             dotContainer.className = "dots-container";
             dotContainer.style.bottom = "0";
             this.slider.insertAdjacentElement("beforeend", dotContainer);
-            //for (let index = 0; index < this.realCardsLength; index++) {
-             for (let index = 0; index < 3; index++) {
+            for (let index = 0; index < this.realCardsLength; index++) {
+            // for (let index = 0; index < 3; index++) {
                 const slideDot = document.createElement("span");
                 slideDot.className = "slider-dot";
                 slideDot.dataset.order = index;
@@ -297,10 +298,12 @@ class InfinitySlider {
                 for (let index = 0; index < this.cardsCount; index++) {
                     this.sliderContainer.insertAdjacentElement("afterbegin", this.sliderCards[this.sliderCards.length - 1]);
                 }
-                this.sliderDots[this.activeDot].classList.remove("activeFade");
-                this.activeDot = this.activeDot < 1 ? 2 : --this.activeDot 
-                this.sliderDots[this.activeDot].classList.add("activeFade");
 
+                
+                this.sliderDots[this.activeDot].classList.remove("activeFade");
+                this.activeDot = this.activeDot < 1 ? this.sliderDots.length - 1 : --this.activeDot
+                this.sliderDots[this.activeDot].classList.add("activeFade");
+                
 
             } else if (this.settings.isEffectFadeOut) {
                 setTimeout(() => this.sliderCards[slideIndex].classList.add("activeFade"), 800);
@@ -321,7 +324,7 @@ class InfinitySlider {
                     this.sliderContainer.insertAdjacentElement("beforeend", this.sliderCards[0]);
                 }
                 this.sliderDots[this.activeDot].classList.remove("activeFade");
-                this.activeDot = this.activeDot > 1 ? 0: ++this.activeDot
+                this.activeDot = this.activeDot > this.sliderDots.length - 2 ? 0: ++this.activeDot
                 this.sliderDots[this.activeDot].classList.add("activeFade");
 
             } else if (this.settings.isEffectFadeOut) {

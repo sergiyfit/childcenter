@@ -144,18 +144,17 @@ class InfinitySlider {
         this.settings.isDots ? this.sliderContainer.style.height = this.heightCards + this.settings.distanceToDots + 'px' : this.sliderContainer.style.height = this.heightCards + 'px';
         
         this.sliderDots = this.slider.querySelectorAll('.slider-dot');
-        // this.sliderDots.forEach(element => {
-        //     element.onclick = () => {
-        //         clearInterval(localStorage[this.slider.id + "Interval"]);
-        //         // for (let index = 0; index < this.realCardsLength; index++) {
-        //         for (let index = 0; index < this.realCardsLength; index++) {
-        //             this.sliderDots[index].classList.remove("activeFade");
-        //             this.sliderCards[index].classList.remove("activeFade");
-        //         }
-        //         this.sliderCards[element.dataset.order].classList.add("activeFade");
-        //         element.classList.add("activeFade");
-        //     }
-        // });
+        this.sliderDots.forEach(element => {
+            element.onclick = () => {
+                clearInterval(localStorage[this.slider.id + "Interval"]);
+                for (let index = 0; index < this.realCardsLength; index++) {
+                    this.sliderDots[index].classList.remove("activeFade");
+                    this.sliderCards[index].classList.remove("activeFade");
+                }
+                this.sliderCards[element.dataset.order].classList.add("activeFade");
+                element.classList.add("activeFade");
+            }
+        });
         if (this.settings.isAutoplay && this.realCardsLength > this.cardsCount) {
             this.startAutoPlay();
         }
@@ -419,6 +418,7 @@ class InfinitySlider {
     }
     
     window.onresize = function () {
+        photoSlider.switchCardWidth( getPhotosliderWidth() )
         photoSlider.init();
     };
 
@@ -466,13 +466,13 @@ class InfinitySlider {
     if(padagogueSlider){
         const padagogueSlider = new InfinitySlider(".slider_pedagogue", {
             isArrows: true,
-            isSlidesToScrollAll: true,
+            // isSlidesToScrollAll: true,
             baseCardWidth: "370rem",
             gap: 30,
             isAutoplay: true,
             isDots: true,
             distanceToDots: 100,
-            autoplaySpeed: 5000,
+            autoplaySpeed: 3000,
             transitionCard: "all 1.5s ease-in-out",
         });
 
@@ -533,3 +533,15 @@ class InfinitySlider {
             reportSlider.init();
         };
     }
+
+let photos = document.querySelectorAll(".main__photo_img")
+photos.forEach( photo => {
+    photo.onclick = function(){
+        let popupBackground = document.createElement("div")
+        let popup = document.createElement("div")
+        popupBackground.appendChild(popup)
+        popupBackground.classList.add("popup_background")
+        popupBackground.appendChild(popup)
+        document.body.appendChild(popupBackground)
+    }
+})

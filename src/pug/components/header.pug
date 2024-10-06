@@ -64,26 +64,35 @@
     let headImage = [
         {
             url:"img/header/ditina_3h_rokiv_malue_olivcami.png",
+            vizerunok:"star triangle correct_card1",
             alt:"ditina_3h_rokiv_malue_olivcami"
         },
         {
             url:"img/header/yak_ditini_namaluvati_yizhachka.png",
+            vizerunok:" snow wave correct_card2",
             alt:"yak_ditini_namaluvati_yizhachka"
         },
         {
             url:"img/header/dity_z_ranyoyi_shkoly_rozvitky.png",
+            vizerunok:"circle transp correct_card3",
             alt:"dity_z_ranyoyi_shkoly_rozvitky"
         },
         {
             url:"img/header/centr_rozvitky_ditey_labaratoriya_malenkih_geniyiv.png",
+            vizerunok:"star snow correct_card4",
             alt:"centr_rozvitky_ditey_labaratoriya_malenkih_geniyiv"
         }
     ];
 
 
 
-mixin printHeader(hasHero)
-    header.header
+mixin printHeader(hasHero, whiteBackground)
+    - let whitebcg = "white"
+    if !whiteBackground
+        - whitebcg = "milk-background"
+        if hasHero
+            - whitebcg = "milk-background correct-mb"    
+    header(class=whitebcg).header
         .header__menu__moving-part 
             .header__menu.flex
                 .header__menu__logo
@@ -106,10 +115,13 @@ mixin printHeader(hasHero)
                 a.global__btn.header__menu__btn(href=defaultUrlContact) Записати дитину
         if hasHero    
             .header__hero.milk-background
-                img(src="img/header/srtichka.svg", alt="strichka").header__hero-strip
+                .header__hero-strip-container
+                    img(src="img/header/srtichka.svg", alt="strichka").header__hero-strip
+                    img(src="img/header/srtichka.svg", alt="strichka").header__hero-strip.overstrip
                 h1.global__huge_text.header__hero_header Ваша дитина починає розвиватись тут
                 p.header__hero__text Від немовля до дошкільнятки, більше 9 років співпраці з батьками і дітьми!
-                a.global__btn.header__hero__btn(href=defaultUrlContact) Записати дитину
+                a.header__hero__btn(href=defaultUrlContact) Записати дитину
                 .header__hero_img_container.flex
                     for item in headImage
-                        img(src=item.url alt=item.alt).header__hero_img
+                        .header__hero_img(class=item.vizerunok)
+                            img(src=item.url alt=item.alt)

@@ -26,7 +26,6 @@
             padding: 7px
             box-sizing: border-box
             width: 40%
-
             +media(600)
                 width: 17%
                 font-size: 18px
@@ -34,6 +33,9 @@
                 max-width: 200px
             +media(800)
                 width: auto 
+            &:hover
+                transition: $link-transition
+                transform: scale(1.1)
 
             img
                 width: 100%

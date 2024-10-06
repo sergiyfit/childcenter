@@ -1,6 +1,5 @@
 .main__prepare
     &-page
-        border-top: $border-top-orange-line
         padding-top: 35px
         padding-bottom: 20px
         &_header
@@ -102,6 +101,8 @@
                     width: 575px
                     font-size: 18px
                     line-height: 23px
+                &::before
+                    top: 5px
             &_btn
                 margin-top: 15px
                 width: 250px
@@ -156,6 +157,7 @@
                     font-size: 11px
                 +media(1280)
                     font-size: 18px    
+
             &__btn
                 margin: 0
                 +media(928)

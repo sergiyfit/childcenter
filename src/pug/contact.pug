@@ -6,7 +6,7 @@ html(lang="en")
         include components/photo 
                     
         include components/header 
-        +printHeader(false)
+        +printHeader(false, true)
         main 
             .main__contact
                 h1.global__huge_text.main__contact_header контакти
@@ -21,8 +21,8 @@ html(lang="en")
                                 a(href=urlMap).marker вул. Вайсера, 4/2  
                             .main__contact_social
                                 .global__middle_text.main__contact_subheader ми у соцмережах:
-                                a(href="#").icon-link.icon-link--instagram @geniusesclub
-                                a(href="#").icon-link.icon-link--facebook geniusesclub15
+                                a(href=instagramUrl target="_blank").icon-link.icon-link--instagram @geniusesclub
+                                a(href=facebookUrl target="_blank").icon-link.icon-link--facebook geniusesclub15
 
                         .main__contact_map_container
                             .global__middle_text.main__contact_subheader Ми на карті:
@@ -40,6 +40,7 @@ html(lang="en")
                             label(for="usertask").main__contact_form_label Оберіть заняття 
                                 .custom-select.main__contact_form_textfield                           
                                 select(id="usertask" name="usertask").main__contact_form_textfield.select
+                                    option(value="Не знаю") Не знаю
                                     option(value="Дитячий садок 1,5-7 років") Дитячий садок 1,5-7 років
                                     option(value="Підготовка до школи") Підготовка до школи  
                                     option(value="Курс Мама+Малюк") Курс Мама+Малюк  

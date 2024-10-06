@@ -28,7 +28,7 @@
         +media(1280)
             font-weight: 700
             font-size: 14px
-            padding: 12.5px
+            padding: 15px
             height: 50px
         &:hover
             background-color: #FF0099
@@ -281,7 +281,7 @@
 
         
     &__image
-        width: 100%
+        width: calc( 100% - 20px )
         bottom: 0
         position: absolute
         // display: none
@@ -403,11 +403,12 @@
         position: absolute
         width: 20px
         height: 20px
-        top: 2px
+        top: 0px
+        animation: 15s rotation infinite linear
         +media(840)
             width: 30px
             height: 30px
-            top: 50%
+            // top: 50%
             transform: translateY(-50%)
         left: 0
         background-size: contain
@@ -430,6 +431,8 @@
     right: 0
     left: auto
     animation: animSmall 2s infinite linear alternate
+    +media(480)
+        animation: rightAnim 2s infinite linear alternate
     
     +media(640)
         animation: leftAnim 2s infinite linear alternate
@@ -439,7 +442,7 @@
 .right-img 
     right: 0px
     animation: animSmall 2s infinite linear alternate
-    +media(640)
+    +media(480)
         animation: rightAnim 2s infinite linear alternate
 
 
@@ -462,6 +465,7 @@
     width: 95%
     margin: 0 auto  
     max-width: 1540px
+
 
 
     +media(640)
@@ -541,6 +545,10 @@
             +media(1280)
                 padding-right: 50px
                 
+    .marker-list::before
+        top: 2px
+
+
 /*-------------------------------------------*/
 /*--------Rounded Cards with symbol----------*/
 /*-------------------------------------------*/
@@ -730,6 +738,8 @@
         content: ''
         position: absolute
         top: 0px
+        
+
         +media(640)
             top: 4px
 
@@ -780,12 +790,19 @@ a.icon-link
 
 @keyframes animSmall
     from
-        left: -10px
+        left: 0px
     to
-        left: 10px
+        left: 20px
 
 @keyframes rightAnim 
     from
         right: 0
     to
         right: 20px
+
+@keyframes rotation 
+    from
+        transform: rotate(0deg)        
+    to  
+        transform: rotate(360deg)
+        

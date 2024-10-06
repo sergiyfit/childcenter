@@ -10,6 +10,7 @@ html
 
 html,body
     scroll-behavior: smooth
+    overflow-x: hidden
 
 body
     font-family: 'Open Sans'
@@ -79,6 +80,8 @@ $elements_anim: rotatation 5s infinite linear
 
         background-color: #03CEA4
         border-radius: 50%
+        animation: $elements_anim
+        transform-origin: 60% 60%
 
         +media(1280)
             width: 75px
@@ -123,6 +126,60 @@ $elements_anim: rotatation 5s infinite linear
         background-size: contain
         background-repeat: no-repeat
         background-image: url("../img/icons/snow.svg")
+        animation: $elements_anim
+.triangle
+    position: relative
+    &::before
+        z-index: 1
+        content: ''
+        position: absolute
+        right: 0
+        
+        top: -23px
+        width: 50px
+        height: 50px
+        +media(1280)
+            width: 85px
+            height: 85px
+        background-size: contain
+        background-repeat: no-repeat
+        background-image: url("../img/icons/triangle.svg")
+        animation: $elements_anim
+.wave
+    position: relative
+    &::after        
+        z-index: 1
+        content: ''
+        position: absolute
+        right: 0
+        
+        top: -23px
+        width: 50px
+        height: 50px
+        +media(1280)
+            width: 85px
+            height: 85px
+        background-size: contain
+        background-repeat: no-repeat
+        background-image: url("../img/icons/wave.svg")
+        animation: $elements_anim
+.transp
+    position: relative
+    &::after        
+        z-index: 1
+        content: ''
+        position: absolute
+        right: 0
+        
+        top: -23px
+        width: 50px
+        height: 50px
+        +media(1280)
+            width: 85px
+            height: 85px
+        background-size: contain
+        background-repeat: no-repeat
+        background-image: url("../img/icons/star_transp.svg")
         animation: $elements_anim
 
 @keyframes rotatation 

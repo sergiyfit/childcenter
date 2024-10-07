@@ -25,6 +25,33 @@
             linkText:"#"
         }
     ];
+
+-
+    foodMenuList = 
+                [
+                    {
+                        loading:"lazy" , 
+                        url:"img/photo/menu/week-1.png", 
+                        alt:"Дитяче меню 1 тиждень"
+                    },
+                    {
+                        loading:"lazy" , 
+                        url:"img/photo/menu/week-2.png", 
+                        alt:"Дитяче меню 2 тиждень"
+                    },
+                    {
+                        loading:"lazy" , 
+                        url:"img/photo/menu/week-3.png", 
+                        alt:"Дитяче меню 3 тиждень"
+                    },
+                    {
+                        loading:"lazy" , 
+                        url:"img/photo/menu/week-4.png", 
+                        alt:"Дитяче меню 4 тиждень"
+                    } 
+                ];
+             
+
 - titleImage = {image:"img/pages/index/kindergarten/kindergarten_Ukraine.png", alt:"kindergarten_Ukraine"}
 
 mixin printKindergartenList(items)
@@ -36,7 +63,7 @@ mixin printKindergartenList(items)
                     strong.global__middle_text.main__kindergarten_line_header #{item.head}
                     span.main__kindergarten_text #{item.text}
                     if item.linkText!="#"
-                        a(href=item.linkUrl).global__link.main__kindergarten_link #{item.linkText}
+                        a(href=item.linkUrl).global__btn.main__kindergarten_link#foodmenu #{item.linkText}
 
 .main__kindergarten#kindergarten     
     h2.global__huge_text.main__kindergarten_header дитячий садок

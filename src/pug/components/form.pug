@@ -1,0 +1,22 @@
+
+mixin printform(hasAge)
+    form(action="http://localhost/genius.php" method="post").main__contact_form.milk-background 
+        label(for="username").main__contact_form_label Ваше імʼя
+            input(type="text" id="username" name="username" placeholder="Ваше імʼя" requiered).main__contact_form_textfield
+        label(for="usernum").main__contact_form_label Номер телефону
+            input(type="text" id="usernum" name="usernum" placeholder="+380" requiered).main__contact_form_textfield
+        label(for="userage").main__contact_form_label Вік дитини
+            input(type="text" id="userage" name="userage" placeholder="1..6" requiered ).main__contact_form_textfield
+        label(for="usertask").main__contact_form_label Оберіть заняття 
+            .custom-select.main__contact_form_textfield                           
+            select(id="usertask" name="usertask" requiered).main__contact_form_textfield.select
+                option(value="Не знаю") Не знаю
+                option(value="Дитячий садок 1,5-7 років") Дитячий садок 1,5-7 років
+                option(value="Підготовка до школи") Підготовка до школи  
+                option(value="Курс Мама+Малюк") Курс Мама+Малюк  
+                option(value="Англійська мова") Англійська мова  
+                option(value="Логопед-дефектолог") Логопед-дефектолог  
+                option(value="Творчі майстер-класи") Творчі майстер-класи  
+                option(value="Цікава субота") Цікава субота  
+                option(value="Курс Маленькі генії") Курс Маленькі генії  
+        button.global__btn.main__contact_form_btn надіслати

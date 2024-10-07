@@ -447,7 +447,8 @@ class InfinitySlider {
             newImgs.forEach(img => {
                 let cloneImg = img.cloneNode(true)
                 cloneImg.classList.add("main__photo_img")
-                slideCont.appendChild(cloneImg )
+                slideCont.appendChild(cloneImg)
+                
             });
             slideCont.style.opacity = "0"
             setTimeout(function(){

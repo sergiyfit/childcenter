@@ -112,7 +112,7 @@ mixin printHeader(hasHero, whiteBackground)
 
                                 a(href=item.url).header__menu__item #{item.name}  
 
-                a.global__btn.header__menu__btn(href=defaultUrlContact) Записати дитину
+                a.global__btn.header__menu__btn(href=defaultUrlContact).popupRegister Записати дитину
         if hasHero    
             .header__hero.milk-background
                 .header__hero-strip-container
@@ -120,7 +120,7 @@ mixin printHeader(hasHero, whiteBackground)
                     img(src="img/header/srtichka.svg", alt="strichka").header__hero-strip.overstrip
                 h1.global__huge_text.header__hero_header Ваша дитина починає розвиватись тут
                 p.header__hero__text Від немовля до дошкільнятки, більше 9 років співпраці з батьками і дітьми!
-                a.header__hero__btn(href=defaultUrlContact) Записати дитину
+                a.header__hero__btn(href=defaultUrlContact).popupRegister Записати дитину
                 .header__hero_img_container.flex
                     for item in headImage
                         .header__hero_img(class=item.vizerunok)

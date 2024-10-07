@@ -67,35 +67,35 @@ if (choise) {
         switch (choise) {
             // Дитячий садок 1,5-7 років
             case 'kindergarten':
-                index = 0
+                index = 1
                 break;
                 // Підготовка до школи  
             case 'prepare':
-                index = 1
+                index = 2
                 break;
                 // Курс Мама+Малюк  
             case 'course':
-                index = 2
+                index = 3
                 break;
             // Англійська мова  
             case 'english':
-                index = 3
+                index = 4
                 break;
             // Логопед-дефектолог  
             case 'logoped':
-                index = 4
+                index = 5
                 break;
             // Творчі майстер-класи  
             case 'art':
-                index = 5
+                index = 6
                 break;
             // Цікава субота  
             case 'saturday':
-                index = 6
+                index = 7
                 break;
             // Цікава субота 
             case 'genius':
-                index = 7
+                index = 8
                 break;
         }
 

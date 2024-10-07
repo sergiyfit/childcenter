@@ -8,14 +8,14 @@
     
     +media(640)
         border-radius: 25px
-        width: 580px
-        height: 580px
+        width: 400px
+        height: 480px
         max-height: 100vh
 
     // background-color: $global-orange
     // color: $primary-black
     box-sizing: border-box
-    border: $border-top-orange-line
+    // border: $border-top-orange-line
     // overflow: scroll
     &-text
         box-sizing: border-box
@@ -29,7 +29,7 @@
             font-size: 16px
             line-height: 26px
          
-.dialog-close
+.popup-dialog-close
     width: 50px
     height: 50px 
     position: absolute
@@ -66,7 +66,7 @@
 
 
 .popup_background
-    display: flex
+    display: none
     position: fixed
     top: 0
     left: 0
@@ -78,3 +78,6 @@
     flex-direction: column
     text-align: center
     backdrop-filter: blur(2px)
+
+    form
+        margin: 0

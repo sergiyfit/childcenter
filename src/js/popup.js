@@ -4,6 +4,7 @@ let popupPolitic= document.querySelector(".politic")
 let popupBtn = document.querySelectorAll(".popupRegister")
 let popupBackground = document.querySelector(".popup_background")
 let popupClose= document.querySelector(".popup-dialog-close")
+let imgContainer = document.querySelector(".popup-img-box")
 
 
 popupBtn.forEach(popBtn => {
@@ -17,12 +18,9 @@ popupBtn.forEach(popBtn => {
 
         if (window.innerWidth > 500){
             popup.style.width = "480px"
-            popup.style.height = "480px"
 
         } else {
             popup.style.width = "320px"
-            popup.style.height = "320px"
-
         }
     }
 })
@@ -31,6 +29,8 @@ popupClose.onclick = () => {
     popupBackground.style.display = "none"
     popupNav.style.display = "none"
     popup.querySelector("img").remove()
+    imgContainer.style.width = "auto"
+    imgContainer.style.height = "auto"
 }
 
 
@@ -43,7 +43,7 @@ if (foodmenu){
         popupClose.nextElementSibling.style.display="none"
         // popup.classList.add("milk-background")
         let popupImg = document.createElement("img")
-        popup.insertAdjacentElement("afterbegin",popupImg)
+        imgContainer.insertAdjacentElement("afterbegin",popupImg)
         let currentImg = 1
         
         popupImg.style.display = "block"
@@ -94,8 +94,29 @@ if (foodmenu){
         
         popupImg.src = "img/photo/menu/week-" + currentImg + ".png"
         popupImg.onclick = function(){           
-            currentImg = currentImg >=4 ? 1 : currentImg + 1 
-            popupImg.src = "img/photo/menu/week-" + currentImg + ".png"
+            // currentImg = currentImg >=4 ? 1 : currentImg + 1 
+            // popupImg.src = "img/photo/menu/week-" + currentImg + ".png"
+            
+            popupImg.style.height = "auto"
+            if (window.innerWidth < 720){
+                popupImg.style.width = "300%"
+                imgContainer.style.width = "100vw"
+                imgContainer.style.height = "100vh"
+                popup.style.overflow = "hidden"
+                imgContainer.style.overflow = "scroll"
+            } else{                
+                popupImg.style.width = "100%"
+                imgContainer.style.width = "100vw"
+                imgContainer.style.height = "100vh"
+                popup.style.overflow = "hidden"
+                imgContainer.style.overflow = "scroll"
+                
+            } 
+            
+            popup.style.width = "max-content"
+            popup.style.height = "max-content"
+            
+
         }
         
     }
@@ -141,6 +162,8 @@ popupImgSlider.onclick = (e) => {
             popupImg.style.display = "block"
             popup.style.width = "max-content"
             popup.style.height = "max-content"
+
+            
             
             if(window.innerWidth < window.innerHeight){
                 popupImg.style.width = "90vw"

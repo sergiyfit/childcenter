@@ -48,9 +48,14 @@ if (foodmenu){
         
         popupImg.style.display = "block"
         popup.style.width = "max-content"
-        popup.style.height = "max-content"        
-        
-        popupImg.style.height = "90vh"
+        popup.style.height = "max-content"     
+           
+        if(window.innerWidth < window.innerHeight){
+            popupImg.style.width = "90vw"
+        } else {
+            popupImg.style.height = "90vh"
+        }
+
         
         popupNav.style.display = "flex"
         

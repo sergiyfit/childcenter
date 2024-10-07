@@ -29,6 +29,7 @@ popupBtn.forEach(popBtn => {
 
 popupClose.onclick = () => {
     popupBackground.style.display = "none"
+    popupNav.style.display = "none"
     popup.querySelector("img").remove()
 }
 
@@ -122,9 +123,10 @@ let popupImgSlider = document.querySelector(".main__photo_img_container.slider")
 popupImgSlider.onclick = (e) => {
     if (e.target){
         if(e.target.src){
+            
             popupBackground.style.display = "flex"
-            opupNav.style.display = "none"
-            popupClose.nextElementSibling.style.display="none"
+            popupNav.style.display = "none"
+            popupClose.nextElementSibling.style.display= "none"
             // popup.classList.add("milk-background")
             
             let popupImg = document.createElement("img")

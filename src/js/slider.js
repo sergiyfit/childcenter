@@ -551,14 +551,14 @@ class InfinitySlider {
         };
     }
 
-let photos = document.querySelectorAll(".main__photo_img")
-photos.forEach( photo => {
-    photo.onclick = function(){
-        let popupBackground = document.createElement("div")
-        let popup = document.createElement("div")
-        popupBackground.appendChild(popup)
-        popupBackground.classList.add("popup_background")
-        popupBackground.appendChild(popup)
-        document.body.appendChild(popupBackground)
-    }
-})
+// let photos = document.querySelectorAll(".main__photo_img")
+// photos.forEach( photo => {
+//     photo.onclick = function(){
+//         let popupBackground = document.createElement("div")
+//         let popup = document.createElement("div")
+//         popupBackground.appendChild(popup)
+//         popupBackground.classList.add("popup_background")
+//         popupBackground.appendChild(popup)
+//         document.body.appendChild(popupBackground)
+//     }
+// })

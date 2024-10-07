@@ -429,17 +429,33 @@ class InfinitySlider {
     let album = document.querySelectorAll(".album")
     let photoBtn = document.querySelectorAll(".main__photo_btn")
     photoBtn.forEach( (btn,index) => {
+
+        btn.onmouseenter = function() {
+            const resetClr = getComputedStyle(btn).borderColor
+            btn.style.backgroundColor = resetClr          
+            btn.style.color = "#fff"
+        }
+
+        btn.onmouseleave = function() {
+            if(!btn.hasAttribute("active")){
+                const resetClr = getComputedStyle(btn).borderColor
+                btn.style.backgroundColor = "#fff"            
+                btn.style.color = resetClr
+            }
+        }
+
         btn.onclick = function(){
             photoBtn.forEach(resetColorBtn => {
                 const resetClr = getComputedStyle(resetColorBtn).borderColor
                 resetColorBtn.style.backgroundColor = "#fff"            
-                resetColorBtn.style.color = resetClr
+                resetColorBtn.style.color = resetClr                
+                btn.removeAttribute("active")
             })
 
             const clr = getComputedStyle(btn).borderColor
             btn.style.backgroundColor = clr            
             btn.style.color = "#fff"
-
+            btn.setAttribute("active","true")
             let slideCont = document.querySelector(".slider .slider-container")
             slideCont.querySelectorAll("img").forEach(el => el.remove());
             let newImgs = album[index+1].querySelectorAll("img")
@@ -448,7 +464,7 @@ class InfinitySlider {
                 let cloneImg = img.cloneNode(true)
                 cloneImg.classList.add("main__photo_img")
                 slideCont.appendChild(cloneImg)
-                
+
             });
             slideCont.style.opacity = "0"
             setTimeout(function(){

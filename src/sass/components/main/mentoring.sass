@@ -53,11 +53,13 @@
             background-color: #fff
             box-sizing: border-box
             transition: $link-transition
-            animation: shakeMin 0.5s linear infinite alternate
             &:hover
-                animation: none
-                transition: transform 0.5s ease 0.1s 
-                transform: scale(1.05)
+                animation: scaling 1s linear forwards
+                & > h3
+                    animation: shakeMin 0.5s linear infinite alternate
+                & > img
+                    
+                    animation: shakeMax 0.5s linear infinite alternate
 
             h3
                 +media(480)
@@ -69,7 +71,6 @@
                 +media(960)       
                     font-size: 24px        
             img
-                animation: shakeMin 0.25s linear 0.25s infinite alternate
                 margin-top: 25px
                 +media(480)
                     margin-top: 15px
@@ -84,3 +85,4 @@
                 +media(1280)
                     width: 400px
                     height: 230px
+

@@ -40,7 +40,7 @@ mixin printListsWithImage(arr, nameClass, leftToRight,listParagraph,mixinUrl)
                         else
                             for item in list.items
                                 p(class=("main__"+nameClass+"_list_text"))  #{item}
-                    a(class=("main__"+nameClass+"__btn") href=currentUrl).global__btn.img-block__btn Записати дитину
+                    a(class=("main__"+nameClass+"__btn") href=currentUrl).global__btn.img-block__btn.popupRegister Записати дитину
             if index % 2 == 0            
                 img(src=list.image, alt=list.alt).right-img.img-block__image  
 

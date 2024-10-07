@@ -21,7 +21,6 @@
             +media(640)
                 column-gap: 30px
         &_card
-            animation: shakeMin 0.5s linear infinite alternate
             margin-bottom: 25px
             border-radius: 20px
             
@@ -29,6 +28,12 @@
             box-sizing: border-box
             padding: 15px 15px
             width: 100vw
+            &:hover
+                animation: shakeMin 0.5s linear infinite alternate
+                & > img
+                    animation: shakeMax 0.5s linear infinite alternate
+                    
+            
             +media(480)
                 width: 45%
                 padding: 15px 10px
@@ -66,7 +71,6 @@
                 border-radius: 20px
                 margin-top: 5px
                 aspect-ratio: 53/30
-                animation: shakeMin 0.5s linear 0.25 infinite alternate
                 +media(640)
                     margin-top: 10px
                 +media(1280)

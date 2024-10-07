@@ -104,8 +104,13 @@ if (foodmenu){
                 imgContainer.style.height = "100vh"
                 popup.style.overflow = "hidden"
                 imgContainer.style.overflow = "scroll"
-            } else{                
-                popupImg.style.width = "100%"
+            } else{
+                if (popupImg.getBoundingClientRect().width> popupImg.getBoundingClientRect().height){
+                    popupImg.style.width = "100vw"
+                } else {
+                    popupImg.style.height = "100vh"                    
+                }
+
                 imgContainer.style.width = "100vw"
                 imgContainer.style.height = "100vh"
                 popup.style.overflow = "hidden"
@@ -127,18 +132,12 @@ politicBtn.onclick = function(e){
     e.preventDefault()
     if (window.innerWidth > 860){
         popup.style.width = "840px"
-        popup.style.height = "840px"
-
-    } else if (window.innerWidth > 500){
-        popup.style.width = "480px"
-        popup.style.height = "480px"
 
     } else {
-        popup.style.width = "320px"
-        popup.style.height = "320px"
+        popup.style.width = "auto"
 
     }
-
+    
     popupBackground.style.display = "flex"
     popupPolitic.style.display="block"
     popupNav.style.display = "none"

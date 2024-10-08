@@ -474,7 +474,7 @@ if (document.querySelector(".slider")){
     if (photoBtn){
         setTimeout(function(){
         photoBtn[0].onclick()
-        } , 1500)
+        } , 100)
     }
     /* ----------------------------------------------- */
     /* -----------Loading PEDAGOGUE SLIDER------------ */
@@ -549,6 +549,7 @@ if (document.querySelector(".slider")){
             reportSlider.switchCardWidth( newCardReportSize )
             reportSlider.init();
         };
+
     } else if(document.querySelector(".slider")){
         window.onload = function(){
             photoSlider.init();
@@ -560,6 +561,10 @@ if (document.querySelector(".slider")){
         };
     }
 
+setTimeout(()=>{
+    document.querySelectorAll(".right").forEach(e=>e.onclick())
+    document.querySelectorAll(".left").forEach(e=>e.onclick())
+}, 3000)
 // let photos = document.querySelectorAll(".main__photo_img")
 // photos.forEach( photo => {
 //     photo.onclick = function(){

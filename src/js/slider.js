@@ -564,7 +564,7 @@ if (document.querySelector(".slider")){
 setTimeout(()=>{
     document.querySelectorAll(".right").forEach(e=>e.onclick())
     document.querySelectorAll(".left").forEach(e=>e.onclick())
-}, 3000)
+}, 500)
 // let photos = document.querySelectorAll(".main__photo_img")
 // photos.forEach( photo => {
 //     photo.onclick = function(){

@@ -63,6 +63,22 @@ if (select) {
 }
 
 /*----------------------------------------------*/
+/*----------------------------------------------*/
+/*-------------Валідація інпутів----------------*/
+/*----------------------------------------------*/
+/*----------------------------------------------*/
+const formname = document.querySelectorAll("#username")
+formname.forEach( textInput => {
+    textInput.onkeyup = function()
+    {this.value = this.value.replace(/[\d]/g,'')}
+})
+const formphone = document.querySelectorAll("#usernum")
+formphone.forEach( phoneInput => {
+    phoneInput.onkeyup = function()
+    {this.value = this.value.slice(0,1) + this.value.slice(1).replace(/[\D]/g,'')}
+})
+
+/*----------------------------------------------*/
 /*-----------AUTOMATIC CHOISE SELECT -----------*/
 /*--При кліку на записатись, в вкладці контакти-*/ 
 /*---------в селект передає назву курсу---------*/

@@ -4,20 +4,28 @@
 /*------------------------------------------------*/
 
 let burger = document.querySelector(".burger")
+let menu = document.querySelector(".header__menu__container")
+let btn = document.querySelector(".header__menu__btn")
 burger.onclick = () => {
-    let menu = document.querySelector(".header__menu__container")
-    let btn = document.querySelector(".header__menu__btn")
 
     menu.classList.toggle("show")
-    btn.classList.toggle("show")
     burger.classList.toggle("burger-close")
 
+}
+
+menu.onclick = ( e ) => {
+    if(e.target.firstElementChild.className != "header__menu__subitem__elements"){
+        menu.classList.remove("show")
+        burger.classList.remove("burger-close")
+
+    }
 }
 
 /*------------------------------------------------*/
 /*------------Custom select in contacts-----------*/
 /*-----Випадаючий список замість стандартного-----*/
 /*------------------------------------------------*/
+
 let select = document.querySelector(".select")
 
 if (select) {
@@ -129,11 +137,19 @@ if (kindergartenQuestionsBtn) {
 let lastScroll = 0
 
 window.onscroll = (event) =>{
-    let menu = document.querySelector(".header__menu__moving-part")
+    let menuBox = document.querySelector(".header__menu__moving-part")
     if(window.scrollY > 130 && lastScroll < window.scrollY) {
-        menu.style.top = "-130px"
+        menuBox.style.top = "-780px"
+        
+        setTimeout( function(){
+            menuBox.style.top = "-130px"
+            menu.classList.remove("show")
+            burger.classList.remove("burger-close")
+        }, 500 )
+
+
     } else {
-        menu.style.top = "0px"        
+        menuBox.style.top = "0px"        
     }
     lastScroll = window.scrollY
 }

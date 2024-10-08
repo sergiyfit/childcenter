@@ -10,25 +10,33 @@ let imgContainer = document.querySelector(".popup-img-box")
 popupBtn.forEach(popBtn => {
     popBtn.onclick = (event) => {
         event.preventDefault()
-        popupBackground.style.display = "flex"
-        popupClose.nextElementSibling.style.display="block"
-        popup.classList.remove(".milk-background")
-        popupPolitic.style.display="none"
-        popupNav.style.display = "none"
-
-        if (window.innerWidth > 500){
-            popup.style.width = "480px"
+        if (document.querySelectorAll("form").length >=2 ){
+            let contactForm = document.querySelector("form input")
+            contactForm.focus();
+            contactForm.scrollIntoView();
 
         } else {
-            popup.style.width = "320px"
+            popupBackground.style.display = "flex"
+            popupClose.nextElementSibling.style.display="block"
+            popup.classList.remove(".milk-background")
+            popupPolitic.style.display="none"
+            popupNav.style.display = "none"
+
+            if (window.innerWidth > 500){
+                popup.style.width = "480px"
+
+            } else {
+                popup.style.width = "320px"
+            }
         }
+
     }
 })
 
 popupClose.onclick = () => {
     popupBackground.style.display = "none"
     popupNav.style.display = "none"
-    popup.querySelector("img").remove()
+    popup.querySelectorAll("img").forEach(e => e.remove())
     imgContainer.style.width = "auto"
     imgContainer.style.height = "auto"
 }
@@ -145,32 +153,35 @@ politicBtn.onclick = function(e){
 }
 
 let popupImgSlider = document.querySelector(".main__photo_img_container.slider")
-popupImgSlider.onclick = (e) => {
-    if (e.target){
-        if(e.target.src){
-            
-            popupBackground.style.display = "flex"
-            popupNav.style.display = "none"
-            popupClose.nextElementSibling.style.display= "none"
-            // popup.classList.add("milk-background")
-            
-            let popupImg = document.createElement("img")
-            popup.appendChild(popupImg)
-            let currentImg = 1
+if(popupImgSlider){
+
+    popupImgSlider.onclick = (e) => {
+        if (e.target){
+            if(e.target.src){
+                
+                popupBackground.style.display = "flex"
+                popupNav.style.display = "none"
+                popupClose.nextElementSibling.style.display= "none"
+                // popup.classList.add("milk-background")
+                
+                let popupImg = document.createElement("img")
+                popup.appendChild(popupImg)
+                let currentImg = 1
+        
+                popupImg.style.display = "block"
+                popup.style.width = "max-content"
+                popup.style.height = "max-content"
     
-            popupImg.style.display = "block"
-            popup.style.width = "max-content"
-            popup.style.height = "max-content"
-
-            
-            
-            if(window.innerWidth < window.innerHeight){
-                popupImg.style.width = "90vw"
-            } else {
-                popupImg.style.height = "90vh"
+                
+                
+                if(window.innerWidth < window.innerHeight){
+                    popupImg.style.width = "90vw"
+                } else {
+                    popupImg.style.height = "90vh"
+                }
+    
+                popupImg.src = e.target.src
             }
-
-            popupImg.src = e.target.src
         }
     }
 }

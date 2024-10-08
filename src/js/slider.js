@@ -401,7 +401,10 @@ class InfinitySlider {
         return newCardPhotoSize
     }
 
-    const photoSlider = new InfinitySlider(".slider", {
+let photoSlider
+
+if (document.querySelector(".slider")){
+        photoSlider = new InfinitySlider(".slider", {
         isArrows: true,
         isSlidesToScrollAll: true,
         baseCardWidth: "500rem",
@@ -412,15 +415,8 @@ class InfinitySlider {
         autoplaySpeed: 5000,
         transitionCard: "all 1.5s ease-in-out",
     });
-    
-    window.onload = function(){
-        photoSlider.init();
-    }
-    
-    window.onresize = function () {
-        photoSlider.switchCardWidth( getPhotosliderWidth() )
-        photoSlider.init();
-    };
+}
+
 
     /* ----------------------------------------------- */
     /* Loading Gallery and work with it. Refresh Photo */
@@ -548,6 +544,15 @@ class InfinitySlider {
 
             reportSlider.switchCardWidth( newCardReportSize )
             reportSlider.init();
+        };
+    } else if(document.querySelector(".slider")){
+        window.onload = function(){
+            photoSlider.init();
+        }
+        
+        window.onresize = function () {
+            photoSlider.switchCardWidth( getPhotosliderWidth() )
+            photoSlider.init();
         };
     }
 

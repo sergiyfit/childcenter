@@ -471,7 +471,11 @@ if (document.querySelector(".slider")){
             
         }
     })
-
+    if (photoBtn){
+        setTimeout(function(){
+        photoBtn[0].onclick()
+        } , 1500)
+    }
     /* ----------------------------------------------- */
     /* -----------Loading PEDAGOGUE SLIDER------------ */
     /* ----------------------------------------------- */ 

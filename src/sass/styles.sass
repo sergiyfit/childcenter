@@ -59,10 +59,12 @@ $elements_anim: rotatation 5s infinite linear
         background-repeat: no-repeat
         background-image: url("../img/icons/diamond.svg")
         animation: $elements_anim
+        transform-origin: 60% 60%
 
-        +media(640)
         
         +media(1280)
+            top: -21px
+            right: 10px
             width: 85px
             height: 85px    
 
@@ -84,6 +86,8 @@ $elements_anim: rotatation 5s infinite linear
         transform-origin: 60% 60%
 
         +media(1280)
+            top: -21px
+            right: 10px
             width: 75px
             height: 75px
 
@@ -103,10 +107,13 @@ $elements_anim: rotatation 5s infinite linear
         background-repeat: no-repeat
         background-image: url("../img/icons/star.svg")
         animation: $elements_anim
+        transform-origin: 60% 60%
 
         +media(1280)
             width: 85px
-            height: 85px            
+            height: 85px
+            top: -21px
+            right: 10px            
     
 
 .snow
@@ -121,12 +128,16 @@ $elements_anim: rotatation 5s infinite linear
         width: 50px
         height: 50px
         +media(1280)
+            top: -21px
+            right: 10px
             width: 85px
             height: 85px
+
         background-size: contain
         background-repeat: no-repeat
         background-image: url("../img/icons/snow.svg")
         animation: $elements_anim
+        transform-origin: 60% 60%
 .triangle
     position: relative
     &::before
@@ -145,6 +156,7 @@ $elements_anim: rotatation 5s infinite linear
         background-repeat: no-repeat
         background-image: url("../img/icons/triangle.svg")
         animation: $elements_anim
+        
 .wave
     position: relative
     &::after        

@@ -178,29 +178,29 @@ window.onscroll = (event) =>{
 /*------------------------------------*/
 /**************************************/
 
-let reports = document.querySelectorAll(".main__report_card_text")
-reports.forEach( report => {
-    const numSymbol = 388
-    const text = report.innerText
-    if (text.length > numSymbol){
-        const limitSymbol = text.slice(0, numSymbol).lastIndexOf(" ")
-        const firstPart = text.slice(0, limitSymbol+1)
-        const secondPart = text.slice(limitSymbol+1)
-        report.innerText = firstPart
-        let reedMore = document.createElement("strong")
-        reedMore.innerText = " більше.."
-        report.appendChild(reedMore)
+// let reports = document.querySelectorAll(".main__report_card_text")
+// reports.forEach( report => {
+//     const numSymbol = 388
+//     const text = report.innerText
+//     if (text.length > numSymbol){
+//         const limitSymbol = text.slice(0, numSymbol).lastIndexOf(" ")
+//         const firstPart = text.slice(0, limitSymbol+1)
+//         const secondPart = text.slice(limitSymbol+1)
+//         report.innerText = firstPart
+//         let reedMore = document.createElement("strong")
+//         reedMore.innerText = " більше.."
+//         report.appendChild(reedMore)
 
-        let textMore = document.createElement("span")
-        textMore.innerText = secondPart
-        textMore.style.display = "none"
-        report.appendChild(textMore)
+//         let textMore = document.createElement("span")
+//         textMore.innerText = secondPart
+//         textMore.style.display = "none"
+//         report.appendChild(textMore)
         
-        reedMore.onclick = function(){
-            reedMore.style.display = "none"
-            textMore.style.display = "inline"            
-        } 
+//         reedMore.onclick = function(){
+//             reedMore.style.display = "none"
+//             textMore.style.display = "inline"            
+//         } 
 
 
-    }
-})
+//     }
+// })

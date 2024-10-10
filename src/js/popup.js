@@ -39,6 +39,7 @@ popupClose.onclick = () => {
     popup.querySelectorAll("img").forEach(e => e.remove())
     imgContainer.style.width = "auto"
     imgContainer.style.height = "auto"
+    popup.querySelectorAll(".main__report_card").forEach(e => e.remove())
 }
 
 
@@ -185,3 +186,49 @@ if(popupImgSlider){
         }
     }
 }
+
+
+/**************************************/
+/*------------------------------------*/
+/*------------REED MORE---------------*/
+/*------------------------------------*/
+/**************************************/
+
+let reports = document.querySelectorAll(".main__report_card_text")
+reports.forEach( report => {
+    const numSymbol = 388
+    const text = report.innerText
+    if (text.length > numSymbol){
+        const limitSymbol = text.slice(0, numSymbol).lastIndexOf(" ")
+        const firstPart = text.slice(0, limitSymbol+1)
+        const secondPart = text.slice(limitSymbol+1)
+        report.innerText = firstPart
+        let reedMore = document.createElement("strong")
+        reedMore.innerText = " більше.."
+        report.appendChild(reedMore)
+
+        let textMore = document.createElement("span")
+        textMore.innerText = secondPart
+        textMore.style.display = "none"
+        report.appendChild(textMore)
+        
+        reedMore.onclick = function(){
+
+            popupBackground.style.display = "flex"
+            popupNav.style.display = "none"
+            popupClose.nextElementSibling.style.display= "none"
+
+            let popupReport = report.parentElement.cloneNode(true)
+            
+            popup.appendChild(popupReport)
+            popupReport.style.position = "static"  
+            popupReport.style.textAlign = "justify"  
+            popupReport.style.width = "auto"  
+            popupReport.querySelector("span").style.display = "inline"  
+            popupReport.querySelector("strong").style.display = "none"
+
+        } 
+
+
+    }
+})

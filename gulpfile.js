@@ -135,6 +135,7 @@ export const watch = () => {
     gulp.watch("src/sass/**/*.sass", gulp.parallel(css))
     gulp.watch("src/js/**/*.js", gulp.parallel(js))
     gulp.watch("src/pug/**/*.pug", gulp.parallel(html))
+    gulp.watch("src/*.*", gulp.parallel(php))
     gulp.watch("src/*.*", gulp.parallel(html))
     gulp.watch("src/fonts/**/*.*", gulp.parallel(fonts))
     gulp.watch("src/img/**/*.*", gulp.parallel(images))

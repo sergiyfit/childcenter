@@ -184,9 +184,9 @@ class InfinitySlider {
             }
         };
 
-        this.switchCardWidth = function(newWidth){
-            this.settings.baseCardWidth = newWidth
-        }
+    }
+    switchCardWidth = function(newWidth){
+        this.settings.baseCardWidth = newWidth
     }
 
     creationClons() {
@@ -381,6 +381,20 @@ class InfinitySlider {
     }
 }
 
+class InfinitySliderUpg extends InfinitySlider {
+
+    switchCardWidth = function(newWidth){
+        this.settings.baseCardWidth = newWidth
+    }
+
+    arrowsToDots = function(){
+        let slideNav = this.slider.querySelector('.dots-container')
+        slideNav.insertAdjacentElement("afterbegin", this.prevBtnSlider);
+        slideNav.insertAdjacentElement("beforeend", this.nextBtnSlider);
+    }
+    
+}
+
     /* ----------------------------------------------- */
     /* ------------------PHOTOALBUM------------------- */
     /* ----------------------------------------------- */ 
@@ -561,10 +575,7 @@ if (document.querySelector(".slider")){
         };
     }
 
-setTimeout(()=>{
-    document.querySelectorAll(".right").forEach(e=>e.onclick())
-    document.querySelectorAll(".left").forEach(e=>e.onclick())
-}, 500)
+
 // let photos = document.querySelectorAll(".main__photo_img")
 // photos.forEach( photo => {
 //     photo.onclick = function(){

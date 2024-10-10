@@ -75,7 +75,9 @@ formname.forEach( textInput => {
 const formphone = document.querySelectorAll("#usernum")
 formphone.forEach( phoneInput => {
     phoneInput.onkeyup = function()
-    {this.value = this.value.slice(0,1) + this.value.slice(1).replace(/[\D]/g,'')}
+    {   
+        this.value = this.value.slice(0,1) + this.value.slice(1).replace(/[\D]/g,'')
+    }
 })
 
 /*----------------------------------------------*/

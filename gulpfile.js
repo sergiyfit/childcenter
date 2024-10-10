@@ -75,6 +75,16 @@ export const js = () => {
         stream:true
     }))
 }
+export const php = () => {
+    return gulp
+    .src([
+      "src/php/*.*"
+    ])
+    .pipe(gulp.dest("docs"))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+}
 
 export const files = () => {
     return gulp
@@ -140,6 +150,7 @@ export default gulp.series(
         files,
         fonts,
         images,
+        php,
         browserSyncFunc
     )
 )

@@ -6,12 +6,12 @@ mixin printform(hasAge)
         label(for="usernum").main__contact_form_label Номер телефону
             input(type="text" id="usernum" name="usernum" placeholder="+380" requiered).main__contact_form_textfield
         label(for="userage").main__contact_form_label Вік дитини
-            input(type="number" id="userage" name="userage" placeholder="Введіть вік дитини від 1 до 7" max=7 min=1 step=1  requiered ).main__contact_form_textfield
+            input(type="number" id="userage" name="userage" placeholder="Введіть вік дитини від 1 до 7" max=7 min=1.8 step=0.1  requiered ).main__contact_form_textfield
         label(for="usertask").main__contact_form_label Оберіть заняття 
             .custom-select.main__contact_form_textfield                           
             select(id="usertask" name="usertask" requiered).main__contact_form_textfield.select
                 option(value="Не знаю") Не знаю
-                option(value="Дитячий садок 1,5-7 років") Дитячий садок 1,5-7 років
+                option(value="Дитячий садок 1,5-7 років") Дитячий садок 1,8-7 років
                 option(value="Підготовка до школи") Підготовка до школи  
                 option(value="Курс Мама+Малюк") Курс Мама+Малюк  
                 option(value="Англійська мова") Англійська мова  

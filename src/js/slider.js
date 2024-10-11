@@ -380,7 +380,16 @@ class InfinitySlider {
         }
     }
 }
-
+/*--------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------*/
 class InfinitySliderUpg extends InfinitySlider {
 
     switchCardWidth = function(newWidth){
@@ -418,7 +427,7 @@ class InfinitySliderUpg extends InfinitySlider {
 let photoSlider
 
 if (document.querySelector(".slider")){
-        photoSlider = new InfinitySlider(".slider", {
+        photoSlider = new InfinitySliderUpg(".slider", {
         isArrows: true,
         isSlidesToScrollAll: true,
         baseCardWidth: "500rem",
@@ -495,7 +504,7 @@ if (document.querySelector(".slider")){
     /* ----------------------------------------------- */ 
     let padagogueSlider = document.querySelector(".main__pedagogue")
     if(padagogueSlider){
-        const padagogueSlider = new InfinitySlider(".slider_pedagogue", {
+        const padagogueSlider = new InfinitySliderUpg(".slider_pedagogue", {
             isArrows: true,
             // isSlidesToScrollAll: true,
             baseCardWidth: "370rem",
@@ -507,7 +516,7 @@ if (document.querySelector(".slider")){
             transitionCard: "all 1.5s ease-in-out",
         });
 
-        const reportSlider = new InfinitySlider(".main__report_container", {
+        const reportSlider = new InfinitySliderUpg(".main__report_container", {
             isArrows: true,
             isSlidesToScrollAll: true,
             baseCardWidth: "500rem",
@@ -524,6 +533,9 @@ if (document.querySelector(".slider")){
             photoSlider.init();
             padagogueSlider.init();
             reportSlider.init();
+            photoSlider.arrowsToDots();
+            padagogueSlider.arrowsToDots();
+            reportSlider.arrowsToDots();
         }
         
         window.onresize = function () {
@@ -567,6 +579,7 @@ if (document.querySelector(".slider")){
     } else if(document.querySelector(".slider")){
         window.onload = function(){
             photoSlider.init();
+            photoSlider.arrowsToDots();
         }
         
         window.onresize = function () {

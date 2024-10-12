@@ -60,9 +60,11 @@ if (foodmenu){
         popup.style.height = "max-content"     
            
         if(window.innerWidth < window.innerHeight){
+            popupImg.style.height = "auto"
             popupImg.style.width = "90vw"
         } else {
             popupImg.style.height = "90vh"
+            popupImg.style.width = "auto"
         }
 
         
@@ -115,9 +117,11 @@ if (foodmenu){
                 imgContainer.style.overflow = "scroll"
             } else{
                 if (popupImg.getBoundingClientRect().width> popupImg.getBoundingClientRect().height){
-                    popupImg.style.width = "100vw"
+                    popupImg.style.height = "100vh"
+                    popupImg.style.width = "auto"                    
                 } else {
-                    popupImg.style.height = "100vh"                    
+                    popupImg.style.width = "100vw"
+                    popupImg.style.height = "auto"
                 }
 
                 imgContainer.style.width = "100vw"
@@ -219,6 +223,11 @@ reports.forEach( report => {
             popupClose.nextElementSibling.style.display= "none"
 
             let popupReport = report.parentElement.cloneNode(true)
+            if (innerWidth > 500) {
+                popup.style.width = "480px"
+            } else{
+                popup.style.width = "90vh"
+            }
             
             popup.appendChild(popupReport)
             popupReport.style.position = "static"  

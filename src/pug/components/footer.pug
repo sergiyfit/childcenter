@@ -7,8 +7,8 @@ mixin printFooter(hasLocation)
                 .footer__location_container.flex
                     .footer__location_card 
                         h3.global__middle_text.footer__location_header наша локація
-                        a(href=urlMap).footer__location_strong.marker вул. Вайсера, 4/2  
-                        a(href=urlMap).global__link.footer__location_link подивитися мапу 
+                        a(href=urlMap target="_blank").footer__location_strong.marker вул. Вайсера, 4/2  
+                        a(href=urlMap target="_blank").global__link.footer__location_link подивитися мапу 
                             span.footer__location_arrow 
                     .footer__location_card 
                         h3.global__middle_text.footer__location_header Графік роботи
@@ -30,8 +30,8 @@ mixin printFooter(hasLocation)
                     a.icon-link.icon-link--email(href=email.url) #{email.title}
                 .footer__contact_links-centered 
                     .footer__contact_links-social
-                        a.footer__contact_links-social-ref.instagram(href=instagramUrl)
-                        a.footer__contact_links-social-ref.facebook(href=facebookUrl)
+                        a.footer__contact_links-social-ref.instagram(href=instagramUrl target="_blank")
+                        a.footer__contact_links-social-ref.facebook(href=facebookUrl target="_blank")
                     p.footer__contact_links-copywright &copy; Лабораторія маленьких геніїв 2015-2024. Усі права захищені
                 .footer__contact_links-left        
                     .footer__contact_links__logo 

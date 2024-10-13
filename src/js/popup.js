@@ -6,6 +6,7 @@ let popupBackground = document.querySelector(".popup_background")
 let popupClose= document.querySelector(".popup-dialog-close")
 let imgContainer = document.querySelector(".popup-img-box")
 
+popup.onclick = (e) => {e.cancelBubble=true}
 
 popupBtn.forEach(popBtn => {
     popBtn.onclick = (event) => {
@@ -32,21 +33,23 @@ popupBtn.forEach(popBtn => {
 
     }
 })
-
 popupClose.onclick = () => {
     popupBackground.style.display = "none"
     popupNav.style.display = "none"
     popup.querySelectorAll("img").forEach(e => e.remove())
     imgContainer.style.width = "auto"
     imgContainer.style.height = "auto"
+    imgContainer.style.overflow = "visible"
     popup.querySelectorAll(".main__report_card").forEach(e => e.remove())
 }
+popupBackground.onclick = () => {popupClose.onclick()}
 
 
 let foodmenu = document.querySelector("#foodmenu")
 if (foodmenu){
     foodmenu.onclick = (e) => {
         e.preventDefault()
+        e.cancelBubble = true
         popupPolitic.style.display="none"
         popupBackground.style.display = "flex"
         popupClose.nextElementSibling.style.display="none"
@@ -75,22 +78,25 @@ if (foodmenu){
         let arrRight = document.querySelector(".arr-right")
         
         popDots.forEach( (popDot,index) => {
-            popDot.onclick = function() {
+            popDot.onclick = function(e) {
+                e.cancelBubble = true
                 popDots[index].classList.add("global-dot--active")
                 popDots[currentImg-1].classList.remove("global-dot--active")
                 currentImg = index + 1
-                popupImg.src = "img/photo/menu/week-" + currentImg + ".png"
+                popupImg.src = "img/photo/menu/week-" + currentImg + "min.gif"
             }
         });
         
-        arrRight.onclick = function() {
+        arrRight.onclick = function(e) {
+            e.cancelBubble = true
             popDots[currentImg-1].classList.remove("global-dot--active")
             currentImg = currentImg >=4 ? 1 : currentImg + 1 
             popupImg.src = "img/photo/menu/week-" + currentImg + ".png"
             popDots[currentImg-1].classList.add("global-dot--active")
         }
 
-        arrLeft.onclick = function() {
+        arrLeft.onclick = function(e) {
+            e.cancelBubble  = true
         popDots[currentImg-1].classList.remove("global-dot--active")
             currentImg = currentImg <=1 ? 4 : currentImg + -1 
             popupImg.src = "img/photo/menu/week-" + currentImg + ".png"

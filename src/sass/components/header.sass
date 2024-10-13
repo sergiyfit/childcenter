@@ -112,13 +112,17 @@
                     transform: translate(-50% , 112px)
                     border: $border-top-orange-line
                     border-top: none
-                    border-radius: 0 0 40px 40px  
+                    border-radius: 0 0 0px 0px
+                    &:hover
+                        border-radius: 0 0 40px 40px
+                          
                 +media(1200)
                     transform: translate(-50% , 116.7px)
 
 
                 &:hover 
                     display: block
+                    
                 &:hover + .header__menu__item
                     color: $global-blue
 

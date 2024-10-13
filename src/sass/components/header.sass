@@ -89,24 +89,43 @@
                 padding: 10px 5px 10px
                 display: flex
                 flex-direction: column-reverse
+
+
                 +media(678)
                     padding: 50px 5px 45px
 
                 &:hover > ul.header__menu__subitem__elements
-                    display: block
+                    //display: block
+                    +media(678)
+                        transition: all 1s ease
+                        padding: 0 40px 20px                
+                        border-radius: 0 0 40px 40px
+                &:hover > ul.header__menu__subitem__elements > li.header__menu__subitem__holder
+                    +media(678)
+                        transition: all 0.5s ease 
+                        padding-bottom: 20px
+
+                &:hover > ul.header__menu__subitem__elements > li.header__menu__subitem__holder > a
+                    transition: all 1s ease 
+                    +media(678)
+                        padding-top: 10px
+                        font-size: 12px
+                    +media(1200)
+                        font-size: 14px                    
+
                 &:hover > .header__menu__item
                     color: $global-blue
                 
         &__subitem
             &__elements // ul
-                display: none
+                //display: none
                 background-color: #fff
                 box-sizing: border-box
                 padding: 20px 00px 20px 20px
                 z-index: 2
                 +media(678)
                     position: absolute
-                    padding: 0 40px 20px                
+                    padding: 0               
                     left: 50%
                     top: 0
                     transform: translate(-50% , 112px)
@@ -114,6 +133,8 @@
                     border-top: none
                     border-radius: 0 0 0px 0px
                     &:hover
+                        transition: all 0.5s ease 
+                        padding: 0 40px 20px                
                         border-radius: 0 0 40px 40px
                           
                 +media(1200)
@@ -121,16 +142,19 @@
 
 
                 &:hover 
-                    display: block
+                    //display: block
                     
                 &:hover + .header__menu__item
                     color: $global-blue
 
             &__holder // li
                 padding-bottom: 20px
+                +media(678)
+                    padding-bottom: 0
                 &:hover
-                    transition: $link-transition
+                    // transition: $link-transition
                     +media(678)
+                        padding-bottom: 20px
                         transform: scale(1.1)
 
             &__link //a
@@ -146,14 +170,20 @@
                 white-space: none
                 +media(678)
                     font-weight: 600
-                    font-size: 12px
                     letter-spacing: -0.7px
                     width: 140px
+                    font-size: 0px
+                    line-height: 0px
+                    &:hover
+                        padding-top: 10px
+                        font-size: 12px
                 +media(1200)
                     width: 190px
                     letter-spacing: 0.03em
                     font-weight: 600
-                    font-size: 14px
+                    font-size: 0px
+                    &:hover
+                        font-size: 14px
                 &:hover
                     color: $global-blue
 
@@ -418,6 +448,33 @@
     //
 .correct-mb
     margin-bottom: 145px
+
+
+.ellipse1 img
+    overflow: hidden
+    border-radius: 66% 35% 41% 44%/46% 29% 57% 47%
+    animation: bulb 10s infinite ease
+.ellipse2 img
+    overflow: hidden
+    border-radius: 28% 72% 41% 44%/38% 43% 67% 47%
+    animation: bulb 10s infinite ease 1s
+.ellipse3 img
+    overflow: hidden
+    border-radius: 49% 45% 41% 56%/48% 40% 66% 40%
+    animation: bulb 10s infinite ease 2s
+.ellipse4 img
+    overflow: hidden
+    border-radius: 50% 61% 58% 59%/61% 57% 67% 58%
+    animation: bulb 10s infinite ease 3s
+
+@keyframes bulb
+    25%
+        border-radius: 28% 72% 41% 44%/38% 43% 67% 47%
+    50%
+        border-radius: 50% 61% 58% 59%/61% 57% 67% 58%
+    75%
+        border-radius: 49% 45% 41% 56%/48% 40% 66% 40%
+
 
 @keyframes slide
     0% 

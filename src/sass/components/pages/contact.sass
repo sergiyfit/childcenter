@@ -183,6 +183,35 @@
             text-align: left
             font-size: 12px
 
+.yellow_arr
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        right: 20px
+        border: 2px solid $global-orange
+        border-left: none
+        border-bottom: none
+        transform: rotate(-45deg)
+        width: 8px
+        height: 8px
+        top: 45px
+        //transition: $link-transition
+        +media(678)
+            width: 10px
+            height: 10px
+            top: 50px
+        +media(840)
+            width: 8px
+            height: 8px
+            top: 45px
+        +media(1280)
+            width: 10px
+            height: 10px
+            top: 50px        
+    &--show::before
+        transform: rotate(135deg)
+
 .custom-select
     display: none
     border: $input-border

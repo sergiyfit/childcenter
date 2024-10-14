@@ -34,11 +34,13 @@ if (select) {
         event.cancelBubble = true
         customSelect.style.display = "block"
         select.style.display = "none"
+        select.parentElement.classList.add("yellow_arr--show")
     }
 
     document.body.onclick = () => {
         select.style.display = "block"
         customSelect.style.display = "none"
+        select.parentElement.classList.remove("yellow_arr--show")
     }
 
     let customSelect = document.querySelector(".custom-select")
@@ -57,6 +59,7 @@ if (select) {
             setTimeout(() => {
                 select.style.display = "block"
                 customSelect.style.display = "none"
+                select.parentElement.classList.remove("yellow_arr--show")
             }, 200)
         }
     }

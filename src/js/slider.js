@@ -108,7 +108,7 @@ class InfinitySlider {
         }
         if (this.settings.isDots && this.realCardsLength > 1) {
             this.creationDots();
-            this.sliderDots = document.querySelectorAll('.slider-dot');
+            this.sliderDots = this.slider.querySelectorAll('.slider-dot');  // Correction .before correct document.querySelector
             for (let i = 0; i < this.sliderCards.length; i++) {
                 if (this.sliderCards[i].classList.contains("activeFade")) {
                     this.sliderDots[i].classList.remove("activeFade");
@@ -141,7 +141,7 @@ class InfinitySlider {
 
         this.settings.isDots ? this.sliderContainer.style.height = this.heightCards + this.settings.distanceToDots + 'px' : this.sliderContainer.style.height = this.heightCards + 'px';
         
-        this.sliderDots = document.querySelectorAll('.slider-dot');
+        this.sliderDots = this.slider.querySelectorAll('.slider-dot'); // Correction .before correct document.querySelector
         this.sliderDots.forEach(element => {
             element.onclick = () => {
                 clearInterval(localStorage[this.slider.id + "Interval"]);
@@ -369,6 +369,71 @@ class InfinitySlider {
 /*--------------------------------------------------------------------------------------------*/
 class InfinitySliderUpg extends InfinitySlider {
 
+    changeSlide(direction) {
+        this.widthSliderContainer = this.sliderContainer.getBoundingClientRect().width;
+        this.cardsCount = Math.floor(this.widthSliderContainer / (parseInt(this.settings.baseCardWidth) + this.settings.gap));
+        if (this.cardsCount == 0) this.cardsCount = 1;
+        this.widthCards = (this.widthSliderContainer - ((this.cardsCount - 1) * this.distanceCards)) / this.cardsCount;
+        this.sliderCards = this.sliderContainer.children;
+        let slideIndex = 0;
+        for (let i = 0; i < this.sliderCards.length; i++) {
+            if (this.sliderCards[i].classList.contains("activeFade")) {
+                slideIndex = i;
+            }
+        }
+        if (direction == "left") {
+            if (this.settings.isSlidesToScrollAll) {
+                for (let index = 0; index < this.cardsCount; index++) {
+                    this.sliderContainer.insertAdjacentElement("afterbegin", this.sliderCards[this.sliderCards.length - 1]);
+                }
+            } else {
+                this.sliderCards[this.sliderCards.length - 1].remove();
+                let cloneLast = this.sliderCards[this.sliderCards.length - 1].cloneNode(true);
+                cloneLast.classList.add("clone");
+                this.sliderContainer.insertAdjacentElement("afterbegin", cloneLast);
+                this.sliderCards[1].classList.remove("clone");
+            }
+
+            let activeDot = this.slider.querySelector(".dots-container .activeFade")
+            activeDot.classList.remove("activeFade")
+            if (activeDot.previousElementSibling.classList.contains("slider-dot")){
+                activeDot.previousElementSibling.classList.add("activeFade")
+            } else {
+                let allDot = this.slider.querySelectorAll(".slider-dot")
+                allDot[allDot.length-1].classList.add("activeFade")
+            }
+
+
+        } else if (direction == "right") {
+            if (this.settings.isSlidesToScrollAll) {
+                for (let index = 0; index < this.cardsCount; index++) {
+                    this.sliderContainer.insertAdjacentElement("beforeend", this.sliderCards[0]);
+                }
+            } else {
+                this.sliderCards[0].remove();
+                let cloneFirst = this.sliderCards[0].cloneNode(true);
+                cloneFirst.classList.add("clone");
+                this.sliderContainer.insertAdjacentElement("beforeend", cloneFirst);
+                this.sliderCards[this.sliderCards.length - 2].classList.remove("clone");
+            }
+
+            let activeDot = this.slider.querySelector(".dots-container .activeFade")
+            activeDot.classList.remove("activeFade")
+            if (activeDot.nextElementSibling.classList.contains("slider-dot")){
+                activeDot.nextElementSibling.classList.add("activeFade")
+            } else {
+                this.slider.querySelector(".slider-dot").classList.add("activeFade")
+            }
+
+        }
+        if (!this.settings.isEffectFadeOut) this.shuffleCard();
+    }
+
+    resetActive = function(){
+        let activeDot = this.slider.querySelectorAll(".dots-container .activeFade")
+        activeDot.forEach(element => element.classList.remove("activeFade"));
+    }
+
     switchCardWidth = function(newWidth){
         this.settings.baseCardWidth = newWidth
     }
@@ -498,14 +563,16 @@ if (document.querySelector(".slider")){
             isSlidesToScrollAll: true,
             baseCardWidth: "500rem",
             gap: 20,
-            isAutoplay: true,
+            isAutoplay: false,
             isDots: true,
             distanceToDots: 100,
             autoplaySpeed: 5000,
             transitionCard: "all 1.5s ease-in-out",
+            
         });
         
         window.onload = function(){
+
 
             photoSlider.init();
             padagogueSlider.init();
@@ -516,6 +583,9 @@ if (document.querySelector(".slider")){
         }
         
         window.onresize = function () {
+            photoSlider.resetActive();
+            padagogueSlider.resetActive();
+            reportSlider.resetActive();
 
             photoSlider.switchCardWidth( getPhotosliderWidth() )
             photoSlider.init();
@@ -560,6 +630,7 @@ if (document.querySelector(".slider")){
         }
         
         window.onresize = function () {
+            photoSlider.resetActive();
             photoSlider.switchCardWidth( getPhotosliderWidth() )
             photoSlider.init();
         };

@@ -232,7 +232,7 @@ reports.forEach( report => {
             if (innerWidth > 500) {
                 popup.style.width = "480px"
             } else{
-                popup.style.width = "90vh"
+                popup.style.width = "90vw"
             }
             
             popup.appendChild(popupReport)

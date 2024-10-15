@@ -800,8 +800,10 @@ mixin printPhotoAlbum
             button().global__btn.global_smal-btn.main__photo_btn ігри та розваги
             
 
-        .main__photo_img_container.slider
+        .main__photo_img_container.slider#photoslider
             .slider-container
-                img
-                img
-                img
+                for image in albums[1].photos 
+                    - let loadLaz = "eager"
+                    if image.loading 
+                        - loadLaz = image.loading 
+                    img(src=image.url, alt=image.alt, loading=loadLaz)

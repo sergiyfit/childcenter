@@ -429,6 +429,55 @@ class InfinitySliderUpg extends InfinitySlider {
         if (!this.settings.isEffectFadeOut) this.shuffleCard();
     }
 
+    dotsNewClick = function(){        
+        this.sliderDots.forEach(element => {
+            element.onclick = () => {
+                let activeElem = 0
+                let clickedElem = 0
+
+                clearInterval(localStorage[this.slider.id + "Interval"]);
+
+                for (let index = 0; index < this.realCardsLength; index++) {
+                    this.sliderCards[index].style.transition = "all 0.04s ease"
+                }
+
+                for (let index = 0; index < this.realCardsLength; index++) {
+
+                    if(this.sliderDots[index].classList.contains("activeFade")){
+                        activeElem = index
+                    }
+                    if(this.sliderDots[index] == element){
+                        clickedElem = index
+                    }
+                }
+
+
+                    if (activeElem > clickedElem){
+                        for (let i = 0; i < activeElem - clickedElem; i++) { 
+                            setTimeout( () => { this.changeSlide('left'); }, 50 + i*50 )
+                        }
+                        setTimeout( () => {                 
+                            for (let index = 0; index < this.realCardsLength; index++) {
+                                this.sliderCards[index].style.transition = "all 1s ease"
+                            }
+                        } , (activeElem - clickedElem)*100 + 100)  
+                    } else {
+                        for (let i = 0; i < clickedElem - activeElem; i++) {     
+                            setTimeout( () => { this.changeSlide('right');}, 50 + i*50 )                            
+                        }
+                        setTimeout( () => {                 
+                            for (let index = 0; index < this.realCardsLength; index++) {
+                                this.sliderCards[index].style.transition = "all 1s ease"
+                            }
+                        } , (clickedElem - activeElem)*100 + 100)                            
+                }
+            }
+        });
+    }
+   
+    
+
+
     resetActive = function(){
         let activeDot = this.slider.querySelectorAll(".dots-container .activeFade")
         activeDot.forEach(element => element.classList.remove("activeFade"));
@@ -530,6 +579,7 @@ if (document.querySelector(".slider")){
             slideCont.style.opacity = "0"
             setTimeout(function(){
                 photoSlider.init() 
+                photoSlider.dotsNewClick();
                 slideCont.style.opacity = "1"
 
             } , 500)
@@ -575,21 +625,28 @@ if (document.querySelector(".slider")){
 
 
             photoSlider.init();
-            padagogueSlider.init();
-            reportSlider.init();
             photoSlider.arrowsToDots();
+            photoSlider.dotsNewClick();
+            
+            padagogueSlider.init();
             padagogueSlider.arrowsToDots();
+            padagogueSlider.dotsNewClick();
+
+            reportSlider.init();
             reportSlider.arrowsToDots();
+            reportSlider.dotsNewClick();
         }
         
         window.onresize = function () {
             photoSlider.resetActive();
             padagogueSlider.resetActive();
             reportSlider.resetActive();
-
+            
             photoSlider.switchCardWidth( getPhotosliderWidth() )
             photoSlider.init();
 
+      
+            
             let newCardPedSize = "370rem"
             if (window.innerWidth >=520 && window.innerWidth <= 717){
                 newCardPedSize = "200rem"                
@@ -621,18 +678,25 @@ if (document.querySelector(".slider")){
 
             reportSlider.switchCardWidth( newCardReportSize )
             reportSlider.init();
+
+
+            photoSlider.dotsNewClick();
+            padagogueSlider.dotsNewClick();
+            reportSlider.dotsNewClick();
         };
 
     } else if(document.querySelector(".slider")){
         window.onload = function(){
             photoSlider.init();
             photoSlider.arrowsToDots();
+            photoSlider.dotsNewClick();
         }
         
         window.onresize = function () {
             photoSlider.resetActive();
             photoSlider.switchCardWidth( getPhotosliderWidth() )
             photoSlider.init();
+            photoSlider.dotsNewClick();
         };
     }
 

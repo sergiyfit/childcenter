@@ -437,9 +437,8 @@ class InfinitySliderUpg extends InfinitySlider {
 
                 clearInterval(localStorage[this.slider.id + "Interval"]);
 
-                for (let index = 0; index < this.realCardsLength; index++) {
-                    this.sliderCards[index].style.transition = "all 0.04s ease"
-                }
+                let halfPart = Math.ceil(this.sliderDots.length / 2)
+                
 
                 for (let index = 0; index < this.realCardsLength; index++) {
 
@@ -451,25 +450,47 @@ class InfinitySliderUpg extends InfinitySlider {
                     }
                 }
 
+                let moveLeft, moveRight
 
-                    if (activeElem > clickedElem){
-                        for (let i = 0; i < activeElem - clickedElem; i++) { 
-                            setTimeout( () => { this.changeSlide('left'); }, 50 + i*50 )
+                if (activeElem > clickedElem){
+                    moveLeft = (activeElem - clickedElem)
+                    moveRight = (this.sliderDots.length - activeElem + clickedElem)
+                    
+                } else {
+                    moveRight = (clickedElem - activeElem )
+                    moveLeft = (this.sliderDots.length - clickedElem + activeElem)
+                }
+
+                let delayTime = (moveRight > moveLeft) ? moveLeft : moveRight
+
+                alert(`moveLeft ${moveLeft} , moveRight ${moveRight} delayTime ${delayTime}`)
+
+                if (!this.settings.isSlidesToScrollAll){
+
+                    for (let index = 0; index < this.realCardsLength; index++) {
+                        this.sliderCards[index].style.transition =  `all ${1 / delayTime}s ${delayTime < 2 ? "ease" : "linear"}`
+                    }  
+                }
+
+                if (moveRight > moveLeft){
+                    
+                        for (let i = 0; i < moveLeft; i++) { 
+                            setTimeout( () => { this.changeSlide('left'); }, i*(1000 / delayTime) )
                         }
                         setTimeout( () => {                 
                             for (let index = 0; index < this.realCardsLength; index++) {
-                                this.sliderCards[index].style.transition = "all 1s ease"
+                                this.sliderCards[index].style.transition = this.settings.transitionCard
                             }
-                        } , (activeElem - clickedElem)*100 + 100)  
+                        } , 1010)  
                     } else {
-                        for (let i = 0; i < clickedElem - activeElem; i++) {     
-                            setTimeout( () => { this.changeSlide('right');}, 50 + i*50 )                            
+                        for (let i = 0; i < moveRight; i++) {     
+                            setTimeout( () => { this.changeSlide('right');}, i*(1000 / delayTime) )                            
                         }
                         setTimeout( () => {                 
                             for (let index = 0; index < this.realCardsLength; index++) {
-                                this.sliderCards[index].style.transition = "all 1s ease"
+                                this.sliderCards[index].style.transition = this.settings.transitionCard
                             }
-                        } , (clickedElem - activeElem)*100 + 100)                            
+                        } , 1010)                            
                 }
             }
         });

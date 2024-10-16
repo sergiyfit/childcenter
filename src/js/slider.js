@@ -463,7 +463,7 @@ class InfinitySliderUpg extends InfinitySlider {
 
                 let delayTime = (moveRight > moveLeft) ? moveLeft : moveRight
 
-                alert(`moveLeft ${moveLeft} , moveRight ${moveRight} delayTime ${delayTime}`)
+                // alert(`moveLeft ${moveLeft} , moveRight ${moveRight} delayTime ${delayTime}`)
 
                 if (!this.settings.isSlidesToScrollAll){
 

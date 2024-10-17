@@ -190,8 +190,7 @@ if(popupImgSlider){
                 } else {
                     popupImg.style.height = "90vh"
                 }
-    
-                popupImg.src = e.target.src
+                popupImg.src = (e.target.hasAttribute("huge")) ? e.target.getAttribute("huge") : e.target.src
             }
         }
     }

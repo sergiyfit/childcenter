@@ -125,4 +125,11 @@ mixin printCardsWithFigure(allContent, nameClass, mixinUrl)
                             li(class=("main__"+nameClass+"_list-item")).card-with-fig_list-item #{item}     
                 if cardWithFig.textMore
                     p(class=("main__"+nameClass+"_text")).card-with-fig_text #{cardWithFig.textMore}    
-                a(class=("main__"+nameClass+"__btn")  href=currentUrl).global__btn.card-with-fig__btn Записати дитину                    
+                a(class=("main__"+nameClass+"__btn")  href=currentUrl).global__btn.card-with-fig__btn Записати дитину
+
+mixin setPrice(text)
+    .price_strip_container 
+        .price_strip.milk-background
+            .price_strip-text.global__middle_text
+                span Ціна 
+                strong - #{text}

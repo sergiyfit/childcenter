@@ -1,29 +1,3 @@
-//- mixin printPhotoAlbum
-//-     .main__photo#photoalbum.slider 
-//-         h2.global__huge_text.main__photo_header галерея
-//-         .main__photo_btn_container
-//-             button(checked).global__btn.global_smal-btn.main__photo_btn заняття у садочку
-//-             button().global__btn.global_smal-btn.main__photo_btn свята та вечірки
-//-             button().global__btn.global_smal-btn.main__photo_btn екскурсії та прогулянки
-//-             button().global__btn.global_smal-btn.main__photo_btn майстер-класи
-//-             button().global__btn.global_smal-btn.main__photo_btn ігри та розваги
-//-             button().global__btn.global_smal-btn.main__photo_btn меню
-            
-//-         .main__photo_img_container.slider-container
-//-             img(src="img/photo/photo1.png", alt:"lego").main__photo_img 
-//-             img(src="img/photo/photo2.png", alt:"lego").main__photo_img 
-//-             img(src="img/photo/photo3.png", alt:"lego").main__photo_img 
-//-             img(src="img/photo/photo2.png", alt:"lego").main__photo_img 
-//-         .main__photo_nav_container.global-nav
-//-             .global__circle_btn.main__photo_nav__circle_btn--left.arr-left.left.slider_navigation 
-//-             .global-dot.main__photo_nav__dot.slider-dot
-
-//-             .global-dot.main__photo_nav__dot.slider-dot  
-//-             .global-dot.main__photo_nav__dot.slider-dot  
-//-             .global-dot.main__photo_nav__dot.slider-dot  
-//-             .global-dot.main__photo_nav__dot.slider-dot  
-
-//-             .global__circle_btn.main__photo_nav__circle_btn--right.arr-right.right.slider_navigation   
 
 -
     let albums = [             
@@ -32,15 +6,15 @@
                 photos:
                 [
                     {
-                        url:"img/photo/photo1.png", 
+                        url:"img/photo/album1/preview/-min.jpg", urlHuge:"img/photo/photo1.png", 
                         alt:"lego"
                     },
                     {
-                        url:"img/photo/photo2.png", 
+                        url:"img/photo/album1/preview/-min.jpg", urlHuge:"img/photo/photo2.png", 
                         alt:"lego"
                     },
                     {
-                        url:"img/photo/photo3.png", 
+                        url:"img/photo/album1/preview/-min.jpg", urlHuge:"img/photo/photo3.png", 
                         alt:"lego"
                     }
                 ]
@@ -51,122 +25,146 @@
                 [ 
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-07-31_18-54-28.jpg", 
+                        url:"img/photo/album1/preview/dity_grayut_v_koli-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-07-31_18-54-28.jpg", 
+                        alt:"Діти грають в колі"
+                    },
+                    {
+                        loading:"lazy" , 
+                        url:"img/photo/album1/preview/divchata_zbyraut_lego-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-07-31_19-17-40.jpg", 
+                        alt:"Лего для діточок"
+                    },
+                    {
+                        loading:"lazy" , 
+                        url:"img/photo/album1/preview/malyunok_vidbytok_ruki-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-07-31_19-18-03.jpg", 
+                        alt:"Як робити фарбою відбиток руки"
+                    },
+                    {
+                        loading:"lazy" , 
+                        url:"img/photo/album1/preview/divchina_vchyt_khimiyu-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-07-31_19-18-38.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-07-31_19-17-40.jpg", 
+                        url:"img/photo/album1/preview/dity_maluyut_u_dvori-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-07-31_19-18-40.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-07-31_19-18-03.jpg", 
+                        url:"img/photo/album1/preview/dity_zburayut_figutki-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-03-05.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-07-31_19-18-38.jpg", 
+                        url:"img/photo/album1/preview/dity_grayut_na_pidlozi-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-03-16.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-07-31_19-18-40.jpg", 
+                        url:"img/photo/album1/preview/divchuna_vchit_litery-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-03-55.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-03-05.jpg", 
+                        url:"img/photo/album1/preview/angliyska_mova_doshkilnyat-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-04-27.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-03-16.jpg", 
+                        url:"img/photo/album1/preview/dityna_maluye_na_kykymi-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-04-34.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-03-55.jpg", 
+                        url:"img/photo/album1/preview/prosunuta_angliyska_dlya_ditey-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-04-42.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-04-27.jpg", 
+                        url:"img/photo/album1/preview/dutyna_vchitsya_rukidillu-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-04-58.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-04-34.jpg", 
+                        url:"img/photo/album1/preview/diyu_grayut_vodoyu-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-05-05.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-04-42.jpg", 
+                        url:"img/photo/album1/preview/dity_gtayut_supuchimi_materialamy-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-05-13.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-04-58.jpg", 
+                        url:"img/photo/album1/preview/dity_grayut_na_pidlozi-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-05-19.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-05-05.jpg", 
+                        url:"img/photo/album1/preview/dytyna_vivchaye_ovochi-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-05-25.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-05-13.jpg", 
+                        url:"img/photo/album1/preview/dityna_robit_aplikacii-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-05-31.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-05-19.jpg", 
+                        url:"img/photo/album1/preview/malyunok_farbamy-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-05-39.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-05-25.jpg", 
+                        url:"img/photo/album1/preview/dityna_kliye_papir-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-05-44.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-05-31.jpg", 
+                        url:"img/photo/album1/preview/malyunok_moroziva-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-05-56.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-05-39.jpg", 
+                        url:"img/photo/album1/preview/divchyna_malyue_ovochi-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-06-22.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-05-44.jpg", 
+                        url:"img/photo/album1/preview/dity_na_dityachomu_maydanchiku-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-06-31.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-05-56.jpg", 
+                        url:"img/photo/album1/preview/lyalkoviy_teatr_dlya_ditok-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-21_19-06-51.jpg", 
                         alt:"masterclass"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-06-22.jpg", 
-                        alt:"masterclass"
-                    },
-                    {
-                        loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-06-31.jpg", 
-                        alt:"masterclass"
-                    },
-                    {
-                        loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-21_19-06-51.jpg", 
-                        alt:"masterclass"
-                    },
-                    {
-                        loading:"lazy" , 
-                        url:"img/photo/album1/photo_2024-09-25_19-09-22.jpg", 
+                        url:"img/photo/album1/preview/divchuna_vchit_cifry-min.jpg", 
+                        urlHuge:"img/photo/album1/photo_2024-09-25_19-09-22.jpg", 
                         alt:"masterclass"
                     }
                 ]
@@ -177,147 +175,182 @@
                 [
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_17-45-14.jpg" , 
+                        url:"img/photo/album2/preview/dity_gotuyutsa_do_velykodnyu-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_17-45-14.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_17-46-48.jpg" , 
+                        url:"img/photo/album2/preview/patrioty_dity-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_17-46-48.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_17-46-49.jpg" , 
+                        url:"img/photo/album2/preview/dity_zbirayut_pazly-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_17-46-49.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_17-48-11.jpg" , 
+                        url:"img/photo/album2/preview/dity_tancuyut-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_17-48-11.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_17-52-50.jpg" , 
+                        url:"img/photo/album2/preview/dity_na_sceni-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_17-52-50.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_17-52-51.jpg" , 
+                        url:"img/photo/album2/preview/dity_svyatkuyut_i_yidyat_happy_mill-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_17-52-51.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_18-03-56.jpg" , 
+                        url:"img/photo/album2/preview/dity_posered_roslyn-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_18-03-56.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_18-04-29.jpg" , 
+                        url:"img/photo/album2/preview/dity_kvity-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_18-04-29.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_18-04-34.jpg" , 
+                        url:"img/photo/album2/preview/svyatkuvanya_rizdva-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_18-04-34.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_18-04-37.jpg" , 
+                        url:"img/photo/album2/preview/dity_v_kostumah_yangoliv-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_18-04-34_.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_18-04-39.jpg" , 
+                        url:"img/photo/album2/preview/svyatkuvanya_novogo_roku-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_18-04-37.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_18-36-42.jpg" , 
+                        url:"img/photo/album2/preview/dity_kolyaduyut-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_18-04-39.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_18-48-14.jpg" , 
+                        url:"img/photo/album2/preview/dity_na_heloween-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_18-36-42.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-07-31_18-54-11.jpg" , 
+                        url:"img/photo/album2/preview/schaslyvi_dity-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_18-48-14.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-14-34.jpg" , 
+                        url:"img/photo/album2/preview/dity_na_maslyanu-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-07-31_18-54-11.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-15-15.jpg" , 
+                        url:"img/photo/album2/preview/dity_i_spyderman-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-14-34.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-15-40.jpg" , 
+                        url:"img/photo/album2/preview/dity_grayutsya_podushkami-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-15-15.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-15-54.jpg" , 
+                        url:"img/photo/album2/preview/dity_i_yih_malyunki-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-15-40.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-16-12.jpg" , 
+                        url:"img/photo/album2/preview/kokteyli_dlya_ditey-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-15-54.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-16-34.jpg" , 
+                        url:"img/photo/album2/preview/dity_na_pryrodi-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-16-12.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-16-55.jpg" , 
+                        url:"img/photo/album2/preview/pidgotovka_do_helloween-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-16-34.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-17-33.jpg" , 
+                        url:"img/photo/album2/preview/dityachi_tanci-min.jpg",
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-16-55.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-17-44.jpg" , 
+                        url:"img/photo/album2/preview/tanci_z_podushkamy-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-17-33.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-17-58.jpg" , 
+                        url:"img/photo/album2/preview/tancy_z_morkvou-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-17-44.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-18-12.jpg" , 
+                        url:"img/photo/album2/preview/den_svyatogo_valentynu-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-17-58.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-18-24.jpg" , 
+                        url:"img/photo/album2/preview/svyato_v_ditochok-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-18-12.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-19-32.jpg" , 
+                        url:"img/photo/album2/preview/dityacha_kulinariya-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-18-24.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-21-22.jpg" , 
+                        url:"img/photo/album2/preview/ditky_spivayut_pisni-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-19-32.jpg" , 
                         alt:"party_child"
                     },
                     { 
                         loading:"lazy" , 
-                        url:"img/photo/album2/photo_2024-09-21_19-23-22.jpg" , 
+                        url:"img/photo/album2/preview/dity_svatkuyut_noviy_rik-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-21-22.jpg" , 
+                        alt:"party_child"
+                    },
+                    { 
+                        loading:"lazy" , 
+                        url:"img/photo/album2/preview/dityna_z_koshikom-min.jpg", 
+                        urlHuge:"img/photo/album2/photo_2024-09-21_19-23-22.jpg" , 
                         alt:"party_child"
                     }
                 ]
@@ -328,142 +361,170 @@
                 [
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-06-06_12-06-51.jpg",
+                        url:"img/photo/album3/preview/lipka_dlya_ditey-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-06-06_12-06-51.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-06-06_12-32-05.jpg",
+                        url:"img/photo/album3/preview/malyuvanya_v_ditey-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-06-06_12-32-05.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-06-07_21-05-10.jpg",
+                        url:"img/photo/album3/preview/dity_na_sportmaydanchiku-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-06-07_21-05-10.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-06-10_16-04-33.jpg",
+                        url:"img/photo/album3/preview/dity_i_pizza-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-06-10_16-04-33.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-06-10_16-05-22.jpg",
+                        url:"img/photo/album3/preview/dity_snidayut_na_maydanchiku-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-06-10_16-05-22.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-06-11_14-50-40.jpg",
+                        url:"img/photo/album3/preview/dity_grayut-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-06-11_14-50-40.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-06-18_18-54-28.jpg",
+                        url:"img/photo/album3/preview/dity_v_kinoteatri-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-06-18_18-54-28.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-06-21_15-25-42.jpg",
+                        url:"img/photo/album3/preview/dity_na_korabli-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-06-21_15-25-42.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-06-21_15-25-45.jpg",
+                        url:"img/photo/album3/preview/dity_na_richci-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-06-21_15-25-45.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-06-25_14-30-05.jpg",
+                        url:"img/photo/album3/preview/dity_gotuyut_tistechka-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-06-25_14-30-05.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-06-25_14-30-22.jpg",
+                        url:"img/photo/album3/preview/dityacha_kulinaria-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-06-25_14-30-22.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-06-28_13-35-13.jpg",
+                        url:"img/photo/album3/preview/dity_v_okeanariumi-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-06-28_13-35-13.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-07-02_15-45-00.jpg",
+                        url:"img/photo/album3/preview/dity_na_sceni_z_lyalkami-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-07-02_15-45-00.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-07-05_10-40-48.jpg",
+                        url:"img/photo/album3/preview/dity_na_progulyanci-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-07-05_10-40-48.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-07-05_14-05-27.jpg",
+                        url:"img/photo/album3/preview/dity_v_trc-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-07-05_14-05-27.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-07-10_13-48-34.jpg",
+                        url:"img/photo/album3/preview/dity_na_ravlikoviy_fermi-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-07-10_13-48-34.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-07-10_13-48-35.jpg",
+                        url:"img/photo/album3/preview/divchina_v_kepci-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-07-10_13-48-35.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-08-01_16-33-39.jpg",
+                        url:"img/photo/album3/preview/extreem_park-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-08-01_16-33-39.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-08-02_16-25-59.jpg",
+                        url:"img/photo/album3/preview/dity_i_koza-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-08-02_16-25-59.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-08-07_13-04-13.jpg",
+                        url:"img/photo/album3/preview/dity_i_fizika-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-08-07_13-04-13.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-08-08_21-02-41.jpg",
+                        url:"img/photo/album3/preview/dity_na_goydalci-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-08-08_21-02-41.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-08-08_21-07-22.jpg",
+                        url:"img/photo/album3/preview/dity_na_koni-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-08-08_21-07-22.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-08-13_15-19-08.jpg",
+                        url:"img/photo/album3/preview/dity_na_parketi-min.jpg",
+                        urlHuge:"img/photo/album3/photo_2024-08-13_15-19-08.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-08-15_21-30-56.jpg",
+                        url:"img/photo/album3/preview/dity_grayut_v_basketball-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-08-15_21-30-56.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-09-21_19-27-04.jpg",
+                        url:"img/photo/album3/preview/dity_i_mashina-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-09-21_19-27-04.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-09-21_19-32-31.jpg",
+                        url:"img/photo/album3/preview/dity_gotuyut_pizzu-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-09-21_19-32-31.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-09-21_19-33-15.jpg",
+                        url:"img/photo/album3/preview/hlopchik_povar-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-09-21_19-33-15.jpg",
                         alt:"walking"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album3/photo_2024-09-21_19-43-57.jpg",
+                        url:"img/photo/album3/preview/dity_v_parku-min.jpg", 
+                        urlHuge:"img/photo/album3/photo_2024-09-21_19-43-57.jpg",
                         alt:"walking"
                     }
                 ] 
@@ -473,152 +534,182 @@
                 [
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-06_19-19-32.jpg", 
+                        url:"img/photo/album4/preview/divchina_i_porobki.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-06_19-19-32.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-09_18-11-55.jpg", 
+                        url:"img/photo/album4/preview/dity_maluyut-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-09_18-11-55.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-11_18-32-26.jpg", 
+                        url:"img/photo/album4/preview/porobki_na_helloween-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-11_18-32-26.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-16_18-33-17.jpg", 
+                        url:"img/photo/album4/preview/malyuvanya_tvarin-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-16_18-33-17.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-18_20-28-57.jpg", 
+                        url:"img/photo/album4/preview/divchina_z_vinkom.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-18_20-28-57.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-20_18-09-45.jpg", 
+                        url:"img/photo/album4/preview/dity_maluyut_garbuz-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-20_18-09-45.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-20_18-09-46.jpg", 
+                        url:"img/photo/album4/preview/dity_zustrichayut_osin-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-20_18-09-46.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_19-50-05.jpg", 
+                        url:"img/photo/album4/preview/dityna_i_origami-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_19-50-05.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_19-51-13.jpg", 
+                        url:"img/photo/album4/preview/vigotovlenya_igrashok-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_19-51-13.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_19-51-23.jpg", 
+                        url:"img/photo/album4/preview/myaki_igrashki-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_19-51-23.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_19-52-34.jpg", 
+                        url:"img/photo/album4/preview/dityna_v_verbnu_nedilyu-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_19-52-34.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_19-52-51.jpg", 
+                        url:"img/photo/album4/preview/hlopchik_staranno_malue-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_19-52-51.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_19-53-05.jpg", 
+                        url:"img/photo/album4/preview/hlopchick_i_igrashka-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_19-53-05.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_19-53-16.jpg", 
+                        url:"img/photo/album4/preview/divchinka_i_gnom-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_19-53-16.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_19-53-26.jpg", 
+                        url:"img/photo/album4/preview/dity_roblyat_eksperimenty-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_19-53-26.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_19-54-09.jpg", 
+                        url:"img/photo/album4/preview/divchinka_povar-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_19-54-09.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_19-54-44.jpg", 
+                        url:"img/photo/album4/preview/dity_i_malyunki-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_19-54-44.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_19-57-14.jpg", 
+                        url:"img/photo/album4/preview/dityna_i_panda-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_19-57-14.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_19-58-27.jpg", 
+                        url:"img/photo/album4/preview/porobki_aplikaciyi-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_19-58-27.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_19-59-03.jpg", 
+                        url:"img/photo/album4/preview/applikacii_na_vesny-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_19-59-03.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_20-00-10.jpg", 
+                        url:"img/photo/album4/preview/Dity_rozmalyovuyut_figurki-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_20-00-10.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_20-00-42.jpg", 
+                        url:"img/photo/album4/preview/malyuvanna_guashyu-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_20-00-42.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_20-01-59.jpg", 
+                        url:"img/photo/album4/preview/dytyna_u_navushnikah-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_20-01-59.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_20-02-29.jpg", 
+                        url:"img/photo/album4/preview/stvorennya_igrashok_z_vatoy-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_20-02-29.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_20-03-37.jpg", 
+                        url:"img/photo/album4/preview/malyunok_snigovika-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_20-03-37.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_20-03-52.jpg", 
+                        url:"img/photo/album4/preview/divchina_z_gnomami-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_20-03-52.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_20-04-34.jpg", 
+                        url:"img/photo/album4/preview/divchina_z_svichkami-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_20-04-34.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_20-06-10.jpg", 
+                        url:"img/photo/album4/preview/hlopci_z_sovami-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_20-06-10.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_20-06-33.jpg", 
+                        url:"img/photo/album4/preview/dity_i_sloniki-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_20-06-33.jpg", 
                         alt:"master-class"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album4/photo_2024-09-21_20-07-19.jpg", 
+                        url:"img/photo/album4/preview/dity_maluyut_sobachku-min.jpg", 
+                        urlHuge:"img/photo/album4/photo_2024-09-21_20-07-19.jpg", 
                         alt:"master-class"
                     }
                 ]
@@ -629,152 +720,182 @@
                 [
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-08-38.jpg", 
+                        url:"img/photo/album5/preview/dityna_grae_lego-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-08-38.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-09-05.jpg", 
+                        url:"img/photo/album5/preview/dityna_vchit_tvaryn-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-09-05.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-11-32.jpg", 
+                        url:"img/photo/album5/preview/irgy_na_maydanchiku_poruch-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-11-32.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-12-09.jpg", 
+                        url:"img/photo/album5/preview/dity_grayut_v_twister-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-12-09.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-12-29.jpg", 
+                        url:"img/photo/album1/preview/dity_kvadrobery-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-12-29.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-13-05.jpg", 
+                        url:"img/photo/album1/preview/dity_v_kosmosi-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-13-05.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-13-23.jpg", 
+                        url:"img/photo/album1/preview/dity_i_mavka-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-13-23.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-13-59.jpg", 
+                        url:"img/photo/album1/preview/dity_gotuyut_desert-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-13-59.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-14-51.jpg", 
+                        url:"img/photo/album1/preview/dity_na_drabiny-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-14-51.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-15-11.jpg", 
+                        url:"img/photo/album1/preview/dity_u_zelenogo_parkanu-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-15-11.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-15-34.jpg", 
+                        url:"img/photo/album1/preview/dity_i_popcorn-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-15-34.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-15-57.jpg", 
+                        url:"img/photo/album1/preview/dity_grayut_lego_u_dvori-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-15-57.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-16-29.jpg", 
+                        url:"img/photo/album1/preview/shaslyva_dityna-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-16-29.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-16-43.jpg", 
+                        url:"img/photo/album1/preview/obiymi_ditey-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-16-43.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-17-02.jpg", 
+                        url:"img/photo/album1/preview/dity_i_frukty-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-17-02.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-17-20.jpg", 
+                        url:"img/photo/album1/preview/dity_i_vynograd-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-17-20.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-17-40.jpg", 
+                        url:"img/photo/album1/preview/dity_na_pikniku-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-17-40.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-18-23.jpg", 
+                        url:"img/photo/album1/preview/dity_v_pisochnici-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-18-23.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-18-40.jpg", 
+                        url:"img/photo/album1/preview/dytina_na_lavci-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-18-40.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-19-02.jpg", 
+                        url:"img/photo/album1/preview/dityna_i_kream-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-19-02.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-19-34.jpg", 
+                        url:"img/photo/album1/preview/pizza_na_pikniku-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-19-34.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-20-07.jpg", 
+                        url:"img/photo/album1/preview/tort_z_kivi-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-20-07.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-22-59.jpg", 
+                        url:"img/photo/album1/preview/dity_v_vishivanci-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-22-59.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-24-51.jpg", 
+                        url:"img/photo/album1/preview/lego_prosunute-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-24-51.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-24-59.jpg", 
+                        url:"img/photo/album1/preview/buduvanya_z_figurok_dereva-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-24-59.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-25-25.jpg", 
+                        url:"img/photo/album1/preview/aktivnist_ditey-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-25-25.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-27-22.jpg", 
+                        url:"img/photo/album1/preview/ditina_grae_figurkami-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-27-22.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-27-59.jpg", 
+                        url:"img/photo/album1/preview/gotuvanna_chai_z_fruktiv-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-27-59.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-28-11.jpg", 
+                        url:"img/photo/album1/preview/dity_i_flomastery-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-28-11.jpg", 
                         alt:"games-entertaiment"
                     },
                     {
                         loading:"lazy" , 
-                        url:"img/photo/album5/photo_2024-09-21_20-28-26.jpg", 
+                        url:"img/photo/album1/preview/dity_gotuyut_hotdog-min.jpg", 
+                        urlHuge:"img/photo/album5/photo_2024-09-21_20-28-26.jpg", 
                         alt:"games-entertaiment"
                     }
                 ]
@@ -790,7 +911,7 @@ mixin printPhotoAlbum
                         - let loadLaz = "eager"
                         if image.loading 
                             - loadLaz = image.loading 
-                        img(src=image.url, alt=image.alt, loading=loadLaz)
+                        img(src=image.url, alt=image.alt, loading=loadLaz, huge=image.urlHuge)
         h2.global__huge_text.main__photo_header галерея
         .main__photo_btn_container
             button().global__btn.global_smal-btn.main__photo_btn заняття у садочку
@@ -806,4 +927,4 @@ mixin printPhotoAlbum
                     - let loadLaz = "eager"
                     if image.loading 
                         - loadLaz = image.loading 
-                    img(src=image.url, alt=image.alt, loading=loadLaz)
+                    img(src=image.url, alt=image.alt, loading=loadLaz, huge=image.urlHuge)
